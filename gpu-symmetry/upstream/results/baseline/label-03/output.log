@@ -1,0 +1,32 @@
+CHECK real label=a1b2_a2b0 sector=0 mode=2
+terminate called after throwing an instance of 'std::invalid_argument'
+  what():  label a1b2_a2b0 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/baseline/include/RI/physics/symmetry/Filter_Atom_Symmetry.h line 67
+[16v100n06:3755567] *** Process received signal ***
+[16v100n06:3755567] Signal: Aborted (6)
+[16v100n06:3755567] Signal code:  (-6)
+[16v100n06:3755567] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x149f636ab330]
+[16v100n06:3755567] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x149f63704b2c]
+[16v100n06:3755567] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x149f636ab27e]
+[16v100n06:3755567] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x149f6368e8ff]
+[16v100n06:3755567] [ 4] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xa5ff5)[0x149f63a06ff5]
+[16v100n06:3755567] [ 5] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xbb0da)[0x149f63a1c0da]
+[16v100n06:3755567] [ 6] /lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_call_terminate+0x33)[0x149f63a068e6]
+[16v100n06:3755567] [ 7] /lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x31a)[0x149f63a1b8ba]
+[16v100n06:3755567] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x22b06)[0x149f642f8b06]
+[16v100n06:3755567] [ 9] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x311)[0x149f642f91f1]
+[16v100n06:3755567] [10] /lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x44)[0x149f63a1c384]
+[16v100n06:3755567] [11] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/final-build-baseline/test_lri_gpu_symmetry(+0xa4220)[0x564ec6f41220]
+[16v100n06:3755567] [12] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/final-build-baseline/test_lri_gpu_symmetry(+0x1114a3)[0x564ec6fae4a3]
+[16v100n06:3755567] [13] /lib/x86_64-linux-gnu/libgomp.so.1(GOMP_parallel+0x47)[0x149f63bf7977]
+[16v100n06:3755567] [14] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/final-build-baseline/test_lri_gpu_symmetry(+0x3e7f6)[0x564ec6edb7f6]
+[16v100n06:3755567] [15] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/final-build-baseline/test_lri_gpu_symmetry(+0x2c359)[0x564ec6ec9359]
+[16v100n06:3755567] [16] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/final-build-baseline/test_lri_gpu_symmetry(+0x16572)[0x564ec6eb3572]
+[16v100n06:3755567] [17] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/final-build-baseline/test_lri_gpu_symmetry(+0x14dd2)[0x564ec6eb1dd2]
+[16v100n06:3755567] [18] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x149f636901ca]
+[16v100n06:3755567] [19] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x149f6369028b]
+[16v100n06:3755567] [20] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/final-build-baseline/test_lri_gpu_symmetry(+0xb755)[0x564ec6ea8755]
+[16v100n06:3755567] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 3755567 on node 16v100n06 exited on
+signal 6 (Aborted).
+--------------------------------------------------------------------------

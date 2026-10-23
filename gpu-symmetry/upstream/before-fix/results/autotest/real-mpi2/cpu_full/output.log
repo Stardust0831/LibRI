@@ -1,0 +1,29 @@
+-----AUTO TESTS OF ABACUS ------
+ABACUS path: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu
+Number of processes: 2
+Number of threads: 1
+Concurrent test cases: 1
+Test accuracy totenergy: 0.0000001 eV
+Test accuracy force: 0.0001
+Test accuracy stress: 0.001
+Test accuracy descriptor mean: 0.00001
+Check accuaracy: 8
+Test cases file: CASES.one.txt
+Test cases regex: .*
+Generate reference: 
+Property collectors: true
+--------------------------------
+
+[0;32m[ RUN      ][0m cpu_full
+Info: Local MPI proc number: 2,OpenMP thread number: 1,Total thread number: 2,Local thread limit: 128
+[----------] scf HSE on H2O, multik, symmetry=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[0;32m[      OK  ] [0m pointgroupref
+[0;32m[      OK  ] [0m spacegroupref
+[0;32m[      OK  ] [0m nksibzref
+[----------] Time elapsed: 10.682 seconds
+
+[0;32m[ PASSED   ] [0m 7 test cases passed.

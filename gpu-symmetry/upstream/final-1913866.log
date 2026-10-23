@@ -1,0 +1,169 @@
+START environment/compiler
+END environment/compiler 0
+START environment/gpu
+END environment/gpu 0
+START fixed-cpu/configure
+END fixed-cpu/configure 0
+START fixed-cpu/build
+END fixed-cpu/build 0
+START fixed-cpu/omp1
+END fixed-cpu/omp1 0
+START fixed-cpu/omp4
+END fixed-cpu/omp4 0
+START fixed-gpu/configure
+END fixed-gpu/configure 0
+START fixed-gpu/build
+END fixed-gpu/build 0
+START fixed-gpu/omp1
+END fixed-gpu/omp1 0
+START fixed-gpu/omp4
+END fixed-gpu/omp4 0
+START backport/configure
+END backport/configure 0
+START backport/build
+END backport/build 0
+START backport/label-00
+END backport/label-00 0
+START backport/label-01
+END backport/label-01 1
+START backport/label-02
+END backport/label-02 0
+START backport/label-03
+END backport/label-03 1
+START backport/label-04
+END backport/label-04 0
+START backport/label-05
+END backport/label-05 0
+START backport/label-06
+END backport/label-06 0
+START backport/label-07
+END backport/label-07 1
+START backport/label-08
+END backport/label-08 0
+START backport/label-09
+END backport/label-09 1
+START backport/label-10
+END backport/label-10 0
+START backport/label-11
+END backport/label-11 0
+START backport/label-12
+END backport/label-12 0
+START backport/label-13
+END backport/label-13 0
+START backport/label-14
+END backport/label-14 0
+START backport/label-15
+END backport/label-15 0
+START backport/label-16
+END backport/label-16 0
+START backport/label-17
+END backport/label-17 0
+START baseline/configure
+END baseline/configure 0
+START baseline/build
+END baseline/build 0
+START baseline/label-00
+END baseline/label-00 1
+START baseline/label-01
+END baseline/label-01 134
+START baseline/label-02
+END baseline/label-02 1
+START baseline/label-03
+END baseline/label-03 134
+START baseline/label-04
+END baseline/label-04 0
+START baseline/label-05
+END baseline/label-05 0
+START baseline/label-06
+END baseline/label-06 1
+START baseline/label-07
+END baseline/label-07 134
+START baseline/label-08
+END baseline/label-08 1
+START baseline/label-09
+END baseline/label-09 134
+START baseline/label-10
+END baseline/label-10 0
+START baseline/label-11
+END baseline/label-11 0
+START baseline/label-12
+END baseline/label-12 134
+START baseline/label-13
+END baseline/label-13 134
+START baseline/label-14
+END baseline/label-14 134
+START baseline/label-15
+END baseline/label-15 134
+START baseline/label-16
+END baseline/label-16 134
+START baseline/label-17
+END baseline/label-17 134
+START callbacks/build
+END callbacks/build 0
+START callbacks/test
+END callbacks/test 0
+START abacus/configure
+END abacus/configure 0
+START abacus/build
+END abacus/build 0
+START abacus/version
+END abacus/version 0
+START abacus/help
+END abacus/help 0
+START abacus/cases
+END abacus/cases 0
+ALL VALIDATION PASSED
+START environment/compiler
+END environment/compiler 0
+START environment/gpu
+END environment/gpu 0
+START abacus/configure
+END abacus/configure 0
+START abacus/build
+END abacus/build 0
+START abacus/version
+END abacus/version 0
+START abacus/help
+END abacus/help 0
+START autotest/real-mpi1/host
+END autotest/real-mpi1/host 0
+START autotest/real-mpi1/cpu_sym
+END autotest/real-mpi1/cpu_sym 0
+START autotest/real-mpi1/gpu_sym
+END autotest/real-mpi1/gpu_sym 1
+START autotest/real-mpi1/cpu_full
+END autotest/real-mpi1/cpu_full 0
+START autotest/real-mpi1/gpu_full
+END autotest/real-mpi1/gpu_full 0
+START autotest/complex-mpi1/host
+END autotest/complex-mpi1/host 0
+START autotest/complex-mpi1/cpu_sym
+END autotest/complex-mpi1/cpu_sym 0
+START autotest/complex-mpi1/gpu_sym
+END autotest/complex-mpi1/gpu_sym 1
+START autotest/complex-mpi1/cpu_full
+END autotest/complex-mpi1/cpu_full 0
+START autotest/complex-mpi1/gpu_full
+END autotest/complex-mpi1/gpu_full 0
+START autotest/real-mpi2/host
+END autotest/real-mpi2/host 0
+START autotest/real-mpi2/cpu_sym
+END autotest/real-mpi2/cpu_sym 0
+START autotest/real-mpi2/gpu_sym
+END autotest/real-mpi2/gpu_sym 1
+START autotest/real-mpi2/cpu_full
+END autotest/real-mpi2/cpu_full 0
+START autotest/real-mpi2/gpu_full
+END autotest/real-mpi2/gpu_full 0
+START autotest/complex-mpi2/host
+END autotest/complex-mpi2/host 0
+START autotest/complex-mpi2/cpu_sym
+END autotest/complex-mpi2/cpu_sym 0
+START autotest/complex-mpi2/gpu_sym
+END autotest/complex-mpi2/gpu_sym 1
+START autotest/complex-mpi2/cpu_full
+END autotest/complex-mpi2/cpu_full 0
+START autotest/complex-mpi2/gpu_full
+END autotest/complex-mpi2/gpu_full 0
+REPRODUCED: 4 GPU symmetry failures; 16 control runs passed references and match fixed results.
+ALL UPSTREAM VALIDATION PASSED: GPU regressions and 20 before / 20 after HSE cases.

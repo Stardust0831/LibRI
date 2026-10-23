@@ -1,0 +1,492 @@
+[
+  {
+    "name": "environment/compiler",
+    "command": [
+      "mpicxx",
+      "--version"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix",
+    "exit_code": 0,
+    "elapsed_seconds": 0.007235288619995117
+  },
+  {
+    "name": "environment/gpu",
+    "command": [
+      "nvidia-smi",
+      "-q"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix",
+    "exit_code": 0,
+    "elapsed_seconds": 0.7742187976837158
+  },
+  {
+    "name": "abacus/configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/abacus-source",
+      "-B",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build",
+      "-G",
+      "Unix Makefiles",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DENABLE_LIBXC=ON",
+      "-DENABLE_LIBRI=ON",
+      "-DENABLE_LIBRI_GPU=ON",
+      "-DENABLE_ELPA=OFF",
+      "-DENABLE_NCCL_PARALLEL_DEVICE=OFF",
+      "-DBUILD_TESTING=OFF",
+      "-DGIT_SUBMODULE=OFF",
+      "-DCMAKE_CUDA_ARCHITECTURES=70",
+      "-DUSE_CUDA=ON",
+      "-DUSE_CUDA_MPI=ON",
+      "-DENABLE_CUSOLVERMP=ON",
+      "-DENABLE_CUBLASMP=ON",
+      "-DLIBRI_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/libri",
+      "-DLIBCOMM_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+      "-Dcereal_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/lib/cmake/cereal",
+      "-DDDLA_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix",
+    "exit_code": 0,
+    "elapsed_seconds": 18.740567207336426
+  },
+  {
+    "name": "abacus/build",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build",
+      "--target",
+      "abacus_std_gpu",
+      "--verbose",
+      "--parallel",
+      "12"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix",
+    "exit_code": 0,
+    "elapsed_seconds": 243.05423545837402
+  },
+  {
+    "name": "abacus/version",
+    "command": [
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "--version"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix",
+    "exit_code": 0,
+    "elapsed_seconds": 0.16227126121520996
+  },
+  {
+    "name": "abacus/help",
+    "command": [
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-h",
+      "device_exx"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix",
+    "exit_code": 0,
+    "elapsed_seconds": 0.20990729331970215
+  },
+  {
+    "name": "autotest/real-mpi1/host",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 4.855668783187866
+  },
+  {
+    "name": "autotest/real-mpi1/cpu_sym",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 6.790263652801514
+  },
+  {
+    "name": "autotest/real-mpi1/gpu_sym",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/08_RI",
+    "exit_code": 1,
+    "elapsed_seconds": 3.723553419113159
+  },
+  {
+    "name": "autotest/real-mpi1/cpu_full",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 6.0189313888549805
+  },
+  {
+    "name": "autotest/real-mpi1/gpu_full",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi1/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 7.201887607574463
+  },
+  {
+    "name": "autotest/complex-mpi1/host",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 5.005080223083496
+  },
+  {
+    "name": "autotest/complex-mpi1/cpu_sym",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 6.295889616012573
+  },
+  {
+    "name": "autotest/complex-mpi1/gpu_sym",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/08_RI",
+    "exit_code": 1,
+    "elapsed_seconds": 4.4000303745269775
+  },
+  {
+    "name": "autotest/complex-mpi1/cpu_full",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 6.184239387512207
+  },
+  {
+    "name": "autotest/complex-mpi1/gpu_full",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "1",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi1/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 7.329963684082031
+  },
+  {
+    "name": "autotest/real-mpi2/host",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 8.174255609512329
+  },
+  {
+    "name": "autotest/real-mpi2/cpu_sym",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 10.399645328521729
+  },
+  {
+    "name": "autotest/real-mpi2/gpu_sym",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/08_RI",
+    "exit_code": 1,
+    "elapsed_seconds": 6.4057018756866455
+  },
+  {
+    "name": "autotest/real-mpi2/cpu_full",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 10.76228642463684
+  },
+  {
+    "name": "autotest/real-mpi2/gpu_full",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/real-mpi2/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 12.875940322875977
+  },
+  {
+    "name": "autotest/complex-mpi2/host",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 8.004538297653198
+  },
+  {
+    "name": "autotest/complex-mpi2/cpu_sym",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 9.74319338798523
+  },
+  {
+    "name": "autotest/complex-mpi2/gpu_sym",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/08_RI",
+    "exit_code": 1,
+    "elapsed_seconds": 6.640575885772705
+  },
+  {
+    "name": "autotest/complex-mpi2/cpu_full",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 10.54424238204956
+  },
+  {
+    "name": "autotest/complex-mpi2/gpu_full",
+    "command": [
+      "bash",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/integrate/Autotest.sh",
+      "-a",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu",
+      "-n",
+      "2",
+      "-o",
+      "1",
+      "-f",
+      "CASES.one.txt",
+      "-r",
+      ".*"
+    ],
+    "cwd": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/results/abacus-cases/complex-mpi2/tests/08_RI",
+    "exit_code": 0,
+    "elapsed_seconds": 12.160932302474976
+  }
+]

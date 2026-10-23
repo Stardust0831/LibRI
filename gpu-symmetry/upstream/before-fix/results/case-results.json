@@ -1,0 +1,666 @@
+{
+  "real-mpi1": {
+    "host": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708753
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "cpu_sym": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708739
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "gpu_sym": {
+      "harness_exit_code": 1,
+      "converged": false,
+      "reference_checks": [],
+      "repository_passed": false,
+      "numerical_result": null,
+      "exception": "label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49"
+    },
+    "cpu_full": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708733
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "gpu_full": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708747
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    }
+  },
+  "complex-mpi1": {
+    "host": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708764
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "cpu_sym": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708773
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "gpu_sym": {
+      "harness_exit_code": 1,
+      "converged": false,
+      "reference_checks": [],
+      "repository_passed": false,
+      "numerical_result": null,
+      "exception": "label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49"
+    },
+    "cpu_full": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708739
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "gpu_full": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708744
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    }
+  },
+  "real-mpi2": {
+    "host": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708804
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "cpu_sym": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708847
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "gpu_sym": {
+      "harness_exit_code": 1,
+      "converged": false,
+      "reference_checks": [],
+      "repository_passed": false,
+      "numerical_result": null,
+      "exception": "label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49"
+    },
+    "cpu_full": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708787
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "gpu_full": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708838
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    }
+  },
+  "complex-mpi2": {
+    "host": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.4406755170876
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "cpu_sym": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.44067551708804
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "gpu_sym": {
+      "harness_exit_code": 1,
+      "converged": false,
+      "reference_checks": [],
+      "repository_passed": false,
+      "numerical_result": null,
+      "exception": "label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49"
+    },
+    "cpu_full": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.4406755170876
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    },
+    "gpu_full": {
+      "harness_exit_code": 0,
+      "converged": true,
+      "reference_checks": [
+        "etotperatomref",
+        "etotref",
+        "nksibzref",
+        "pointgroupref",
+        "spacegroupref",
+        "totalforceref",
+        "totalstressref"
+      ],
+      "repository_passed": true,
+      "numerical_result": {
+        "energy_ev": [
+          -189.4406755170876
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "exception": null
+    }
+  }
+}

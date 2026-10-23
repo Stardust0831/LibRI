@@ -1,0 +1,16 @@
+{
+  "libri_versions": {
+    "baseline": "bc79bb2ca52af2dbd9ab612c38e248f6c9dd96f1",
+    "backport": "4a41b91335013e36c8e623370389cc7243c1dc26",
+    "fixed": "27951e74f428decceca7805297838db6130cf8da"
+  },
+  "prerequisite_pr": "https://github.com/abacusmodeling/LibRI/pull/15",
+  "abacus_base": "b30b66a5a333a2667d618932f8430a80dd92146a",
+  "abacus_patch": "../abacus-validation-only.patch",
+  "additional_libri_patches": [],
+  "archives_sha256": {
+    "baseline": "39aecb33b5f5a067d678c916634890db0112255bdff827161ae281a36b788a55",
+    "backport": "d31b269eacac6d82ac0f04e15a357f07009e30da3542bf55d46f6b7a9bc24de3",
+    "fixed": "e57b4856c6a4519d52a2f6683873c4eef3f9412e9e2806b905da226859f20be5"
+  }
+}

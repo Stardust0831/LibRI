@@ -1,0 +1,124 @@
+-----AUTO TESTS OF ABACUS ------
+ABACUS path: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu
+Number of processes: 1
+Number of threads: 1
+Concurrent test cases: 1
+Test accuracy totenergy: 0.0000001 eV
+Test accuracy force: 0.0001
+Test accuracy stress: 0.001
+Test accuracy descriptor mean: 0.00001
+Check accuaracy: 8
+Test cases file: CASES.one.txt
+Test cases regex: .*
+Generate reference: 
+Property collectors: true
+--------------------------------
+
+[0;32m[ RUN      ][0m gpu_sym
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+ Updating EXX terminate called after throwing an instance of 'std::invalid_argument'
+  what():  label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49
+[16v100n06:3800653] *** Process received signal ***
+[16v100n06:3800653] Signal: Aborted (6)
+[16v100n06:3800653] Signal code:  (-6)
+[16v100n06:3800653] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x1535fe6b8330]
+[16v100n06:3800653] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x1535fe711b2c]
+[16v100n06:3800653] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x1535fe6b827e]
+[16v100n06:3800653] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x1535fe69b8ff]
+[16v100n06:3800653] [ 4] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xa5ff5)[0x1535fe92aff5]
+[16v100n06:3800653] [ 5] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xbb0da)[0x1535fe9400da]
+[16v100n06:3800653] [ 6] /lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_call_terminate+0x33)[0x1535fe92a8e6]
+[16v100n06:3800653] [ 7] /lib/x86_64-linux-gnu/libstdc++.so.6(__gxx_personality_v0+0x31a)[0x1535fe93f8ba]
+[16v100n06:3800653] [ 8] /lib/x86_64-linux-gnu/libgcc_s.so.1(+0x22b06)[0x153646792b06]
+[16v100n06:3800653] [ 9] /lib/x86_64-linux-gnu/libgcc_s.so.1(_Unwind_RaiseException+0x311)[0x1536467931f1]
+[16v100n06:3800653] [10] /lib/x86_64-linux-gnu/libstdc++.so.6(__cxa_throw+0x44)[0x1535fe940384]
+[16v100n06:3800653] [11] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x1713b8)[0x55bb7f7993b8]
+[16v100n06:3800653] [12] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x1dce5d)[0x55bb7f804e5d]
+[16v100n06:3800653] [13] /lib/x86_64-linux-gnu/libgomp.so.1(GOMP_parallel+0x47)[0x1536467b6977]
+[16v100n06:3800653] [14] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x203aa1)[0x55bb7f82baa1]
+[16v100n06:3800653] [15] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x20ca41)[0x55bb7f834a41]
+[16v100n06:3800653] [16] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x20fce9)[0x55bb7f837ce9]
+[16v100n06:3800653] [17] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x2112cd)[0x55bb7f8392cd]
+[16v100n06:3800653] [18] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x72d8ec)[0x55bb7fd558ec]
+[16v100n06:3800653] [19] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x72fa51)[0x55bb7fd57a51]
+[16v100n06:3800653] [20] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x21e913)[0x55bb7f846913]
+[16v100n06:3800653] [21] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x11947c)[0x55bb7f74147c]
+[16v100n06:3800653] [22] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x66952f)[0x55bb7fc9152f]
+[16v100n06:3800653] [23] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x10cc41)[0x55bb7f734c41]
+[16v100n06:3800653] [24] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x10aada)[0x55bb7f732ada]
+[16v100n06:3800653] [25] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x10ac9c)[0x55bb7f732c9c]
+[16v100n06:3800653] [26] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0xeaca9)[0x55bb7f712ca9]
+[16v100n06:3800653] [27] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x1535fe69d1ca]
+[16v100n06:3800653] [28] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x1535fe69d28b]
+[16v100n06:3800653] [29] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/upstream-validation/before-fix/abacus-build/abacus_std_gpu(+0x108eb5)[0x55bb7f730eb5]
+[16v100n06:3800653] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 3800653 on node 16v100n06 exited on
+signal 6 (Aborted).
+--------------------------------------------------------------------------
+[0;31m[ERROR     ][0m gpu_sym failed.
+
+                     ▄████▄ █████▄ ▄████▄ ▄█████ ██  ██ ▄█████ 
+                     ██▄▄██ ██▄▄██ ██▄▄██ ██     ██  ██ ▀▀▀▄▄▄ 
+                     ██  ██ ██▄▄█▀ ██  ██ ▀█████ ▀████▀ █████▀ 
+
+                                                                                     
+                                v3.11.0-beta11
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: unknown
+
+ Sat Oct 24 00:30:42 2026
+ MAKE THE DIR         : OUT.autotest/
+ RUNNING WITH DEVICE  : CPU / AMD Ryzen Threadripper PRO 5995WX 64-Cores (x1)
+                        GPU / Tesla V100-SXM2-16GB (x2)
+ WARNING: some of potential function is set to zero cause of less than 1e-30.
+ NAME OF ELEMENT      : Si
+ DFT FUNC. (PSEUDO)   : PBE
+ DFT FUNC. (SET TO)   : HSE
+ MAKE SURE THIS DFT FUNCTIONAL IS WHAT YOU NEED
+ UNIFORM GRID DIM          : 15 * 15 * 15
+ UNIFORM GRID DIM (BIG)    : 5 * 5 * 5
+ DONE(0.249662   SEC) : SYMMETRY
+ DONE(0.249668   SEC) : SETUP UNITCELL
+ DONE(0.342525   SEC) : INIT K-POINTS
+ ----------------------------------------------------------------
+ Self-consistent calculations for electrons
+ ----------------------------------------------------------------
+ SPIN    KPOINTS         PROCESSES   THREADS/PROC  THREADS/TOTAL 
+ 1       3               1           1             1             
+ ----------------------------------------------------------------
+ Use Systematically Improvable Atomic bases
+ ----------------------------------------------------------------
+ TOTAL NBASE 8
+ ELEMENT ORBITALS        NBASE       NATOM       
+ Si      1s1p-6au        4           2           
+ ----------------------------------------------------------------
+ Initial plane wave basis and FFT box
+ ----------------------------------------------------------------
+ DONE(0.342939   SEC) : INIT PLANEWAVE
+ START CHARGE         : ATOMIC
+ DONE(0.381809   SEC) : CHARGE
+ DONE(0.980486   SEC) : POTENTIALS
+
+ ================================================================
+ SELF-CONSISTENT: 
+ ================================================================
+ DONE(0.999354   SEC) : INIT SCF
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ CU1   -1.94171354e+02   0.00000000e+00   3.5930e-01   0.05
+ CU2   -1.94010465e+02   1.60888707e-01   1.1845e-01   0.03
+ CU3   -1.94012823e+02  -2.35798729e-03   9.0772e-03   0.03
+ CU4   -1.94013016e+02  -1.92520326e-04   1.8076e-04   0.03
+ CU5   -1.94013037e+02  -2.11712192e-05   5.9050e-06   0.03
+ CU6   -1.94013037e+02  -1.13734726e-07   1.0080e-06   0.03
+ CU7   -1.94013037e+02  -1.86911298e-08   2.4234e-08   0.07
+[----------] Time elapsed: 4.313 seconds
+
+[WARNING][0m    1 test cases out of 1 failed.
+gpu_sym
