@@ -6,7 +6,7 @@ The [repair branch](https://github.com/Stardust0831/LibRI/tree/fix/gpu-symmetry-
 
 ## ABACUS before/after comparison
 
-The [matched end-to-end comparison](before-fix/README.md) now includes 20 runs with the original LibRI revision and the same 20 configurations with the fix. All four GPU RI runs with real-space symmetry enabled abort before the fix with `std::invalid_argument` (`a0b0_a1b1`); all four pass after the fix. The other 16 controls pass unchanged repository references in both versions. Their largest before/after energy difference is 6.54e-13 eV; force and stress components agree at printed precision. Inputs, references and tolerances are byte-identical. Complete baseline compilation and runtime logs accompany the comparison.
+The [matched end-to-end comparison](before-fix/README.md) now includes 20 runs with the original LibRI revision and the same 20 configurations with the fix. All four GPU RI runs with real-space symmetry enabled abort before the fix with `std::invalid_argument` (`a0b0_a1b1`); all four pass after the fix. The other 16 controls pass unchanged repository references in both versions. The 16 controls also pass direct comparisons between the original and fixed versions. Inputs, references and tolerances are byte-identical. Complete baseline compilation and runtime logs accompany the comparison.
 
 ## Complete original logs
 
@@ -31,8 +31,8 @@ The first job completed the builds, contraction tests and four HSE cases. Its po
 
 ## Causes
 
-1. Six labels visit the intermediate atom `Aa01` before output atom `Aa2` is known. The old symmetry filter treats those calls as invalid and throws. Four additional labels call the atom/cell overload with output atom `Ab01`, which was also unsupported.
-2. Four `a01b01_a2b2` labels pass `(Aa01, Ab01, Ab2)` to a callback that screens its first and third arguments. Their output is `(Aa01, Ab01)`, so they screen the intermediate `Ab2` instead. The backport fixes this argument order.
+1. Six labels visit the intermediate atom `Aa01` before output atom `Aa2` is known. The old symmetry filter treats those calls as invalid and throws. The fix defers screening until the output atoms are known; returning `false` at the earlier stage means “do not skip this candidate.” Four additional labels call the atom/cell overload with output atom `Ab01`, which was also unsupported.
+2. Four `a01b01_a2b2` labels pass `(Aa01, Ab01, Ab2)` to a callback that screens its first and third arguments. Their output is `(Aa01, Ab01)`, so they screen the intermediate `Ab2` instead. The backport fixes this argument order so the callback checks the output pair `(Aa01, Ab01)`.
 3. Four `a01b2_a2b01` labels still screen `(Aa01, Aa2)` while summing over `Aa2`. Restricting an internal summation to the output sector discards valid contributions. The additional fix moves that check into the loop where `Ab01` is available and screens `(Aa01, Ab01)` instead.
 
 The third defect is visible only after removing the earlier exception. A callback-only test cannot detect it because it does not execute the actual packing and contraction loops.
@@ -59,7 +59,7 @@ The remaining four labels were `a0b2_a2b0`, `a0b2_a2b1`, `a1b2_a2b0`, and `a1b2_
 
 - Full ABACUS GPU compilation and linking, including BSE, passed.
 - All 20 fixed-version HSE runs passed unchanged repository references: real/complex RI tensors × one/two MPI ranks × five solver/RI/symmetry combinations. The five combinations are a CPU solver with CPU RI, a GPU solver with CPU/GPU RI and real-space symmetry enabled, and a GPU solver with CPU/GPU RI and real-space symmetry disabled. Every case uses `symmetry=1` and `OMP_NUM_THREADS=1`.
-- All 16 extra comparisons of energies and individual force/stress components passed. Maximum energy difference: **4.55e-13 eV**. Forces and stresses agree at printed precision. This two-atom Si case has zero force by symmetry; the synthetic contraction test provides the nontrivial tensor-level checks.
+- All 16 additional CPU/GPU comparisons passed. This two-atom Si case has zero force by symmetry; the synthetic contraction test provides the nontrivial tensor-level checks.
 - CPU/GPU backend selections, real/complex selections and the real-space symmetry switch were checked in each emitted `INPUT.info`; every SCF calculation converged.
 
 ## Selected excerpts

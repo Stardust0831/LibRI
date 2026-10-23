@@ -6,17 +6,17 @@ The baseline was compiled independently from the same ABACUS source (`b30b66a5a3
 
 Inputs, structures, k-points, reference results and tolerance files are byte-identical to the fixed runs. The [input/reference hashes](results/input-reference-sha256.json) record all six fixture files per run. The 115 original LibRI headers are verified before applying the OpenMP patch; only its two `LRI_k` headers change. [Original header hashes](control/original-header-sha256.json), [applied patch log](control/apply-openmp-patch.log), [build header hashes](build-records/libri-header-sha256.json).
 
-Each row below contains four calculations: real/complex RI tensors × one/two MPI ranks. All use `symmetry=1` and one OpenMP thread; two-rank GPU RI uses two GPUs. After-version errors are relative to the CPU RI symmetry reference within each scalar/rank group.
+Each row below contains four calculations: real/complex RI tensors × one/two MPI ranks. All use `symmetry=1` and one OpenMP thread; two-rank GPU RI uses two GPUs. PASS means SCF convergence and successful repository reference checks.
 
-| Configuration | Before: `f683421` | After: `2781215` | After: max abs ΔE (eV) | After: max abs ΔF (eV/Å) | After: max abs Δstress (kbar) |
-| --- | --- | --- | ---: | ---: | ---: |
-| CPU ScaLAPACK / CPU RI / symmetry on (`host`) | **4/4 PASS** | **4/4 PASS** | 3.41e-13 | 0 | 0 |
-| GPU cuSOLVER / CPU RI / symmetry on (`cpu_sym`, reference) | **4/4 PASS** | **4/4 PASS** | — | — | — |
-| GPU cuSOLVER / GPU RI / symmetry on (`gpu_sym`) | **0/4 PASS; 4 aborts** | **4/4 PASS** | 4.26e-13 | 0 | 0 |
-| GPU cuSOLVER / CPU RI / symmetry off (`cpu_full`) | **4/4 PASS** | **4/4 PASS** | 4.55e-13 | 0 | 0 |
-| GPU cuSOLVER / GPU RI / symmetry off (`gpu_full`) | **4/4 PASS** | **4/4 PASS** | 4.55e-13 | 0 | 0 |
+| Solver / RI backend / real-space EXX symmetry | Before: `f683421` | After: `2781215` |
+| --- | --- | --- |
+| CPU ScaLAPACK / CPU RI / on | 4/4 PASS | 4/4 PASS |
+| GPU cuSOLVER / CPU RI / on | 4/4 PASS | 4/4 PASS |
+| GPU cuSOLVER / GPU RI / on | **4/4 abort with `std::invalid_argument`** | **4/4 PASS** |
+| GPU cuSOLVER / CPU RI / off | 4/4 PASS | 4/4 PASS |
+| GPU cuSOLVER / GPU RI / off | 4/4 PASS | 4/4 PASS |
 
-Across the 16 configurations that complete in both versions, the maximum before/after energy difference is **6.54e-13 eV**. Force and stress components agree at printed precision. The Si fixture has symmetry-enforced zero forces. [Machine-readable before/after comparisons](results/summary.json).
+The 16 configurations that complete in both versions also pass direct comparisons of their outputs. The Si fixture has symmetry-enforced zero forces. [Machine-readable outcomes and comparisons](results/summary.json).
 
 ## Complete original records
 
@@ -27,43 +27,26 @@ Across the 16 configurations that complete in both versions, the maximum before/
 - [Complete scheduler output](before-fix-1913589.log), [scheduler state](results/scheduler.txt) and [actual build/test script](control/run.py).
 - [Previously recorded fixed-version runs](../README.md).
 
-## Exact failure excerpt
+## Failure excerpt
+
+The build path is abbreviated below; the complete original log is linked above.
 
 ```text
  Updating EXX terminate called after throwing an instance of 'std::invalid_argument'
-  what():  label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49
+  what():  label a0b0_a1b1 error in .../Filter_Atom_Symmetry.h line 49
 ```
 
 All four GPU symmetry runs abort before a final energy is available. They are recorded as failed calculations; their expected failures make the regression-reproduction job succeed.
 
-## Individual before/after energies
+## Logs for each affected configuration
 
-<details>
-<summary>All 20 matched configurations: before/after energies and raw results</summary>
+The original runs abort inside the symmetry callback. The matching fixed runs converge and pass all seven repository checks:
 
-Each Before/After result links to the corresponding original inputs and outputs. PASS means SCF convergence and all seven repository checks passed. An abort produces no final energy; it is not assigned a numerical error of zero.
+| RI tensors / MPI ranks | Before | After |
+| --- | --- | --- |
+| Real / 1 | [Exception and abort](results/autotest/real-mpi1/gpu_sym/output.log) | [Reference checks pass](https://github.com/Stardust0831/LibRI/blob/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi1/autotest.log#L29) |
+| Complex / 1 | [Exception and abort](results/autotest/complex-mpi1/gpu_sym/output.log) | [Reference checks pass](https://github.com/Stardust0831/LibRI/blob/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi1/autotest.log#L41) |
+| Real / 2 | [Exception and abort](results/autotest/real-mpi2/gpu_sym/output.log) | [Reference checks pass](https://github.com/Stardust0831/LibRI/blob/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi2/autotest.log#L41) |
+| Complex / 2 | [Exception and abort](results/autotest/complex-mpi2/gpu_sym/output.log) | [Reference checks pass](https://github.com/Stardust0831/LibRI/blob/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi2/autotest.log#L41) |
 
-| RI tensors / MPI ranks | Configuration | Before: energy (eV) | After: energy (eV) | Before | After |
-| --- | --- | ---: | ---: | --- | --- |
-| Real / 1 | `host` | -189.44067551708753 | -189.44067551708753 | [PASS](results/abacus-cases/real-mpi1/tests/08_RI/host) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi1/tests/08_RI/host) |
-| Real / 1 | `cpu_sym` | -189.44067551708753 | -189.44067551708767 | [PASS](results/abacus-cases/real-mpi1/tests/08_RI/cpu_sym) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi1/tests/08_RI/cpu_sym) |
-| Real / 1 | `gpu_sym` | — (aborted) | -189.44067551708724 | [ABORT](results/abacus-cases/real-mpi1/tests/08_RI/gpu_sym) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi1/tests/08_RI/gpu_sym) |
-| Real / 1 | `cpu_full` | -189.44067551708719 | -189.44067551708767 | [PASS](results/abacus-cases/real-mpi1/tests/08_RI/cpu_full) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi1/tests/08_RI/cpu_full) |
-| Real / 1 | `gpu_full` | -189.44067551708767 | -189.44067551708775 | [PASS](results/abacus-cases/real-mpi1/tests/08_RI/gpu_full) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi1/tests/08_RI/gpu_full) |
-| Complex / 1 | `host` | -189.44067551708764 | -189.44067551708764 | [PASS](results/abacus-cases/complex-mpi1/tests/08_RI/host) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi1/tests/08_RI/host) |
-| Complex / 1 | `cpu_sym` | -189.44067551708767 | -189.44067551708753 | [PASS](results/abacus-cases/complex-mpi1/tests/08_RI/cpu_sym) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi1/tests/08_RI/cpu_sym) |
-| Complex / 1 | `gpu_sym` | — (aborted) | -189.44067551708716 | [ABORT](results/abacus-cases/complex-mpi1/tests/08_RI/gpu_sym) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi1/tests/08_RI/gpu_sym) |
-| Complex / 1 | `cpu_full` | -189.44067551708761 | -189.44067551708707 | [PASS](results/abacus-cases/complex-mpi1/tests/08_RI/cpu_full) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi1/tests/08_RI/cpu_full) |
-| Complex / 1 | `gpu_full` | -189.44067551708747 | -189.44067551708707 | [PASS](results/abacus-cases/complex-mpi1/tests/08_RI/gpu_full) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi1/tests/08_RI/gpu_full) |
-| Real / 2 | `host` | -189.44067551708804 | -189.44067551708804 | [PASS](results/abacus-cases/real-mpi2/tests/08_RI/host) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi2/tests/08_RI/host) |
-| Real / 2 | `cpu_sym` | -189.44067551708807 | -189.44067551708770 | [PASS](results/abacus-cases/real-mpi2/tests/08_RI/cpu_sym) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi2/tests/08_RI/cpu_sym) |
-| Real / 2 | `gpu_sym` | — (aborted) | -189.44067551708784 | [ABORT](results/abacus-cases/real-mpi2/tests/08_RI/gpu_sym) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi2/tests/08_RI/gpu_sym) |
-| Real / 2 | `cpu_full` | -189.44067551708827 | -189.44067551708787 | [PASS](results/abacus-cases/real-mpi2/tests/08_RI/cpu_full) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi2/tests/08_RI/cpu_full) |
-| Real / 2 | `gpu_full` | -189.44067551708795 | -189.44067551708795 | [PASS](results/abacus-cases/real-mpi2/tests/08_RI/gpu_full) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/real-mpi2/tests/08_RI/gpu_full) |
-| Complex / 2 | `host` | -189.44067551708761 | -189.44067551708761 | [PASS](results/abacus-cases/complex-mpi2/tests/08_RI/host) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi2/tests/08_RI/host) |
-| Complex / 2 | `cpu_sym` | -189.44067551708798 | -189.44067551708784 | [PASS](results/abacus-cases/complex-mpi2/tests/08_RI/cpu_sym) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi2/tests/08_RI/cpu_sym) |
-| Complex / 2 | `gpu_sym` | — (aborted) | -189.44067551708827 | [ABORT](results/abacus-cases/complex-mpi2/tests/08_RI/gpu_sym) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi2/tests/08_RI/gpu_sym) |
-| Complex / 2 | `cpu_full` | -189.44067551708770 | -189.44067551708818 | [PASS](results/abacus-cases/complex-mpi2/tests/08_RI/cpu_full) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi2/tests/08_RI/cpu_full) |
-| Complex / 2 | `gpu_full` | -189.44067551708832 | -189.44067551708767 | [PASS](results/abacus-cases/complex-mpi2/tests/08_RI/gpu_full) | [PASS](https://github.com/Stardust0831/LibRI/tree/11d8d5cafc22b23089c38024bbc8007a277ebd6c/gpu-symmetry/results/abacus-cases/complex-mpi2/tests/08_RI/gpu_full) |
-
-</details>
+The [complete baseline case files](results/abacus-cases) and [complete fixed case files](../results/abacus-cases) contain all 20 configurations for each version.
