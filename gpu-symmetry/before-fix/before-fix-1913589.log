@@ -1,0 +1,53 @@
+START environment/compiler
+END environment/compiler 0
+START environment/gpu
+END environment/gpu 0
+START abacus/configure
+END abacus/configure 0
+START abacus/build
+END abacus/build 0
+START abacus/version
+END abacus/version 0
+START abacus/help
+END abacus/help 0
+START autotest/real-mpi1/host
+END autotest/real-mpi1/host 0
+START autotest/real-mpi1/cpu_sym
+END autotest/real-mpi1/cpu_sym 0
+START autotest/real-mpi1/gpu_sym
+END autotest/real-mpi1/gpu_sym 1
+START autotest/real-mpi1/cpu_full
+END autotest/real-mpi1/cpu_full 0
+START autotest/real-mpi1/gpu_full
+END autotest/real-mpi1/gpu_full 0
+START autotest/complex-mpi1/host
+END autotest/complex-mpi1/host 0
+START autotest/complex-mpi1/cpu_sym
+END autotest/complex-mpi1/cpu_sym 0
+START autotest/complex-mpi1/gpu_sym
+END autotest/complex-mpi1/gpu_sym 1
+START autotest/complex-mpi1/cpu_full
+END autotest/complex-mpi1/cpu_full 0
+START autotest/complex-mpi1/gpu_full
+END autotest/complex-mpi1/gpu_full 0
+START autotest/real-mpi2/host
+END autotest/real-mpi2/host 0
+START autotest/real-mpi2/cpu_sym
+END autotest/real-mpi2/cpu_sym 0
+START autotest/real-mpi2/gpu_sym
+END autotest/real-mpi2/gpu_sym 1
+START autotest/real-mpi2/cpu_full
+END autotest/real-mpi2/cpu_full 0
+START autotest/real-mpi2/gpu_full
+END autotest/real-mpi2/gpu_full 0
+START autotest/complex-mpi2/host
+END autotest/complex-mpi2/host 0
+START autotest/complex-mpi2/cpu_sym
+END autotest/complex-mpi2/cpu_sym 0
+START autotest/complex-mpi2/gpu_sym
+END autotest/complex-mpi2/gpu_sym 1
+START autotest/complex-mpi2/cpu_full
+END autotest/complex-mpi2/cpu_full 0
+START autotest/complex-mpi2/gpu_full
+END autotest/complex-mpi2/gpu_full 0
+REPRODUCED: 4 GPU symmetry failures; 16 control runs passed references and match fixed results.

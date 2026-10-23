@@ -1,0 +1,734 @@
+                                                                                     
+                              ABACUS v3.11.0-beta11
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: unknown
+
+    Start Time is Fri Oct 23 23:32:54 2026
+                                                                                     
+ ------------------------------------------------------------------------------------
+
+ READING GENERAL INFORMATION
+                           global_out_dir = OUT.autotest/
+                           global_in_card = INPUT
+                               pseudo_dir = ../../PP_ORB/
+                              orbital_dir = ../../PP_ORB/
+                                    DRANK = 1
+                                    DSIZE = 1
+                                   DCOLOR = 1
+                                    GRANK = 1
+                                    GSIZE = 1
+
+ #ENERGY SOLVER# ksdft_lcao
+ RUNNING WITH DEVICE  : CPU / AMD Ryzen Threadripper PRO 5995WX 64-Cores (x1)
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                        #Setup Unitcell#                            |
+ | From the input file and the structure file we know the number of   |
+ | different elments in this unitcell, then we list the detail        |
+ | information for each element, especially the zeta and polar atomic |
+ | orbital number for each element. The total atom number is counted. |
+ | We calculate the nearest atom distance for each atom and show the  |
+ | Cartesian and Direct coordinates for each atom. We list the file   |
+ | address for atomic orbitals. The volume and the lattice vectors    |
+ | in real and reciprocal space is also shown.                        |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ READING UNITCELL INFORMATION
+                       Number of elements = 1
+                  Lattice constant (Bohr) = 1.88977
+              Lattice constant (Angstrom) = 1.00002
+
+ READING ATOM TYPE 1
+                               Atom label = Si
+                      L=0, number of zeta = 1
+                      L=1, number of zeta = 1
+            Number of atoms for this type = 2
+
+ WARNING: initial magmom is all zero and symmetry=1; autoset magnetism is SKIPPED to preserve the symmetry of the initial (nonmagnetic) structure.
+          If spontaneous magnetism is expected, set magmom explicitly in STRU, or use symmetry = 0 or -1.
+
+                        TOTAL ATOM NUMBER = 2
+
+ DIRECT COORDINATES
+ atom                  x                  y                  z     mag
+   Si     0.125000000000     0.125000000000     0.125000000000  0.0000
+   Si     0.875000000000     0.875000000000     0.875000000000  0.0000
+
+ ATOMIC VELOCITIES
+ atom                 vx                 vy                 vz
+   Si                  0                  0                  0
+   Si                  0                  0                  0
+
+                     Cell volume (Bohr^3) = 268.14
+                        Cell volume (A^3) = 39.7343
+
+ Lattice vectors: (Cartesian coordinate: in unit of a_0)
+                   +0            +2.70834            +2.70834
+             +2.70834                  +0            +2.70834
+             +2.70834            +2.70834                  +0
+ Reciprocal vectors: (Cartesian coordinate: in unit of 2 pi/a_0)
+            -0.184615           +0.184615           +0.184615
+            +0.184615           -0.184615           +0.184615
+            +0.184615           +0.184615           -0.184615
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                 #Read Pseudopotentials Files#                      |
+ | ABACUS supports norm-conserving (NC) pseudopotentials for both     |
+ | plane wave basis set and numerical atomic orbital basis set.       |
+ | In addition, ABACUS supports ultrasoft pseudopotentials (USPP)     |
+ | for plane wave basis set.                                          |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+                PAO radial cut off (Bohr) = 15
+
+                     Pseudopotential file = Si_dojo_nsoc.upf
+                     Pseudopotential type = NC
+          Exchange-correlation functional = PBE
+                 Nonlocal core correction = 1
+                        Valence electrons = 4
+                                     Lmax = 2
+                           Number of zeta = 2
+                     Number of projectors = 6
+                           L of projector = 0
+                           L of projector = 0
+                           L of projector = 1
+                           L of projector = 1
+                           L of projector = 2
+                           L of projector = 2
+                    DFT functional set to = HSE
+         Number of pseudo atomic orbitals = 8
+            Electron number of element Si = 4
+      Total electron number of element Si = 8
+          Autoset the number of electrons = 8
+               Occupied electronic states = 4
+                 Number of basis (NLOCAL) = 8
+     Number of electronic states (NBANDS) = 8
+ Libxc v7.0.0
+	S. Lehtola, C. Steigemann, M. J.T. Oliveira, and M. A.L. Marques.,  SoftwareX 7, 1–5 (2018)
+ XC: HSE06
+	J. Heyd, G. E. Scuseria, and M. Ernzerhof.,  J. Chem. Phys. 118, 8207 (2003)
+	J. Heyd, G. E. Scuseria, and M. Ernzerhof.,  J. Chem. Phys. 124, 219906 (2006)
+	A. V. Krukau, O. A. Vydrov, A. F. Izmaylov, and G. E. Scuseria.,  J. Chem. Phys. 125, 224106 (2006)
+
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |           #Setup Plane Waves of Charge/Potential#                  |
+ | Use the kinetic energy cutoff and the lattice vectors to generate  |
+ | the dimensions of FFT grid, which is used to represent the charge  |
+ | density or potential. If USPP is used, a double grid technique     |
+ | is applied.                                                        |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ SETUP PLANE WAVES FOR CHARGE/POTENTIAL
+  Energy cutoff for charge/potential (Ry) = 40
+            FFT grid for charge/potential = [ 15, 15, 15 ]
+           Number of FFT grids this proc. = 3375
+                Division for big FFT grid = [ 3, 3, 3 ]
+      FFT (big) grid for charge/potential = [ 5, 5, 5 ]
+     Number of FFT (big) grids this proc. = 125
+                    Number of plane waves = 1139
+        Number of sticks on FFT x-y plane = 151
+
+ PARALLEL PW FOR CHARGE/POTENTIAL
+     PROC   COLUMNS(POT)             PW
+        1            151           1139
+ --------------- SUM -------------------
+        1            151           1139
+
+                            Number of |g| = 37
+                                  Max |g| = 3.54461
+                                  Min |g| = 0
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                      #Symmetry Analysis#                           |
+ | We calculate the norm of 3 vectors and the angles between them,    |
+ | the type of Bravais lattice is given. We can judge if the unticell |
+ | is a primitive cell. Finally we give the point group operation for |
+ | this unitcell. We use the point group operations to perform        |
+ | symmetry analysis on given k-point mesh and the charge density.    |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ LATTICE VECTORS: (CARTESIAN COORDINATE: IN UNIT OF A0)
+                   +0            +2.70834            +2.70834
+             +2.70834                  +0            +2.70834
+             +2.70834            +2.70834                  +0
+                     Right-handed lattice = 1
+                                   NORM_A = 3.83017
+                                   NORM_B = 3.83017
+                                   NORM_C = 3.83017
+                           ALPHA (DEGREE) = 60
+                           BETA  (DEGREE) = 60
+                           GAMMA (DEGREE) = 60
+
+ The lattice vectors have been changed (STRU_SIMPLE.cif)
+
+ For optimal symmetric configuration:
+                             BRAVAIS TYPE = 3
+                     BRAVAIS LATTICE NAME = 03. Cubic F (face-centered)
+                                    ibrav = 3
+                                    IBRAV = 3
+                                  BRAVAIS = FACE CENTERED CUBIC
+                       LATTICE CONSTANT A = 5.41667
+
+ Original cell was already a primitive cell.
+              Number of rotation matrices = 48
+              PURE POINT GROUP OPERATIONS = 12
+                   SPACE GROUP OPERATIONS = 48
+                                       C2 = 3
+                                       C3 = 2
+                                       C4 = 0
+                                       C6 = 0
+                                       S1 = 3
+                                       S3 = 0
+                                       S4 = 0
+                                       S6 = 2
+                              POINT GROUP = D_3d
+               POINT GROUP IN SPACE GROUP = O_h
+ DONE : SYMMETRY Time : 0.0406226 (SEC)
+
+ DONE : SETUP UNITCELL Time : 0.0406321 (SEC)
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                       #Setup K-points#                             |
+ | We setup the k-points according to input parameters.               |
+ | The reduced k-points are set according to symmetry operations.     |
+ | We treat the spin as another set of k-points.                      |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+ SETUP K-POINTS
+                                    nspin = 1
+                   Input type of k points = Monkhorst-Pack(Gamma)
+                                   nkstot = 8
+                     Right-handed lattice = 1
+
+ For reciprocal-space lattice
+                     Bravais lattice type = 2
+                     Bravais lattice name = 02. Cubic I (body-centered)
+                     Right-handed lattice = 1
+
+ For k-vectors
+                     Bravais lattice type = 2
+                     Bravais lattice name = 02. Cubic I (body-centered)
+                     Right-handed lattice = 1
+              Number of rotation matrices = 48
+           Number of irreducible k-points = 3
+
+ K-POINTS REDUCTION ACCORDING TO SYMMETRY
+     IBZ    DIRECT_X    DIRECT_Y    DIRECT_Z  WEIGHT  ibz2bz
+       1  0.00000000  0.00000000  0.00000000  0.1250       0
+       2  0.50000000  0.50000000  0.50000000  0.5000       1
+       3  0.50000000  0.50000000  0.00000000  0.3750       3
+
+                               nkstot now = 3
+ K-POINTS DIRECT COORDINATES
+ KPOINTS    DIRECT_X    DIRECT_Y    DIRECT_Z  WEIGHT
+       1  0.00000000  0.00000000  0.00000000  0.1250
+       2  0.50000000  0.50000000  0.50000000  0.5000
+       3  0.50000000  0.50000000  0.00000000  0.3750
+
+
+       Number of k-points in this process = 3
+       Minimum distributed k-point number = 3
+
+ K-POINTS CARTESIAN COORDINATES
+ KPOINTS CARTESIAN_X CARTESIAN_Y CARTESIAN_Z  WEIGHT
+       1  0.00000000  0.00000000  0.00000000  0.2500
+       2  0.09230757  0.09230757  0.09230757  1.0000
+       3  0.00000000  0.00000000  0.18461513  0.7500
+
+
+ K-POINTS DIRECT COORDINATES
+ KPOINTS    DIRECT_X    DIRECT_Y    DIRECT_Z  WEIGHT
+       1  0.00000000  0.00000000  0.00000000  0.2500
+       2  0.50000000  0.50000000  0.50000000  1.0000
+       3  0.50000000  0.50000000  0.00000000  0.7500
+
+ DONE : INIT K-POINTS Time : 0.111463 (SEC)
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ | Setup charge mixing parameters                                     |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+                              mixing_type = broyden
+                              mixing_beta = 0.8
+                               mixing_gg0 = 1
+                           mixing_gg0_min = 0.1
+                              mixing_ndim = 8
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |              #Setup Plane Waves of Wave Functions#                 |
+ | Use the kinetic energy cutoff and the lattice vectors to generate  |
+ | the dimensions of FFT grid, which is used to represent the wave    |
+ | functions of electrons.                                            |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ SETUP PLANE WAVES FOR WAVE FUNCTIONS
+     Energy cutoff for wavefunc (unit:Ry) = 10
+              FFT grid for wave functions = [ 15, 15, 15 ]
+              Number of total plane waves = 259
+        Number of sticks on FFT x-y plane = 55
+
+ PARALLEL PW FOR WAVE FUNCTIONS
+     PROC   COLUMNS(POT)             PW
+        1             55            259
+ --------------- sum -------------------
+        1             55            259
+ DONE : INIT PLANEWAVE Time : 0.1117 (SEC)
+
+                                 init_chg = atomic
+ SET NONLOCAL PSEUDOPOTENTIAL PROJECTORS FOR ELEMENT Si
+ Max number of nonlocal projectors (all elements) = 6
+ DONE : CHARGE Time : 0.147944 (SEC)
+
+
+ *** Memory Allocation Warning ***  ORB::Jl(x) 23.3757 MB
+
+ *** Memory Allocation Warning ***  ORB::Jl(x) 35.0635 MB
+
+ *** Memory Allocation Warning ***  ORB::Jl(x) 140.604 MB
+ Auxiliary basis functions
+		Si		2 s		1 p		1 d		
+ DONE : POTENTIALS Time : 0.691433 (SEC)
+
+ ================================================================
+ SELF-CONSISTENT
+ ================================================================
+
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ |                                                                    |
+ |                    #Search Adjacent Atoms#                         |
+ | Set the adjacent atoms for each atom and set the periodic boundary |
+ | condition for the atoms on real space FFT grid. For k-dependent    |
+ | algorithm, we also need to set the sparse H and S matrix element   |
+ | for each atom.                                                     |
+ |                                                                    |
+ <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ SETUP SEARCHING RADIUS
+         Orbital max radius cutoff (Bohr) = 6
+  Nonlocal proj. max radius cutoff (Bohr) = 1.94
+                     Search radius (Bohr) = 15.9
+ SEARCH ADJACENT ATOMS
+                  searching radius (Bohr) = 15.9
+          Radius (unit: lattice constant) = 8.4
+                      Max number of cells = [ 4, 4, 4 ]
+                      Min number of cells = [ 3, 3, 3 ]
+                 Min coordinates of atoms = [ -15.6, -15.6, -15.6 ]
+                 Max coordinates of atoms = [ 21, 21, 21 ]
+                   Number of needed cells = [ 7, 7, 7 ]
+                                ParaV.nnr = 2656
+ DONE : INIT SCF Time : 0.708609 (SEC)
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         1
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 0.359296
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -14.2713261816       -194.1713540868      
+  E_Harris       -13.7124840171       -186.5679163658      
+  E_Fermi        0.8654468347         11.7750082680        
+  E_gap(k)       0.4644180492         6.3187317234         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         2
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 0.118451
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -14.2595010840       -194.0104653796      
+  E_Harris       -13.9949927724       -190.4116451740      
+  E_Fermi        0.9829399700         13.3735843839        
+  E_gap(k)       0.4458194148         6.0656843199         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         3
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 0.00907724
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -14.2596743928       -194.0128233669      
+  E_Harris       -14.2384579353       -193.7241586531      
+  E_Fermi        1.0470200732         14.2454389161        
+  E_gap(k)       0.4360120747         5.9322486130         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         4
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 0.000180759
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -14.2596885428       -194.0130158872      
+  E_Harris       -14.2596014925       -194.0118315069      
+  E_Fermi        1.0525661410         14.3208970398        
+  E_gap(k)       0.4349315352         5.9175471184         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         5
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 5.90497e-06
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -14.2596900988       -194.0130370584      
+  E_Harris       -14.2596789930       -194.0128859563      
+  E_Fermi        1.0525732961         14.3209943894        
+  E_gap(k)       0.4349239029         5.9174432755         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         6
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 1.00795e-06
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -14.2596901072       -194.0130371722      
+  E_Harris       -14.2596893465       -194.0130268217      
+  E_Fermi        1.0525755737         14.3210253781        
+  E_gap(k)       0.4349235988         5.9174391381         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         7
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 2.42342e-08
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -14.2596901086       -194.0130371909      
+  E_KS(sigma->0) -14.2594271822       -194.0094598944      
+  E_Harris       -14.2596900827       -194.0130368390      
+  E_band         4.3712562140         59.4739919286        
+  E_one_elec     7.1634095123         97.4631864750        
+  E_Hartree      2.1685317785         29.5043884819        
+  E_xc           -6.7511887020        -91.8546346206       
+  E_Ewald        -16.8399168447       -229.1188229341      
+  E_entropy(-TS) -0.0005258527        -0.0071545930        
+  E_descf        0.0000000000         0.0000000000         
+  E_localpp      -6.1689009427        -83.9322032182       
+  E_exx          0.0000000000         0.0000000000         
+  E_Fermi        1.0525756581         14.3210265268        
+  E_gap(k)       0.4349235858         5.9174389621         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         1
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 0.00108486
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236125334       -189.4404671978      
+  E_Harris       -15.7084048013       -213.7238117886      
+  E_Fermi        1.0291072194         14.0017220374        
+  E_gap(k)       0.5286560791         7.1927349579         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         2
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 0.00028826
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236146538       -189.4404960478      
+  E_Harris       -13.9230715909       -189.4331072978      
+  E_Fermi        1.0292897640         14.0042056837        
+  E_gap(k)       0.5285888285         7.1918199664         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         3
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 2.01932e-05
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236155537       -189.4405082915      
+  E_Harris       -13.9235507383       -189.4396264332      
+  E_Fermi        1.0293741705         14.0053540935        
+  E_gap(k)       0.5285623636         7.1914598939         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         4
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 6.55475e-07
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236156410       -189.4405094794      
+  E_Harris       -13.9236138969       -189.4404857500      
+  E_Fermi        1.0293870319         14.0055290813        
+  E_gap(k)       0.5285601243         7.1914294260         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         5
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 1.87636e-08
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236156413       -189.4405094834      
+  E_KS(sigma->0) -13.9233528196       -189.4369336107      
+  E_Harris       -13.9236156300       -189.4405093298      
+  E_band         3.9354438416         53.5444604050        
+  E_one_elec     7.1616060480         97.4386490844        
+  E_Hartree      2.1709026418         29.5366457320        
+  E_xc           -5.5224710503        -75.1370733248       
+  E_Ewald        -16.8399168447       -229.1188229341      
+  E_entropy(-TS) -0.0005256434        -0.0071517453        
+  E_descf        0.0000000000         0.0000000000         
+  E_localpp      -6.1693056782        -83.9377099280       
+  E_exx          -0.8932107927        -12.1527562955       
+  E_Fermi        1.0293874273         14.0055344610        
+  E_gap(k)       0.5285600685         7.1914286666         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         1
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 4.85175e-05
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236276715       -189.4406731624      
+  E_Harris       -13.9249931871       -189.4592519553      
+  E_Fermi        1.0291043491         14.0016829838        
+  E_gap(k)       0.5288777061         7.1957503486         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         2
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 1.28845e-05
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236277698       -189.4406744996      
+  E_Harris       -13.9236035810       -189.4403453949      
+  E_Fermi        1.0291124860         14.0017936927        
+  E_gap(k)       0.5288747010         7.1957094617         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         3
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 8.9837e-07
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236278101       -189.4406750491      
+  E_Harris       -13.9236249264       -189.4406358145      
+  E_Fermi        1.0291162430         14.0018448089        
+  E_gap(k)       0.5288735212         7.1956934100         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         4
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 2.93108e-08
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236278140       -189.4406751019      
+  E_KS(sigma->0) -13.9233649921       -189.4370992269      
+  E_Harris       -13.9236277358       -189.4406740382      
+  E_band         3.9348041106         53.5357564182        
+  E_one_elec     7.1622405119         97.4472814077        
+  E_Hartree      2.1710082602         29.5380827443        
+  E_xc           -5.5225042102        -75.1375244884       
+  E_Ewald        -16.8399168447       -229.1188229341      
+  E_entropy(-TS) -0.0005256437        -0.0071517499        
+  E_descf        0.0000000000         0.0000000000         
+  E_localpp      -6.1693235442        -83.9379530070       
+  E_exx          -0.8939298874        -12.1625400815       
+  E_Fermi        1.0291168149         14.0018525904        
+  E_gap(k)       0.5288734217         7.1956920559         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         1
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 2.18164e-06
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236278383       -189.4406754322      
+  E_Harris       -13.9236880294       -189.4414943738      
+  E_Fermi        1.0291041585         14.0016803906        
+  E_gap(k)       0.5288876076         7.1958850650         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         2
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 5.79278e-07
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236278427       -189.4406754924      
+  E_Harris       -13.9236267565       -189.4406607142      
+  E_Fermi        1.0291045238         14.0016853613        
+  E_gap(k)       0.5288874725         7.1958832272         
+ ----------------------------------------------------------
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ --> #ION MOVE#         1  #ELEC ITER#         3
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+               Electron density deviation = 4.03339e-08
+ ----------------------------------------------------------
+      Energy           Rydberg                 eV          
+ ----------------------------------------------------------
+  E_KohnSham     -13.9236278445       -189.4406755171      
+  E_KS(sigma->0) -13.9233650227       -189.4370996420      
+  E_Harris       -13.9236277151       -189.4406737556      
+  E_band         3.9347764049         53.5353794632        
+  E_one_elec     7.1622689545         97.4476683896        
+  E_Hartree      2.1710130025         29.5381472662        
+  E_xc           -5.5225056982        -75.1375447326       
+  E_Ewald        -16.8399168447       -229.1188229341      
+  E_entropy(-TS) -0.0005256438        -0.0071517502        
+  E_descf        0.0000000000         0.0000000000         
+  E_localpp      -6.1693243355        -83.9379637729       
+  E_exx          -0.8939616149        -12.1629717560       
+  E_Fermi        1.0291046925         14.0016876561        
+  E_gap(k)       0.5288874195         7.1958825059         
+ ----------------------------------------------------------
+
+ #SCF IS CONVERGED#
+ #TOTAL ENERGY# -189.44067552 eV
+ #FERMI ENERGY# 14.001687656 eV
+ Write eigenvalues and occupations to file: OUT.autotest/eig_occ.txt
+
+ #TOTAL-FORCE (eV/Angstrom)#
+ -------------------------------------------------------------------------
+     Atoms              Force_x              Force_y              Force_z 
+ -------------------------------------------------------------------------
+       Si1         0.0000000000         0.0000000000         0.0000000000 
+       Si2         0.0000000000         0.0000000000         0.0000000000 
+ -------------------------------------------------------------------------
+                Net force vector (eV/Ang) = [ 0, 0, 0 ]
+                     Total drift (ev/Ang) = 0
+
+ #TOTAL-STRESS (kbar)#
+ ----------------------------------------------------------------
+              Stress_x             Stress_y             Stress_z 
+ ----------------------------------------------------------------
+       -714.5981063126        -0.0000000000        -0.0000000000 
+         -0.0000000000      -714.5981063126         0.0000000000 
+         -0.0000000000         0.0000000000      -714.5981063126 
+ ----------------------------------------------------------------
+ #TOTAL-PRESSURE# (EXCLUDE KINETIC PART OF IONS): -714.598106 kbar
+
+ --------------------------------------------
+ !FINAL_ETOT_IS -189.4406755170876409 eV
+ --------------------------------------------
+
+
+
+ TIME STATISTICS
+----------------------------------------------------------------------
+     CLASS_NAME             NAME        TIME/s  CALLS   AVG/s  PER/%  
+----------------------------------------------------------------------
+                     total              1.57   15       0.10   100.00 
+ Driver              atomic_world       1.57   1        1.57   100.00 
+ ESolver_KS_LCAO     before_all_runners 0.68   1        0.68   43.51  
+ Symmetry            analy_sys          0.02   1        0.02   1.51   
+ NOrbital_Lm         extra_uniform      0.07   63       0.00   4.74   
+ Mathzone_Add1       Uni_Deriv_Phi      0.06   63       0.00   3.95   
+ Exx_LRI             init               0.54   1        0.54   34.49  
+ Matrix_Orbs21       init               0.11   2        0.05   7.00   
+ Matrix_Orbs21       init_radial_table  0.25   2        0.13   16.03  
+ Center2_Orb         cal_ST_Phi12_R     0.28   83       0.00   18.14  
+ Exx_LRI             refresh_coulomb    0.33   1        0.33   20.94  
+ LRI_CV              set_orbitals       0.32   1        0.32   20.52  
+ Matrix_Orbs11       init_radial_table  0.12   1        0.12   7.50   
+ Relax_Driver        relax_driver       0.87   1        0.87   55.81  
+ ESolver_KS          runner             0.44   1        0.44   27.99  
+ ESolver_KS_LCAO     before_scf         0.02   1        0.02   1.09   
+ Potential           cal_veff           0.05   21       0.00   3.21   
+ PotXC               cal_veff           0.05   21       0.00   3.15   
+ HSolverLCAO         solve              0.09   19       0.00   5.98   
+ HamiltLCAO          updateHk           0.05   57       0.00   2.91   
+ OperatorLCAO        init               0.05   399      0.00   2.90   
+ Veff                contributeHR       0.04   19       0.00   2.70   
+ Gint                cal_gint_vl        0.04   19       0.00   2.70   
+ LCAO_domain         dm2rho             0.04   19       0.00   2.38   
+ Gint                cal_gint_rho       0.04   19       0.00   2.36   
+ ModuleIO            ctrl_iter_lcao     0.26   19       0.01   16.84  
+ Exx_LRI             cal_exx_elec       0.26   3        0.09   16.58  
+ XC_Functional_Libxc v_xc_libxc         0.05   15       0.00   3.18   
+ Libxc               xc_lda/gga_exc_vxc 0.05   15       0.00   2.97   
+ ESolver_KS_LCAO     cal_force          0.44   1        0.44   27.82  
+ Force_Stress_LCAO   getForceStress     0.44   1        0.44   27.82  
+ Exx_LRI             cal_exx_force      0.19   1        0.19   11.91  
+ Exx_LRI             cal_exx_stress     0.23   1        0.23   14.49  
+----------------------------------------------------------------------
+
+
+ NAME-------------------------|MEMORY(MB)------------------
+                         total       141.2068
+                    ORB::Jl(x)       140.6042
+
+ Start  Time  : Fri Oct 23 23:32:54 2026
+ Finish Time  : Fri Oct 23 23:32:55 2026
+ Total  Time  : 0 h 0 mins 1 secs 

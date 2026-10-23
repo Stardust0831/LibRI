@@ -4,6 +4,10 @@ The warning in [ABACUS PR #8169](https://github.com/deepmodeling/abacus-develop/
 
 The [repair branch](https://github.com/Stardust0831/LibRI/tree/fix/gpu-symmetry-filter), at `2781215e73813de9d58fc45a6087b7b857659f45`, is based on `fac_add_Ds` at `f68342122e4d23007142028bf2d017ce026835eb`. It backports maki49's [initial fix](https://github.com/maki49/LibRI/commit/2f77684417313e78e2da67aeee2ebf9b44f1e9fe) and [extension to all contraction labels](https://github.com/maki49/LibRI/commit/a0db48f56ffadf448c8057788df57562b42cd3c8), preserving authorship. It then corrects four further numerical failures exposed by an actual CPU/GPU contraction comparison.
 
+## ABACUS before/after comparison
+
+The [matched end-to-end comparison](before-fix/README.md) now includes 20 runs with the original LibRI revision and the same 20 configurations with the fix. All four GPU RI runs with real-space symmetry enabled abort before the fix with `std::invalid_argument` (`a0b0_a1b1`); all four pass after the fix. The other 16 controls pass unchanged repository references in both versions. Their largest before/after energy difference is 6.54e-13 eV; force and stress components agree at printed precision. Inputs, references and tolerances are byte-identical. Complete baseline compilation and runtime logs accompany the comparison.
+
 ## Complete original logs
 
 Compiler output and calculation outputs are preserved without truncation or path replacement. Excerpts follow below.
@@ -54,7 +58,7 @@ The remaining four labels were `a0b2_a2b0`, `a0b2_a2b1`, `a1b2_a2b0`, and `a1b2_
 - The standalone C++11 callback regression passes.
 
 - Full ABACUS GPU compilation and linking, including BSE, passed.
-- All 20 HSE runs passed unchanged repository references: real/complex RI tensors × one/two MPI ranks × five solver/RI/symmetry combinations. The five combinations are a CPU solver with CPU RI, a GPU solver with CPU/GPU RI and real-space symmetry enabled, and a GPU solver with CPU/GPU RI and real-space symmetry disabled. Every case uses `symmetry=1` and `OMP_NUM_THREADS=1`.
+- All 20 fixed-version HSE runs passed unchanged repository references: real/complex RI tensors × one/two MPI ranks × five solver/RI/symmetry combinations. The five combinations are a CPU solver with CPU RI, a GPU solver with CPU/GPU RI and real-space symmetry enabled, and a GPU solver with CPU/GPU RI and real-space symmetry disabled. Every case uses `symmetry=1` and `OMP_NUM_THREADS=1`.
 - All 16 extra comparisons of energies and individual force/stress components passed. Maximum energy difference: **4.55e-13 eV**. Forces and stresses agree at printed precision. This two-atom Si case has zero force by symmetry; the synthetic contraction test provides the nontrivial tensor-level checks.
 - CPU/GPU backend selections, real/complex selections and the real-space symmetry switch were checked in each emitted `INPUT.info`; every SCF calculation converged.
 
@@ -95,4 +99,4 @@ See the [standalone test commands](https://github.com/Stardust0831/LibRI/blob/27
 
 [manifest.json](manifest.json) and [committed-source.json](committed-source.json) identify the exact tested source. [baseline.tar.gz](baseline.tar.gz), [backport.tar.gz](backport.tar.gz) and [fixed.tar.gz](fixed.tar.gz) preserve the three LibRI source snapshots. The [ABACUS test-only patch](abacus-validation-only.patch) reconstructs its isolated source changes from `b30b66a5a`; the large ABACUS source archive is not duplicated here. All 115 LibRI headers used in the ABACUS build match the fixed source plus the separately recorded [OpenMP patch](move-declarations.patch), as verified by [header hashes](build-records/libri-header-sha256.json).
 
-[control](control/) contains the actual build and test scripts. [build-records](build-records/) contains CMake configuration, the full compilation database and executable hash. [SHA256SUMS.json](SHA256SUMS.json) covers the 544 raw evidence files. The numerical fixture and all three implementations were tested with identical compiler and dependency settings.
+[control](control/) contains the actual build and test scripts. [build-records](build-records/) contains CMake configuration, the full compilation database and executable hash. [SHA256SUMS.json](SHA256SUMS.json) covers the 978 raw evidence files, including the additional [before-fix records](before-fix/README.md). The numerical fixture and all three implementations were tested with identical compiler and dependency settings.

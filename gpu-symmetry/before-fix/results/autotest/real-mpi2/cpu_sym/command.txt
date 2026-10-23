@@ -1,0 +1,1 @@
+bash /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/before-fix/results/abacus-cases/real-mpi2/tests/integrate/Autotest.sh -a /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/before-fix/abacus-build/abacus_std_gpu -n 2 -o 1 -f CASES.one.txt -r '.*'

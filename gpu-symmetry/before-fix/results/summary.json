@@ -1,0 +1,852 @@
+{
+  "baseline_commit": "f68342122e4d23007142028bf2d017ce026835eb",
+  "fixed_commit": "2781215e73813de9d58fc45a6087b7b857659f45",
+  "job_id": "1913589",
+  "case_count": 20,
+  "cases": {
+    "real-mpi1": {
+      "host": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708753
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            0.0,
+            -0.0,
+            0.0,
+            -714.5981063126,
+            -0.0,
+            -0.0,
+            0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "cpu_sym": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708753
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            0.0,
+            0.0,
+            -0.0,
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "gpu_sym": {
+        "harness_exit_code": 1,
+        "converged": false,
+        "reference_checks": [],
+        "repository_passed": false,
+        "numerical_result": null,
+        "exception": "label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49"
+      },
+      "cpu_full": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.4406755170872
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "gpu_full": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708767
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            0.0,
+            -0.0,
+            0.0,
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      }
+    },
+    "complex-mpi1": {
+      "host": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708764
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            -0.0,
+            -0.0,
+            -714.5981063126,
+            0.0,
+            -0.0,
+            0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "cpu_sym": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708767
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            0.0,
+            0.0,
+            -0.0,
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "gpu_sym": {
+        "harness_exit_code": 1,
+        "converged": false,
+        "reference_checks": [],
+        "repository_passed": false,
+        "numerical_result": null,
+        "exception": "label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49"
+      },
+      "cpu_full": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.4406755170876
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            -0.0,
+            0.0,
+            -714.5981063126,
+            -0.0,
+            0.0,
+            0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "gpu_full": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708747
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126,
+            -0.0,
+            -0.0,
+            0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      }
+    },
+    "real-mpi2": {
+      "host": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708804
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            0.0,
+            0.0,
+            -714.5981063126,
+            0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "cpu_sym": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708807
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            0.0,
+            0.0,
+            0.0,
+            -714.5981063126,
+            -0.0,
+            0.0,
+            0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "gpu_sym": {
+        "harness_exit_code": 1,
+        "converged": false,
+        "reference_checks": [],
+        "repository_passed": false,
+        "numerical_result": null,
+        "exception": "label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49"
+      },
+      "cpu_full": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708827
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            0.0,
+            0.0,
+            -714.5981063126,
+            0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "gpu_full": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708795
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            -0.0,
+            0.0,
+            -714.5981063126,
+            -0.0,
+            -0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      }
+    },
+    "complex-mpi2": {
+      "host": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.4406755170876
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            0.0,
+            0.0,
+            -714.5981063126,
+            0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "cpu_sym": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708798
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126,
+            0.0,
+            -0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "gpu_sym": {
+        "harness_exit_code": 1,
+        "converged": false,
+        "reference_checks": [],
+        "repository_passed": false,
+        "numerical_result": null,
+        "exception": "label a0b0_a1b1 error in /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/before-fix/libri/include/RI/physics/./symmetry/Filter_Atom_Symmetry.h line 49"
+      },
+      "cpu_full": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.4406755170877
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126,
+            0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      },
+      "gpu_full": {
+        "harness_exit_code": 0,
+        "converged": true,
+        "reference_checks": [
+          "etotperatomref",
+          "etotref",
+          "nksibzref",
+          "pointgroupref",
+          "spacegroupref",
+          "totalforceref",
+          "totalstressref"
+        ],
+        "repository_passed": true,
+        "numerical_result": {
+          "energy_ev": [
+            -189.44067551708832
+          ],
+          "force_ev_angstrom": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "stress_kbar": [
+            -714.5981063126,
+            -0.0,
+            -0.0,
+            0.0,
+            -714.5981063126,
+            -0.0,
+            0.0,
+            -0.0,
+            -714.5981063126
+          ]
+        },
+        "exception": null
+      }
+    }
+  },
+  "comparisons_with_fixed": [
+    {
+      "group": "real-mpi1",
+      "variant": "host",
+      "reference": "fixed host",
+      "max_errors": {
+        "energy_ev": 0.0,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi1",
+      "variant": "cpu_sym",
+      "reference": "fixed cpu_sym",
+      "max_errors": {
+        "energy_ev": 1.4210854715202004e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi1",
+      "variant": "cpu_full",
+      "reference": "fixed cpu_full",
+      "max_errors": {
+        "energy_ev": 4.831690603168681e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi1",
+      "variant": "gpu_full",
+      "reference": "fixed gpu_full",
+      "max_errors": {
+        "energy_ev": 8.526512829121202e-14,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi1",
+      "variant": "host",
+      "reference": "fixed host",
+      "max_errors": {
+        "energy_ev": 0.0,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi1",
+      "variant": "cpu_sym",
+      "reference": "fixed cpu_sym",
+      "max_errors": {
+        "energy_ev": 1.4210854715202004e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi1",
+      "variant": "cpu_full",
+      "reference": "fixed cpu_full",
+      "max_errors": {
+        "energy_ev": 5.400124791776761e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi1",
+      "variant": "gpu_full",
+      "reference": "fixed gpu_full",
+      "max_errors": {
+        "energy_ev": 3.979039320256561e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi2",
+      "variant": "host",
+      "reference": "fixed host",
+      "max_errors": {
+        "energy_ev": 0.0,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi2",
+      "variant": "cpu_sym",
+      "reference": "fixed cpu_sym",
+      "max_errors": {
+        "energy_ev": 3.694822225952521e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi2",
+      "variant": "cpu_full",
+      "reference": "fixed cpu_full",
+      "max_errors": {
+        "energy_ev": 3.979039320256561e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi2",
+      "variant": "gpu_full",
+      "reference": "fixed gpu_full",
+      "max_errors": {
+        "energy_ev": 0.0,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi2",
+      "variant": "host",
+      "reference": "fixed host",
+      "max_errors": {
+        "energy_ev": 0.0,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi2",
+      "variant": "cpu_sym",
+      "reference": "fixed cpu_sym",
+      "max_errors": {
+        "energy_ev": 1.4210854715202004e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi2",
+      "variant": "cpu_full",
+      "reference": "fixed cpu_full",
+      "max_errors": {
+        "energy_ev": 4.831690603168681e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi2",
+      "variant": "gpu_full",
+      "reference": "fixed gpu_full",
+      "max_errors": {
+        "energy_ev": 6.536993168992922e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    }
+  ],
+  "matched_expected_regression": true,
+  "unaffected_comparisons_passed": true
+}
