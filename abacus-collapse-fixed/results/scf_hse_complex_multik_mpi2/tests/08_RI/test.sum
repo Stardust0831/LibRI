@@ -1,0 +1,4 @@
+scf_hse_complex_multik_host 1
+scf_hse_complex_multik_default 1
+scf_hse_complex_multik_cpu 1
+scf_hse_complex_multik_gpu 1

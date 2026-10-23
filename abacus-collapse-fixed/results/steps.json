@@ -1,0 +1,213 @@
+[
+  {
+    "step": "environment/compiler",
+    "command": [
+      "mpicxx",
+      "--version"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "environment/gpu",
+    "command": [
+      "nvidia-smi",
+      "-q"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "environment/allocation",
+    "command": [
+      "scontrol",
+      "show",
+      "job",
+      "1912314"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "consumer-cpu/configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/source/tests/lcao_hse_gpu/cmake",
+      "-B",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-cpu",
+      "-DLIBRI_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/libri",
+      "-DLIBCOMM_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+      "-Dcereal_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/lib/cmake/cereal",
+      "-DENABLE_LIBRI_GPU=OFF",
+      "-DENABLE_LIBRI_GPU_TESTS=OFF",
+      "-DDDLA_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "consumer-cpu/build",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-cpu",
+      "--verbose",
+      "--parallel",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "consumer-cpu/test",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-cpu",
+      "-V"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "consumer-gpu/configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/source/tests/lcao_hse_gpu/cmake",
+      "-B",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu",
+      "-DLIBRI_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/libri",
+      "-DLIBCOMM_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+      "-Dcereal_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/lib/cmake/cereal",
+      "-DENABLE_LIBRI_GPU=ON",
+      "-DENABLE_LIBRI_GPU_TESTS=ON",
+      "-DDDLA_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "consumer-gpu/build",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu",
+      "--verbose",
+      "--parallel",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "consumer-gpu/test",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu",
+      "-V"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "abacus/configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/source",
+      "-B",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/build-gpu",
+      "-G",
+      "Unix Makefiles",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DENABLE_LIBXC=ON",
+      "-DENABLE_LIBRI=ON",
+      "-DENABLE_LIBRI_GPU=ON",
+      "-DENABLE_ELPA=OFF",
+      "-DENABLE_NCCL_PARALLEL_DEVICE=OFF",
+      "-DBUILD_TESTING=OFF",
+      "-DGIT_SUBMODULE=OFF",
+      "-DCMAKE_CUDA_ARCHITECTURES=70",
+      "-DUSE_CUDA=ON",
+      "-DUSE_CUDA_MPI=ON",
+      "-DENABLE_CUSOLVERMP=ON",
+      "-DENABLE_CUBLASMP=ON",
+      "-DLIBRI_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/libri",
+      "-DLIBCOMM_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+      "-Dcereal_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/lib/cmake/cereal",
+      "-DDDLA_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "abacus/bse-build",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/build-gpu",
+      "--target",
+      "bse",
+      "--verbose",
+      "--parallel",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "abacus/full-build",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/build-gpu",
+      "--target",
+      "abacus_std_gpu",
+      "--verbose",
+      "--parallel",
+      "12"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "abacus/version",
+    "command": [
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/build-gpu/abacus_std_gpu",
+      "--version"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "abacus/cli",
+    "command": [
+      "python3",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/control/verify_cli.py"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "abacus/scf_hse_gamma",
+    "command": [
+      "python3",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/control/backend_regressions.py",
+      "--abacus",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/build-gpu/abacus_std_gpu",
+      "--source",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/source",
+      "--output",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/results/scf_hse_gamma",
+      "--case",
+      "scf_hse_gamma"
+    ],
+    "exit_code": 0
+  },
+  {
+    "step": "abacus/scf_hse_complex_multik_mpi2",
+    "command": [
+      "python3",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/control/backend_regressions.py",
+      "--abacus",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/build-gpu/abacus_std_gpu",
+      "--source",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/source",
+      "--output",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/results/scf_hse_complex_multik_mpi2",
+      "--case",
+      "scf_hse_complex_multik_mpi2"
+    ],
+    "exit_code": 0
+  }
+]

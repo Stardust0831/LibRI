@@ -1,0 +1,33 @@
+START environment/compiler
+END environment/compiler exit 0
+START environment/gpu
+END environment/gpu exit 0
+START environment/allocation
+END environment/allocation exit 0
+START consumer-cpu/configure
+END consumer-cpu/configure exit 0
+START consumer-cpu/build
+END consumer-cpu/build exit 0
+START consumer-cpu/test
+END consumer-cpu/test exit 0
+START consumer-gpu/configure
+END consumer-gpu/configure exit 0
+START consumer-gpu/build
+END consumer-gpu/build exit 0
+START consumer-gpu/test
+END consumer-gpu/test exit 0
+START abacus/configure
+END abacus/configure exit 0
+START abacus/bse-build
+END abacus/bse-build exit 0
+START abacus/full-build
+END abacus/full-build exit 0
+START abacus/version
+END abacus/version exit 0
+START abacus/cli
+END abacus/cli exit 0
+START abacus/scf_hse_gamma
+END abacus/scf_hse_gamma exit 0
+START abacus/scf_hse_complex_multik_mpi2
+END abacus/scf_hse_complex_multik_mpi2 exit 0
+PASSED See individual dependency and ABACUS regression results.

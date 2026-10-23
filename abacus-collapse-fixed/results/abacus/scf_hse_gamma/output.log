@@ -1,0 +1,105 @@
+-----AUTO TESTS OF ABACUS ------
+ABACUS path: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/build-gpu/abacus_std_gpu
+Number of processes: 1
+Number of threads: 1
+Concurrent test cases: 1
+Test accuracy totenergy: 0.0000001 eV
+Test accuracy force: 0.0001
+Test accuracy stress: 0.001
+Test accuracy descriptor mean: 0.00001
+Check accuaracy: 8
+Test cases file: CASES.task.txt
+Test cases regex: ^[^#].*_.*$
+Generate reference: 
+Property collectors: true
+--------------------------------
+
+[0;32m[ RUN      ][0m scf_hse_gamma_host
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+[----------] scf HSE on H2O, gamma_only, nspin=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[----------] Time elapsed: 4.104 seconds
+
+[0;32m[ RUN      ][0m scf_hse_gamma_default
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+[----------] scf HSE on H2O, gamma_only, nspin=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[----------] Time elapsed: 5.297 seconds
+
+[0;32m[ RUN      ][0m scf_hse_gamma_cpu
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+[----------] scf HSE on H2O, gamma_only, nspin=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[----------] Time elapsed: 5.557 seconds
+
+[0;32m[ RUN      ][0m scf_hse_gamma_gpu
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+[----------] scf HSE on H2O, gamma_only, nspin=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[----------] Time elapsed: 5.578 seconds
+
+[0;32m[ PASSED   ] [0m 16 test cases passed.
+
+[
+  {
+    "case": "scf_hse_gamma_host",
+    "ranks": 1,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_gamma_default",
+    "ranks": 1,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_gamma_cpu",
+    "ranks": 1,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_gamma_gpu",
+    "ranks": 1,
+    "device_exx": "gpu",
+    "result": "PASS"
+  },
+  {
+    "check": "valid_cpu",
+    "result": "PASS",
+    "expected_error": null
+  },
+  {
+    "check": "valid_gpu",
+    "result": "PASS",
+    "expected_error": null
+  },
+  {
+    "check": "bad_value",
+    "result": "PASS",
+    "expected_error": "device_exx must be cpu or gpu"
+  },
+  {
+    "check": "bad_device",
+    "result": "PASS",
+    "expected_error": "device_exx=gpu requires basis_type=lcao and device=gpu"
+  },
+  {
+    "check": "bad_symmetry",
+    "result": "PASS",
+    "expected_error": "LibRI GPU contractions do not support real-space EXX symmetry"
+  }
+]

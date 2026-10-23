@@ -1,0 +1,317 @@
+{
+  "passed": true,
+  "absolute_tolerances": {
+    "energy_ev": 1e-07,
+    "forces_ev_angstrom": 0.0001,
+    "stress_kbar": 0.001
+  },
+  "cases": {
+    "scf_hse_gamma": {
+      "host": {
+        "values": {
+          "energy_ev": [
+            -428.9943139416819
+          ],
+          "atom_labels": [
+            "H1",
+            "H2",
+            "O1"
+          ],
+          "forces_ev_angstrom": [
+            6.8713801209,
+            0.6261628324,
+            0.0,
+            -1.951716138,
+            7.9885359523,
+            0.0,
+            -4.9196639829,
+            -8.6146987847,
+            0.0
+          ],
+          "stress_kbar": [
+            -32.7888700507,
+            6.9594240298,
+            -0.0,
+            6.8181549229,
+            -42.8149639648,
+            0.0,
+            -0.0,
+            0.0,
+            -167.4031212394
+          ]
+        },
+        "log_sha256": "3a42bbee29b448f2ab28a7c51e3d5f08ce003f5363f8204505d24b47480a9653"
+      },
+      "default": {
+        "values": {
+          "energy_ev": [
+            -428.9943139416814
+          ],
+          "atom_labels": [
+            "H1",
+            "H2",
+            "O1"
+          ],
+          "forces_ev_angstrom": [
+            6.8713801209,
+            0.6261628324,
+            0.0,
+            -1.951716138,
+            7.9885359522,
+            0.0,
+            -4.9196639829,
+            -8.6146987846,
+            0.0
+          ],
+          "stress_kbar": [
+            -32.7888700507,
+            6.9594240298,
+            0.0,
+            6.8181549229,
+            -42.8149639648,
+            -0.0,
+            0.0,
+            -0.0,
+            -167.4031212394
+          ]
+        },
+        "log_sha256": "0279bc640c592031af60f8e4686c6fba763eacbe33b0771ad414c11b27234967"
+      },
+      "cpu": {
+        "values": {
+          "energy_ev": [
+            -428.994313941681
+          ],
+          "atom_labels": [
+            "H1",
+            "H2",
+            "O1"
+          ],
+          "forces_ev_angstrom": [
+            6.871380121,
+            0.6261628324,
+            0.0,
+            -1.951716138,
+            7.9885359523,
+            0.0,
+            -4.9196639829,
+            -8.6146987847,
+            0.0
+          ],
+          "stress_kbar": [
+            -32.7888700507,
+            6.9594240298,
+            0.0,
+            6.8181549229,
+            -42.8149639648,
+            0.0,
+            0.0,
+            0.0,
+            -167.4031212394
+          ]
+        },
+        "log_sha256": "7c6c2e4a3e5ddc530915d408c6aee7aaea54c6151224e7f68273728b504d1540"
+      },
+      "gpu": {
+        "values": {
+          "energy_ev": [
+            -428.99431394168147
+          ],
+          "atom_labels": [
+            "H1",
+            "H2",
+            "O1"
+          ],
+          "forces_ev_angstrom": [
+            6.8713801209,
+            0.6261628324,
+            0.0,
+            -1.9517161381,
+            7.9885359522,
+            0.0,
+            -4.9196639828,
+            -8.6146987846,
+            0.0
+          ],
+          "stress_kbar": [
+            -32.7888700507,
+            6.9594240298,
+            0.0,
+            6.8181549229,
+            -42.8149639648,
+            -0.0,
+            0.0,
+            -0.0,
+            -167.4031212394
+          ]
+        },
+        "log_sha256": "5555ab84d802e791f15b32eda9738588d8b9d20e8edb79f83d1b444faee4c3d7"
+      }
+    },
+    "scf_hse_complex_multik_mpi2": {
+      "host": {
+        "values": {
+          "energy_ev": [
+            -193.3954526003579
+          ]
+        },
+        "log_sha256": "6d820faee3251121c5bdf915a8b02182e3774b9f860400bf97cccb523598bfe7"
+      },
+      "default": {
+        "values": {
+          "energy_ev": [
+            -193.3954526003277
+          ]
+        },
+        "log_sha256": "e0b3ee9bd3fa90b9ecebf24a3a2c10856a786f7cc8786a8599476a3c91d5a521"
+      },
+      "cpu": {
+        "values": {
+          "energy_ev": [
+            -193.3954526003027
+          ]
+        },
+        "log_sha256": "d6cf12033578b6e2a605c9ef6405e673cff20ced0ce1e0cc4e5f976faab9fe97"
+      },
+      "gpu": {
+        "values": {
+          "energy_ev": [
+            -193.3954526003449
+          ]
+        },
+        "log_sha256": "d5fdefd8e1e68b27bfc9eeb7324dbb258da7e1a9844677d652e0f6d3667e44ee"
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "comparison": "scf_hse_gamma/host: previous -> current",
+      "max_absolute_differences": {
+        "energy_ev": 0.0,
+        "forces_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_gamma/default: previous -> current",
+      "max_absolute_differences": {
+        "energy_ev": 7.958078640513122e-13,
+        "forces_ev_angstrom": 1.000000082740371e-10,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_gamma/cpu: previous -> current",
+      "max_absolute_differences": {
+        "energy_ev": 3.410605131648481e-13,
+        "forces_ev_angstrom": 4.000000330961484e-10,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_gamma/gpu: previous -> current",
+      "max_absolute_differences": {
+        "energy_ev": 4.547473508864641e-13,
+        "forces_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_gamma: host -> default",
+      "max_absolute_differences": {
+        "energy_ev": 5.115907697472721e-13,
+        "forces_ev_angstrom": 1.000000082740371e-10,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_gamma: host -> cpu",
+      "max_absolute_differences": {
+        "energy_ev": 9.094947017729282e-13,
+        "forces_ev_angstrom": 1.000000082740371e-10,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_gamma: host -> gpu",
+      "max_absolute_differences": {
+        "energy_ev": 4.547473508864641e-13,
+        "forces_ev_angstrom": 1.000000082740371e-10,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_gamma: cpu RI -> gpu RI",
+      "max_absolute_differences": {
+        "energy_ev": 4.547473508864641e-13,
+        "forces_ev_angstrom": 1.000000082740371e-10,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_complex_multik_mpi2/host: previous -> current",
+      "max_absolute_differences": {
+        "energy_ev": 0.0
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_complex_multik_mpi2/default: previous -> current",
+      "max_absolute_differences": {
+        "energy_ev": 1.48929757415317e-11
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_complex_multik_mpi2/cpu: previous -> current",
+      "max_absolute_differences": {
+        "energy_ev": 1.56035184772918e-11
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_complex_multik_mpi2/gpu: previous -> current",
+      "max_absolute_differences": {
+        "energy_ev": 2.708588908717502e-11
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_complex_multik_mpi2: host -> default",
+      "max_absolute_differences": {
+        "energy_ev": 3.021227712451946e-11
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_complex_multik_mpi2: host -> cpu",
+      "max_absolute_differences": {
+        "energy_ev": 5.5223381423274986e-11
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_complex_multik_mpi2: host -> gpu",
+      "max_absolute_differences": {
+        "energy_ev": 1.3017142919125035e-11
+      },
+      "passed": true
+    },
+    {
+      "comparison": "scf_hse_complex_multik_mpi2: cpu RI -> gpu RI",
+      "max_absolute_differences": {
+        "energy_ev": 4.220623850414995e-11
+      },
+      "passed": true
+    }
+  ],
+  "note": "Tolerances match the existing integration harness; force and stress comparisons are componentwise."
+}

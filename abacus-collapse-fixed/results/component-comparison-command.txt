@@ -1,0 +1,1 @@
+python3 control/compare_results.py --results results --previous /mnt/g/work/agent/abacus/lcao-hse-results/device-exx-rename-20261020/results

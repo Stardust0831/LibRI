@@ -13,3 +13,5 @@
 工具链为 GCC 13.3、OpenMP、OpenMPI 和 OpenBLAS。这是两个实际测试目标的编译验证；本次对修改后的版本没有执行物理数值测试。
 
 另有 **[ABACUS 接入未打补丁 LibRI 的实测记录](abacus-unpatched/README.md)**：最新 `fac_add_Ds` 的依赖测试通过，但实际 ABACUS BSE 目标被同一 OpenMP 编译问题阻塞，尚未运行 HSE 算例。
+
+后续 **[加入移动声明补丁的完整 ABACUS 验证](abacus-collapse-fixed/README.md)** 已通过：完整编译、链接成功，八组 HSE 计算均通过参考值检查；能量、力、应力也与 CPU 及先前版本的结果一致。

@@ -1,0 +1,4 @@
+git apply --check move-declarations.patch
+exit: 0
+git apply move-declarations.patch
+exit: 0

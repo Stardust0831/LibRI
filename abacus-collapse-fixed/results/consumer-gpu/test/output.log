@@ -1,0 +1,37 @@
+Internal ctest changing into directory: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu
+UpdateCTestConfiguration  from :/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu/DartConfiguration.tcl
+Test project /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: libri_consumer
+
+1: Test command: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu/libri_consumer
+1: Working Directory: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu
+1: Test timeout computed to be: 10000000
+1/2 Test #1: libri_consumer ...................   Passed    0.05 sec
+test 2
+    Start 2: libri_gpu_accumulation
+
+2: Test command: /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/bin/mpiexec "-n" "1" "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu/libri_gpu_accumulation"
+2: Working Directory: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/consumer-gpu
+2: Environment variables: 
+2:  OMP_NUM_THREADS=1
+2:  OPENBLAS_NUM_THREADS=1
+2:  MKL_NUM_THREADS=1
+2: Test timeout computed to be: 120
+2: real: all 18 contractions preserve signed accumulation
+2: complex: all 18 contractions preserve signed accumulation
+2/2 Test #2: libri_gpu_accumulation ...........   Passed    4.95 sec
+
+100% tests passed, 0 tests failed out of 2
+
+Label Time Summary:
+gpu    =   4.95 sec*proc (1 test)
+
+Total Test time (real) =   5.01 sec

@@ -1,0 +1,4 @@
+JobID|JobName|State|ExitCode|Elapsed|NodeList
+1912314|abacus-collapse-fixed|COMPLETED|0:0|00:05:56|16v100n10
+1912314.batch|batch|COMPLETED|0:0|00:05:56|16v100n10
+1912314.extern|extern|COMPLETED|0:0|00:05:56|16v100n10

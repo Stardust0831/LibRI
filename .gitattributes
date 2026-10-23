@@ -8,3 +8,7 @@ openmp-collapse/02-libri-comparison/snapshots/** -text -whitespace
 openmp-collapse/02-libri-comparison/move-declarations.patch -text -whitespace
 abacus-unpatched/results/** -text -whitespace
 abacus-unpatched/build-records/** -text -whitespace
+abacus-collapse-fixed/results/** -text -whitespace
+abacus-collapse-fixed/build-records/** -text -whitespace
+abacus-collapse-fixed/previous-results/** -text -whitespace
+abacus-collapse-fixed/move-declarations.patch -text -whitespace

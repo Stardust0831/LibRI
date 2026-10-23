@@ -1,0 +1,26 @@
+[
+  {
+    "case": "scf_hse_complex_multik_host",
+    "ranks": 2,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_complex_multik_default",
+    "ranks": 2,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_complex_multik_cpu",
+    "ranks": 2,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_complex_multik_gpu",
+    "ranks": 2,
+    "device_exx": "gpu",
+    "result": "PASS"
+  }
+]

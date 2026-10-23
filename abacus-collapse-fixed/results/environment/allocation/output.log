@@ -1,0 +1,31 @@
+JobId=1912314 JobName=abacus-collapse-fixed
+   UserId=abacususer01(1478400356) GroupId=abacus-group(1478400355) MCS_label=N/A
+   Priority=6098 Nice=0 Account=abacus-group QOS=flood-1o2gpu WCKey=*
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:01 TimeLimit=01:00:00 TimeMin=N/A
+   SubmitTime=2026-10-23T21:25:05 EligibleTime=2026-10-23T21:25:05
+   AccrueTime=2026-10-23T21:25:05
+   StartTime=2026-10-23T21:25:06 EndTime=2026-10-23T22:25:06 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-10-23T21:25:06 Scheduler=Main
+   Partition=16V100 AllocNode:Sid=login-01:1219358
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=16v100n10
+   BatchHost=16v100n10
+   NumNodes=1 NumCPUs=16 NumTasks=2 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=2,mem=30G,node=1,billing=300,gres/gpu=2
+   AllocTRES=cpu=16,mem=30G,node=1,billing=300,gres/gpu=2
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=1 MinMemoryTRES=15G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=NO Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/control/run.sbatch
+   SubmitLine=sbatch control/run.sbatch
+   WorkDir=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023
+   StdErr=
+   StdIn=/dev/null
+   StdOut=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-collapse-fixed-20261023/validation-1912314.log
+   CpusPerTres=gpu:8
+   MemPerTres=gpu:15360
+   TresPerNode=gres/gpu:2
+

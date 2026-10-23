@@ -1,0 +1,9 @@
+{
+  "abacus_sha": "3fa1f972b60b95767c10f2a14b30fe237f96dedb",
+  "libri_sha": "6ce3c8480ae38a085746dc81cc4dbb59b8074430",
+  "libri_patch": "tests/lcao_hse_gpu/libri-compat.patch",
+  "ddla_version": "v0.0.4",
+  "baseline_results": "device-exx-rename-20261020",
+  "current_archive_manifest": "../manifest.json",
+  "note": "Previous full ABACUS results are historical; all current results were freshly built and run."
+}

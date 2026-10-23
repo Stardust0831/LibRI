@@ -1,0 +1,117 @@
+
+                     ▄████▄ █████▄ ▄████▄ ▄█████ ██  ██ ▄█████ 
+                     ██▄▄██ ██▄▄██ ██▄▄██ ██     ██  ██ ▀▀▀▄▄▄ 
+                     ██  ██ ██▄▄█▀ ██  ██ ▀█████ ▀████▀ █████▀ 
+
+                                                                                     
+                                v3.11.0-beta11
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: unknown
+
+ Fri Oct 23 21:30:47 2026
+ MAKE THE DIR         : OUT.autotest/
+ RUNNING WITH DEVICE  : CPU / AMD Ryzen Threadripper PRO 5995WX 64-Cores (x1)
+ WARNING: some of potential function is set to zero cause of less than 1e-30.
+ NAME OF ELEMENT      : Si
+ DFT FUNC. (PSEUDO)   : PBE
+ DFT FUNC. (SET TO)   : HSE
+ MAKE SURE THIS DFT FUNCTIONAL IS WHAT YOU NEED
+ UNIFORM GRID DIM          : 15 * 15 * 15
+ UNIFORM GRID DIM (BIG)    : 5 * 5 * 5
+ DONE(0.0907681  SEC) : SETUP UNITCELL
+ DONE(0.09183    SEC) : INIT K-POINTS
+ ----------------------------------------------------------------
+ Self-consistent calculations for electrons
+ ----------------------------------------------------------------
+ SPIN    KPOINTS         PROCESSES   THREADS/PROC  THREADS/TOTAL 
+ 1       3               2           1             2             
+ ----------------------------------------------------------------
+ Use Systematically Improvable Atomic bases
+ ----------------------------------------------------------------
+ TOTAL NBASE 8
+ ELEMENT ORBITALS        NBASE       NATOM       
+ Si      1s1p-6au        4           2           
+ ----------------------------------------------------------------
+ Initial plane wave basis and FFT box
+ ----------------------------------------------------------------
+ DONE(0.0921373  SEC) : INIT PLANEWAVE
+ START CHARGE         : ATOMIC
+ DONE(0.12722    SEC) : CHARGE
+ DONE(0.623152   SEC) : POTENTIALS
+
+ ================================================================
+ SELF-CONSISTENT: 
+ ================================================================
+ DONE(0.74696    SEC) : INIT SCF
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ GV1   -1.91744877e+02   0.00000000e+00   3.5160e-01   0.01
+ GV2   -1.91604433e+02   1.40443659e-01   1.1313e-01   0.00
+ GV3   -1.91603105e+02   1.32800694e-03   1.5536e-02   0.00
+ GV4   -1.91602574e+02   5.30468561e-04   1.9371e-02   0.00
+ GV5   -1.91603946e+02  -1.37119665e-03   3.7536e-03   0.00
+ GV6   -1.91603940e+02   5.32821053e-06   1.8163e-03   0.00
+ GV7   -1.91603954e+02  -1.40909353e-05   5.9793e-04   0.00
+ GV8   -1.91603956e+02  -1.12177255e-06   3.8214e-05   0.00
+ GV9   -1.91603956e+02  -9.97702932e-10   2.9629e-06   0.01
+ Updating EXX and rerun SCF	1.384e-01 (s)
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ GV1   -1.93345096e+02   0.00000000e+00   1.2513e-02   0.01
+ GV2   -1.93344998e+02   9.88542121e-05   3.2194e-03   0.01
+ GV3   -1.93345000e+02  -2.77135156e-06   1.4750e-04   0.01
+ GV4   -1.93345000e+02  -5.68318475e-08   1.1558e-05   0.01
+ GV5   -1.93345000e+02  -8.99757366e-09   3.7816e-07   0.01
+ deltaE (eV) from outer loop: 1.74104493e+00 
+ Updating EXX and rerun SCF	9.678e-02 (s)
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ GV1   -1.93395453e+02   0.00000000e+00   9.6485e-04   0.01
+ GV2   -1.93395452e+02   1.51478016e-07   2.3425e-04   0.01
+ GV3   -1.93395453e+02  -2.13007920e-07   2.7206e-05   0.01
+ GV4   -1.93395453e+02   4.55546214e-09   1.8526e-06   0.01
+ deltaE (eV) from outer loop: 5.04521535e-02 
+
+ TIME STATISTICS
+----------------------------------------------------------------------
+     CLASS_NAME             NAME        TIME/s  CALLS   AVG/s  PER/%  
+----------------------------------------------------------------------
+                     total              1.09   13       0.08   100.00 
+ Driver              atomic_world       1.09   1        1.09   100.00 
+ ESolver_KS_LCAO     before_all_runners 0.56   1        0.56   51.60  
+ NOrbital_Lm         extra_uniform      0.01   63       0.00   1.26   
+ Exx_LRI             init               0.50   1        0.50   45.35  
+ Matrix_Orbs21       init               0.11   2        0.05   9.70   
+ Matrix_Orbs21       init_radial_table  0.20   2        0.10   18.27  
+ Center2_Orb         cal_ST_Phi12_R     0.28   83       0.00   25.31  
+ Exx_LRI             refresh_coulomb    0.30   1        0.30   27.28  
+ LRI_CV              set_orbitals       0.29   1        0.29   26.98  
+ Matrix_Orbs11       init_radial_table  0.12   1        0.12   11.20  
+ Relax_Driver        relax_driver       0.47   1        0.47   42.91  
+ ESolver_KS          runner             0.47   1        0.47   42.91  
+ ESolver_KS_LCAO     before_scf         0.12   1        0.12   11.33  
+ Exx_LRI             cal_exx_ions       0.12   1        0.12   11.11  
+ Potential           cal_veff           0.03   20       0.00   2.32   
+ PotXC               cal_veff           0.02   20       0.00   2.24   
+ HSolverLCAO         solve              0.07   18       0.00   6.59   
+ HamiltLCAO          updateHk           0.03   54       0.00   2.40   
+ OperatorLCAO        init               0.03   378      0.00   2.39   
+ Veff                contributeHR       0.02   18       0.00   2.20   
+ Gint                cal_gint_vl        0.02   18       0.00   2.20   
+ HSolverLCAO         hamiltSolvePsiK    0.02   54       0.00   2.16   
+ LCAO_domain         dm2rho             0.02   18       0.00   1.94   
+ Gint                cal_gint_rho       0.02   18       0.00   1.91   
+ ModuleIO            ctrl_iter_lcao     0.24   18       0.01   21.73  
+ Exx_LRI             cal_exx_elec       0.24   2        0.12   21.53  
+ XC_Functional_Libxc v_xc_libxc         0.02   10       0.00   1.77   
+ Libxc               xc_lda/gga_exc_vxc 0.02   10       0.00   1.61   
+----------------------------------------------------------------------
+
+
+ START  Time  : Fri Oct 23 21:30:47 2026
+ FINISH Time  : Fri Oct 23 21:30:48 2026
+ TOTAL  Time  : 1
+ SEE INFORMATION IN : OUT.autotest/
