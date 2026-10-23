@@ -1,0 +1,45 @@
+Minimal OpenMP collapse object-compilation reproduction
+Recorded at: 2026-10-23T12:27:37+00:00
+
+$ g++ --version
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Copyright (C) 2023 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+$ g++ -std=c++17 -fopenmp -c range_for.cpp -o range_for.o
+stdout:
+(empty)
+stderr:
+(empty)
+Exit code: 0
+Object file generated: true
+Expected on GCC 13.3: success
+Matches expectation: true
+
+$ g++ -std=c++17 -fopenmp -c intervening_declaration.cpp -o intervening_declaration.o
+stdout:
+(empty)
+stderr:
+intervening_declaration.cpp: In function ‘void probe(const std::vector<int>&, const std::vector<int>&, int*)’:
+intervening_declaration.cpp:5:9: error: not enough for loops to collapse
+    5 |         const int ik = k_indices[ik_index];
+      |         ^~~~~
+intervening_declaration.cpp:5:34: error: ‘ik_index’ was not declared in this scope
+    5 |         const int ik = k_indices[ik_index];
+      |                                  ^~~~~~~~
+Exit code: 1
+Expected on GCC 13.3: failure
+Matches expectation: true
+
+$ g++ -std=c++17 -fopenmp -c declarations_innermost.cpp -o declarations_innermost.o
+stdout:
+(empty)
+stderr:
+(empty)
+Exit code: 0
+Object file generated: true
+Expected on GCC 13.3: success
+Matches expectation: true
+
+All GCC 13.3 expectations matched: true
