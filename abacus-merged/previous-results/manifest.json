@@ -1,0 +1,7 @@
+{
+  "source_sha": "3fa1f972b60b95767c10f2a14b30fe237f96dedb",
+  "upstream_merge_sha": "ffc4d0d3f50927421b16a023e0f250e73cb63c86",
+  "previous_pr_head": "63ca5ef073427565e2835e0e7583cb6f88ad766d",
+  "remote_root": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/checks/device-exx-rename-20261020",
+  "purpose": "Rename INPUT selector to device_exx and verify the merged PR"
+}

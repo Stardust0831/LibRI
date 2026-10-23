@@ -1,0 +1,23 @@
+Change Dir: '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu'
+
+Run Build Command(s): /opt/devtools/cmake/3.31.6/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j2
+/opt/devtools/cmake/3.31.6/bin/cmake -S/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source/tests/lcao_hse_gpu/cmake -B/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu --check-build-system CMakeFiles/Makefile.cmake 0
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_progress_start /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu/CMakeFiles /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu'
+/usr/bin/gmake  -f CMakeFiles/libri_consumer.dir/build.make CMakeFiles/libri_consumer.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source/tests/lcao_hse_gpu/cmake /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source/tests/lcao_hse_gpu/cmake /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu/CMakeFiles/libri_consumer.dir/DependInfo.cmake "--color="
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu'
+/usr/bin/gmake  -f CMakeFiles/libri_consumer.dir/build.make CMakeFiles/libri_consumer.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu'
+[ 50%] Building CXX object CMakeFiles/libri_consumer.dir/test_libri_consumer.cpp.o
+/usr/bin/c++  -isystem /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/libri/include -isystem /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm/include -isystem /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/include -isystem /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/include -fopenmp -MD -MT CMakeFiles/libri_consumer.dir/test_libri_consumer.cpp.o -MF CMakeFiles/libri_consumer.dir/test_libri_consumer.cpp.o.d -o CMakeFiles/libri_consumer.dir/test_libri_consumer.cpp.o -c /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source/tests/lcao_hse_gpu/cmake/test_libri_consumer.cpp
+[100%] Linking CXX executable libri_consumer
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_link_script CMakeFiles/libri_consumer.dir/link.txt --verbose=1
+/usr/bin/c++ -Wl,-rpath -Wl,/opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib -Wl,--enable-new-dtags -Wl,--dependency-file=CMakeFiles/libri_consumer.dir/link.d CMakeFiles/libri_consumer.dir/test_libri_consumer.cpp.o -o libri_consumer  /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib/libmpi.so /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a -lm -ldl /opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu'
+[100%] Built target libri_consumer
+gmake[1]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu'
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_progress_start /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu/CMakeFiles 0
+

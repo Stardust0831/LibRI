@@ -1,0 +1,9 @@
+{
+  "commit_sha": "b30b66a5a333a2667d618932f8430a80dd92146a",
+  "source_tree": "17f2f18ce697201513fc18fbdc626cb9083ea331",
+  "parents": [
+    "484bf4c73ede6b48931a75f1bbc1728f688e20d5",
+    "370ba685e6707b3625c5580ff9d02ef0afb248e8"
+  ],
+  "note": "The committed tree is identical to the tree archived and tested before committing."
+}

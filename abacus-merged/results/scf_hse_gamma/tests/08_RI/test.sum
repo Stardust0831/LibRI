@@ -1,0 +1,4 @@
+scf_hse_gamma_host 1
+scf_hse_gamma_default 1
+scf_hse_gamma_cpu 1
+scf_hse_gamma_gpu 1

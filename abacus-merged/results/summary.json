@@ -1,0 +1,440 @@
+{
+  "source_sha": null,
+  "libri_sha": "f68342122e4d23007142028bf2d017ce026835eb",
+  "libri_repository": "https://gitee.com/linpeize/LibRI.git",
+  "libri_branch": "fac_add_Ds",
+  "ddla_version": "v0.0.4",
+  "ddla_sha": "9c404ac65148ec1b48977b846f38ba6ef9e134f7",
+  "patches_applied": [
+    "move-declarations.patch"
+  ],
+  "remote_root": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023",
+  "archive_sha256": {
+    "abacus.tar.gz": "fa018bf223685ec3279b24d68e02096b571307b1e63878e6fd59a7be518bee12",
+    "libri.tar.gz": "6ff809e755eb1229f188fc2cbc60b1a7e22473c510d4e4f1c04181d9c30a4870",
+    "libri-fixed.tar.gz": "9e22fffe1a9b7766c93e19e4c019796116e83bacad0f550a1158e4fb188c210d"
+  },
+  "patch_sha256": "883c556b0aae7b98b780ea476ba9874d56484d0ab61e2a6fc177b723f5ae25de",
+  "changed_libri_files": [
+    "include/RI/ri/LRI_k-cal_cvc_mo.hpp",
+    "include/RI/ri/LRI_k-cal_hartree.hpp"
+  ],
+  "expected_header_sha256": {
+    "include/RI/comm/example/Communicate_Map_Combine.h": "fbcaba9c93a28d985ee1f2b65ddf3b0c734573450e908fb1a79d0e20ef0fc91b",
+    "include/RI/comm/example/Communicate_Map_Period.h": "26a80833ab4cb475746d719d237818dad89082af5556d136a3717f17662f5efc",
+    "include/RI/comm/mix/Communicate_Tensors_Map.h": "c8d15d67fb2c16299099a5d117ae0579f217f4e26408de6cd5a67b2e532916f0",
+    "include/RI/comm/mix/Communicate_Tensors_Map_Judge.h": "acae46d5fb54df3fe98625dbf78738a2bae423e9cc2d52d687cdcd67ebd6330e",
+    "include/RI/distribute/Distribute_Equally.h": "7037e0592d9a1014fab1b9c7fb65e55dd9d1df9c85946146333be1086ae34be8",
+    "include/RI/distribute/Distribute_Equally.hpp": "20fdff3bddfa920a76620cb6c80e6fd0027b2256f74e7aced2414fd4d8f17168",
+    "include/RI/distribute/Distribute_Equally_Weighted.h": "8ee12ff0533cd1620513a47ad5c59776b158ae446295fee8b460b52a4639aae7",
+    "include/RI/distribute/Distribute_Equally_Weighted.hpp": "f12ca99fa9e42e5d9a8d43c6cca361b36362e3d1d33725d82577b70d3e28e231",
+    "include/RI/distribute/Divide_Atoms.h": "f32ae3d9bd555d7fcc749c923d8cd36de9fea25ce0d1cf8deed689663cb8c355",
+    "include/RI/distribute/Divide_Atoms.hpp": "cc1f9d70655e45dcb685c977f5c69007949f12de52d529a6afcbc4775d513ddb",
+    "include/RI/distribute/Divide_Atoms_Weighted.h": "cb090a4bda1787e7050aa5e7e4ab78b272bf46b4589de7198404ded319dfddfd",
+    "include/RI/distribute/Divide_Atoms_Weighted.hpp": "c6627ddbae90dab6113888121bf1c687cc0e3f4d8e1103cb7a31b94b0ff3dc44",
+    "include/RI/distribute/Split_Processes.h": "d26ea456b817bb2a940d315596c6ae38997aa6db21e39ca2116204d358f4671a",
+    "include/RI/distribute/Split_Processes.hpp": "7681376655f05f8cdcbcb04428dcec76575b9cc779e9719b44b9b629d713b566",
+    "include/RI/global/Array_Operator.h": "a2d1cac07bcf4ddfb5eb29a3eec7007355efe3a0f78e41951fc33f5402c0653b",
+    "include/RI/global/Array_Operator.hpp": "3484c1e33484cb693301c2c2af74f339384d1c7fba177291673b53dd59701672",
+    "include/RI/global/Blas-Fortran.h": "b1f1c1be39cd7c687a55b4ab65cf710f81a6f6c7a25eb8de8b7dcb70f0e0a52d",
+    "include/RI/global/Blas_Interface-Contiguous.h": "43fcfd102de5c6cd9d2fefe18e637fe1e6fe652e1bf96a3a4fbd38135fc8c5e6",
+    "include/RI/global/Blas_Interface-Tensor.h": "8d535437e4ab9b13c589af6306ff5eaed8d101e5579fee0ec2c36f6c994fd9b6",
+    "include/RI/global/Blas_Interface.h": "c2cca061ec321ee12ac91ecff5b6b01e77a27d83fa6ccc9bbf4b565216a99839",
+    "include/RI/global/Cereal_Types.h": "68918fbef2147947970439e4103fc14d57d7551219f69bba1733da78aa97689d",
+    "include/RI/global/Global_Func-1.h": "1bee7f92375d48ac25d4f34f1ab3857b109c735849696970944b9fd9c239fa86",
+    "include/RI/global/Global_Func-2-Tensor.h": "fbe6872355c670760485c3aadbd179e340ff9dfd85a653cc1be8f0286d7e73a4",
+    "include/RI/global/Global_Func-2.h": "56982310582cc9d258df7ee035c831b727eda7c72a072a02c303b429ab90f14e",
+    "include/RI/global/Global_Func-3.h": "7cb195aa0064af3ae126aea90fd7fe34683da3eff70c25c954f50e5405e8bb91",
+    "include/RI/global/Lapack-Fortran.h": "5cb43706b4968a8f33a66cd148bcbc48ca343f950a1fbe0b140a54358ba43b18",
+    "include/RI/global/Lapack_Interface-Contiguous.h": "589c794e3655d5b0d7459bbf40fc8abba870e42653b618d6e507f9ca6907716c",
+    "include/RI/global/Lapack_Interface-Tensor.h": "438732fac82a76078f7a32127b16752ae2bd3b2d00b3564928b3a48bc16ad42f",
+    "include/RI/global/Lapack_Interface.h": "5124b2ab5f9f63b3fb3e17614755aacc9aaaf7e0ee1784fe0fb98f2f32fb3dae",
+    "include/RI/global/MPI_Wrapper-class.h": "347986b8030ddcfed4de2077f2d5f5ec1423ff1000f2c80bf80baa7c86c59759",
+    "include/RI/global/MPI_Wrapper-func.h": "07d769190c38df3e246699ee6dd3157bb9df830121d94df60494c8f76e72da0a",
+    "include/RI/global/MPI_Wrapper.h": "3b68f0464283433c70f27c31b0154d63962b183a85667cd35604efeda4d2f3f0",
+    "include/RI/global/Map_Operator-2.h": "60df11f5e1d013f40cd0a533c946658506c03a3920b81b1d0209c8c446d21e52",
+    "include/RI/global/Map_Operator-2.hpp": "756576431c127befe410a680020d7295c282c29630aec6e6bb7d18ad7c94f802",
+    "include/RI/global/Map_Operator-3.h": "0e847ca49a71763fb8bd0e48da372bc7af774e970f2bf2f4c90aeb6606de833d",
+    "include/RI/global/Map_Operator-3.hpp": "c152f804211f96e6751b951c96b5b2a70ec26367263d4b7b00bcc8f322af2698",
+    "include/RI/global/Map_Operator.h": "53f8d796a361f8b711cb12390f2205b381cb7bce951779135694b9a4785543dc",
+    "include/RI/global/Map_Operator.hpp": "7a1ffcb6a797719fe55a0da236c6fb4abe2d72a69222ff87a434ea1c8f5bf213",
+    "include/RI/global/Shape_Vector.h": "c54b3f0f4649b7aea814153a3c498417e7a927a58e4145257cbdd0e3fc59302d",
+    "include/RI/global/Tensor-multiply.hpp": "e2373a161b43183e0e04c1da6e7af658a2396af1bdecae6e67bcf555786b46d5",
+    "include/RI/global/Tensor.h": "e8ce38f0e9902d4565cc634afb13c38593d27c0a1ca755cd99c8627057afcbb6",
+    "include/RI/global/Tensor.hpp": "de02d89326437df24c3a4121ab798c57465f8fa55add30315f8a96d03c9ef318",
+    "include/RI/global/Tensor_Algorithm.h": "b7f35fba37f8482fb11b23eb4ba501563fac7581233290f3f012b4b5715beef1",
+    "include/RI/global/Tensor_Algorithm.hpp": "a199f6f07f7b05b2314648bde856df952df89864a30692991f2fb11686581e09",
+    "include/RI/global/Tensor_Multiply-22.hpp": "9e0a22c45f7b046f8406f0ee16a92100fd5215bbd29a32d2efefa9312ad80bdb",
+    "include/RI/global/Tensor_Multiply-23.hpp": "d9cbb0aceb77bef03412744c0fb44fce83fe8deded0a93297d1c9979893a8fcc",
+    "include/RI/global/Tensor_Multiply-32.hpp": "8030746412b49bb8d76d5d7f836ee5e0ff919742e63fc3a42e1bb2882433389f",
+    "include/RI/global/Tensor_Multiply-33.hpp": "5c9f3aadc5d4657bee91c687609b25e2c12d16dbf181999866e61d1e071bef62",
+    "include/RI/global/Tensor_Multiply-gemv.hpp": "dd49a12a9424d54e82bda2ea46842f5c25c6b8d29490714cd00855a96d9f7775",
+    "include/RI/global/Tensor_Multiply.h": "1d28bc30d87a0286fc8c5968e3a5e33d30926728ce8c98020fd6ac18c0884b39",
+    "include/RI/global/Tensor_Wrapper.h": "99e2122c2b3af6d129b9a44083e97a5fb16ff94e06fb788d28ea983ac445909a",
+    "include/RI/global/Tensor_Wrapper.hpp": "3e6f9974a3becc1d316743556cb5a1f35481c68cc297984c65e57258416af9a8",
+    "include/RI/global/gpu/GPU_Backend.h": "416d5049154a0bb42e08ebb6769d72a6d52b4567a8cef441ac6f99139b797f6b",
+    "include/RI/global/gpu/Magma_Wrapper.h": "f202b5b828ae0603e40614859490f0067d897d674596d4e429b4ad814079182d",
+    "include/RI/global/gpu/Magmablas_Interface-Contiguous.h": "5e2aeba227a99f29ec42f4b6de7a170705634ed7344c142e098098b877eea657",
+    "include/RI/global/gpu/Magmablas_Interface.h": "a9000e7b249ee8bf692c1b326569f69c74bd989f188d45749b352e3f05e6e7f6",
+    "include/RI/parallel/Parallel_LRI.h": "378d21ee8a7d5797cd361537242cb007b1ed132749878bc4ec887a971204a97f",
+    "include/RI/parallel/Parallel_LRI_Equally.h": "8da4bb0a542a4b5906562035e4d2351e5d33c9a9890637fd281c4f4e6e6e5085",
+    "include/RI/parallel/Parallel_LRI_Equally.hpp": "2af49463640e7b13fd56cc64232d52d2a9dd286f5670a4efad3f597260d73988",
+    "include/RI/parallel/Parallel_LRI_Equally_Filter.h": "67f4c23e10f18f7d9717343f80a6c6053cce169ddce2123a191e72bdbc2aae11",
+    "include/RI/parallel/Parallel_LRI_Equally_Filter.hpp": "1cb4548a7d2f20060c118e3083a57d5f636da4995ee27103267bdbd994b6388b",
+    "include/RI/parallel/Parallel_LRI_Equally_Weighted.h": "0e7001a78dc507081f1d3b6ec5914f47de2747e517c869bf63ee4556ab042732",
+    "include/RI/parallel/Parallel_LRI_Equally_Weighted.hpp": "a4147b171ea8038a63afefafe892bcbc57a39bae2d4628d3fc5b89ad0fb0b21b",
+    "include/RI/physics/Exx.h": "cd3595d74b2f66d3c506ed80ac4b6a93fea7c964d3ea7b2f65fd33c67fc8b9e1",
+    "include/RI/physics/Exx.hpp": "2d8c44aa80f37a15250b1518f5189c4b5315a844f4088de520631d2944d0939f",
+    "include/RI/physics/Exx_Post_2D.h": "7b3b118423b51538e64080e1a8f17609fb14a37ab00d709a59362fa11e55464c",
+    "include/RI/physics/Exx_Post_2D.hpp": "067afbd10c81e8ef3fcd59bd249c9d2de85995e6a77d6296e086b01e3d25dc5d",
+    "include/RI/physics/GW.h": "bf4c1a4a9eacc7ec8367fee8fd480da7de85428acaa165a172f69b8e55132b13",
+    "include/RI/physics/GW.hpp": "15593924e30fab1dcb5ad1f2f5b5afe9090af7f601596e3f34ba41701e856f94",
+    "include/RI/physics/Hartree.h": "2b2f5d5804f5061a0cd04f202132d1e26407b423deaeefb10b019b5d0a39d2ba",
+    "include/RI/physics/LR.h": "61ebc6f38f84ff32acc6c3dd713b10e3905f4f7c47364ebad6301ba4d7a24bed",
+    "include/RI/physics/RPA.h": "ad4fabfc02d8236890d1bf5ff71aefc3833b83f88b31b5a164f9901e43300921",
+    "include/RI/physics/RPA.hpp": "9175e797d90b1938d70378500c632f351802a45a83c8fdef8c69d660e1040be4",
+    "include/RI/physics/symmetry/Filter_Atom_Symmetry.h": "346c3cf420f1cc53e2bc0c84c4d60e694a56ab3297c94b29030fb1426b70964d",
+    "include/RI/physics/symmetry/Symmetry_Filter.h": "2f99dea03991331af3d3eca72867330e5512c00735f137d4529f2fcaa7719462",
+    "include/RI/physics/symmetry/Symmetry_Rotation.h": "11cbe2b961a86a706b087c62457d94b7d742b20794abf403127b1e714e34fe72",
+    "include/RI/ri/Cell_Nearest.h": "e3932f9f73ec24f4577b7f20b02a95369fafd19361719c96f1bc9a40c87ca533",
+    "include/RI/ri/Cell_Nearest.hpp": "2cb885c77c58d706aaf76aa4eebbda105831f2d206ab75408d76c452dcba29c6",
+    "include/RI/ri/Data_Pack.h": "7dc2f9a93d195457b17092611137539b00cb7eb3b9207332565a5a3815d3beaa",
+    "include/RI/ri/Filter_Atom.h": "f98e043ff1b18dc15b4d1a8386b3530a0edd7a72d85eecbecc12ffa3fb39f35b",
+    "include/RI/ri/LRI-cal_loop3_CPU.hpp": "9e0ed009a5285c182c2fe5571383cba99f140c5c5d5e6d5775772f4a0b92a6c2",
+    "include/RI/ri/LRI-cal_loop3_CPU_fine_grained_lock.hpp": "081d5c9d111736b91182d87d171b5b2c01d451b1259576d355979bf5b9262059",
+    "include/RI/ri/LRI-cal_loop3_GPU.hpp": "c632a508bbf40fd6ad678c507ef498e6c242cd8b41c7e449ebdb2e6fe9453f79",
+    "include/RI/ri/LRI-set.hpp": "f29043a6837a5eda3604fceb711e57ce575e26c329dbcbd9317a8d045ea7c14e",
+    "include/RI/ri/LRI.h": "23a3f6cfbf92866d5b6cbb6dd57e962b01bf00af03b4254fb0bbeb5c91647ff3",
+    "include/RI/ri/LRI.hpp": "0749f36f998d2db7a2a025ae4e128219155a877322be517cebc4b96c18843f76",
+    "include/RI/ri/LRI_Cal_Aux.h": "359e09411fa9b7003435ceabbbf2af6ba31d3bb7e2ac7885063732b09ebc7fa4",
+    "include/RI/ri/LRI_Cal_Tools.h": "2b725cc164cdbbd81926e03756c6d7b032100289b180d87277e13ea1cfb6ca1a",
+    "include/RI/ri/LRI_k-cal_cvc_mo.hpp": "66e0a29e4788cc7950a966dcc24006895ef316962d5b0a20ebe953abf4c418d2",
+    "include/RI/ri/LRI_k-cal_hartree.hpp": "748f3cb4ea1dbe8319fdc457aef2ed53586014bd3bc147b91d18b2d6618f59f4",
+    "include/RI/ri/LRI_k.h": "4ae6febc8027ea2d9a64361f2bdc38207730229548039f9671069e9b181fe17f",
+    "include/RI/ri/Label.h": "a971d096c7b1b15383a1b8e59a66ab548d8fcb648c3dc7d46fe57de94e24b367",
+    "include/RI/ri/Label_Tools.h": "ebe37f6cbc070955529c1183bec649874c0247fda13ca2c66092d48add2e5d1c",
+    "include/RI/ri/RI_Tools.h": "c10da048242506788997ceb2fbcf5f4048677569d3a34ee2039a9a7087e79735",
+    "include/RI/ri/RI_Tools.hpp": "4e998b634f0b281d25a20e29457bf11c51159ca12fbc746031e1f07597c4256c",
+    "include/RI/ri/bak_LRI-cal-loop4_1/bak-LRI-cal.hpp": "181196a5568d87260b03f74b66b73403f97772a87742b011b2dd18e23dc3e829",
+    "include/RI/ri/bak_LRI-cal-loop4_2/CS_Matrix-filter.hpp": "a5c1dd16c83a7e02d0988b377d4f855e4fc18e07f9e7c9e129960a3b865e227e",
+    "include/RI/ri/bak_LRI-cal-loop4_2/CS_Matrix-set.hpp": "d7b7c424b08bddfa6fabe06457a075efeb51c434db920f87c3f28995b9816f8d",
+    "include/RI/ri/bak_LRI-cal-loop4_2/CS_Matrix.h": "89026b5edc4c8463f6ae6d1c2b046e9e6968883ad6d004316cb38397f16eb7f2",
+    "include/RI/ri/bak_LRI-cal-loop4_2/CS_Matrix_Tools.h": "e6eaf654cdfd9def1bd81ee865191a72e6c654892d3ec765829b87fc68b0b849",
+    "include/RI/ri/bak_LRI-cal-loop4_2/CS_Matrix_Tools.hpp": "e84ffd3536476475c8c51270b45db43683af5988692c73789400246269d8d981",
+    "include/RI/ri/bak_LRI-cal-loop4_2/Data_Pack.h": "41d5dea87d16a888ead15ae1b5174b25193eaabe9a382426c4bb3c347f937807",
+    "include/RI/ri/bak_LRI-cal-loop4_2/Exx.hpp": "8bb01b2f0b9a60c5b69ac290e201be489e0e6be3c4097fe75f6d8eff9d094320",
+    "include/RI/ri/bak_LRI-cal-loop4_2/LRI-cal-loop4-b01.hpp": "675b577c185081aa6036584f9b24cf1cf169620105f556367ebba143bf6283e2",
+    "include/RI/ri/bak_LRI-cal-loop4_2/LRI-cal-loop4-bx2.hpp": "61d5ebda92e01e325e2b6a02038cae3ebbc793048fda59fc0043a2000ac333c7",
+    "include/RI/ri/bak_LRI-cal-loop4_2/LRI-cal-loop4.hpp": "1113768eac2eaf791f3483e1a6d09dfe3b639a1973d47ce2526cff869677be62",
+    "include/RI/ri/bak_LRI-cal-loop4_2/LRI-set.hpp": "1a00acbebd1a1d1172f46a6fb1786edd7bd8f2a92b458ae44ebf2588d4270510",
+    "include/RI/ri/bak_LRI-cal-loop4_2/LRI.h": "2ed4427d6e9bb2ffce320f7b9f238f402a9d7adf46bd169986c53c1b30070ece",
+    "include/RI/ri/gpu/Dim.h": "6c90f4254894be58bf83a164d289fbb63dad9d83ffe45ea998429a57ebbd1814",
+    "include/RI/ri/gpu/GPU_Data_Input.h": "51b82bcdbafac3631faa340f0fea8f772642d50cda6e7e3c7661ade86f813e84",
+    "include/RI/ri/gpu/GPU_Data_Mul.h": "cd686910f7953b60e5f6ee70f218c40a300ccc4223959fb5edd67ac7e5d2c962",
+    "include/RI/ri/gpu/GPU_Data_Output.h": "b097fdb80671d7a8047ae0a836680c894478760dc68f8f97fd0e20da5fa6212c",
+    "include/RI/ri/gpu/GPU_Data_Pack.h": "86715a03885fb1c4d89f960155bf5b3e3accd3d06a1bca662d5acfcc70a9c7c8",
+    "include/RI/ri/gpu/GPU_Data_Tmp.h": "e0d3b05e809c9e1d70f93fac5aae250c1596f207bc3f8cc8f8bb4df9dc612178",
+    "include/RI/version.h": "18310c0ef12ddbb7f4103f85e84aa54f7143edb0d0aacd88be64b52ed9e3934b"
+  },
+  "source_tree": "17f2f18ce697201513fc18fbdc626cb9083ea331",
+  "merge_parents": [
+    "484bf4c73ede6b48931a75f1bbc1728f688e20d5",
+    "370ba685e6707b3625c5580ff9d02ef0afb248e8"
+  ],
+  "status": "PASSED",
+  "reason": "See individual dependency and ABACUS regression results.",
+  "job_id": "1912596",
+  "steps": [
+    {
+      "step": "environment/compiler",
+      "command": [
+        "mpicxx",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "environment/gpu",
+      "command": [
+        "nvidia-smi",
+        "-q"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "environment/allocation",
+      "command": [
+        "scontrol",
+        "show",
+        "job",
+        "1912596"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "consumer-cpu/configure",
+      "command": [
+        "cmake",
+        "-S",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source/tests/lcao_hse_gpu/cmake",
+        "-B",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu",
+        "-DLIBRI_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/libri",
+        "-DLIBCOMM_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+        "-Dcereal_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/lib/cmake/cereal",
+        "-DENABLE_LIBRI_GPU=OFF",
+        "-DENABLE_LIBRI_GPU_TESTS=OFF",
+        "-DDDLA_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "consumer-cpu/build",
+      "command": [
+        "cmake",
+        "--build",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu",
+        "--verbose",
+        "--parallel",
+        "2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "consumer-cpu/test",
+      "command": [
+        "ctest",
+        "--test-dir",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-cpu",
+        "-V"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "consumer-gpu/configure",
+      "command": [
+        "cmake",
+        "-S",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source/tests/lcao_hse_gpu/cmake",
+        "-B",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-gpu",
+        "-DLIBRI_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/libri",
+        "-DLIBCOMM_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+        "-Dcereal_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/lib/cmake/cereal",
+        "-DENABLE_LIBRI_GPU=ON",
+        "-DENABLE_LIBRI_GPU_TESTS=ON",
+        "-DDDLA_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "consumer-gpu/build",
+      "command": [
+        "cmake",
+        "--build",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-gpu",
+        "--verbose",
+        "--parallel",
+        "2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "consumer-gpu/test",
+      "command": [
+        "ctest",
+        "--test-dir",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-gpu",
+        "-V"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "abacus/configure",
+      "command": [
+        "cmake",
+        "-S",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source",
+        "-B",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu",
+        "-G",
+        "Unix Makefiles",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DENABLE_LIBXC=ON",
+        "-DENABLE_LIBRI=ON",
+        "-DENABLE_LIBRI_GPU=ON",
+        "-DENABLE_ELPA=OFF",
+        "-DENABLE_NCCL_PARALLEL_DEVICE=OFF",
+        "-DBUILD_TESTING=ON",
+        "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/googletest",
+        "-DGIT_SUBMODULE=OFF",
+        "-DCMAKE_CUDA_ARCHITECTURES=70",
+        "-DUSE_CUDA=ON",
+        "-DUSE_CUDA_MPI=ON",
+        "-DENABLE_CUSOLVERMP=ON",
+        "-DENABLE_CUBLASMP=ON",
+        "-DLIBRI_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/libri",
+        "-DLIBCOMM_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+        "-Dcereal_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/lib/cmake/cereal",
+        "-DDDLA_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "abacus/bse-build",
+      "command": [
+        "cmake",
+        "--build",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu",
+        "--target",
+        "bse",
+        "--verbose",
+        "--parallel",
+        "2"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "abacus/full-build",
+      "command": [
+        "cmake",
+        "--build",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu",
+        "--target",
+        "abacus_std_gpu",
+        "--verbose",
+        "--parallel",
+        "12"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "input-gpu/build",
+      "command": [
+        "cmake",
+        "--build",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu",
+        "--target",
+        "MODULE_IO_read_item_serial",
+        "--parallel",
+        "12"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "input-gpu/test",
+      "command": [
+        "ctest",
+        "--test-dir",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu",
+        "-V",
+        "-R",
+        "^MODULE_IO_read_item_serial$"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "input-cpu/configure",
+      "command": [
+        "cmake",
+        "-S",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source",
+        "-B",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input",
+        "-G",
+        "Unix Makefiles",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DENABLE_LIBXC=ON",
+        "-DENABLE_LIBRI=ON",
+        "-DENABLE_LIBRI_GPU=OFF",
+        "-DENABLE_ELPA=OFF",
+        "-DENABLE_NCCL_PARALLEL_DEVICE=OFF",
+        "-DBUILD_TESTING=ON",
+        "-DFETCHCONTENT_SOURCE_DIR_GOOGLETEST=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/googletest",
+        "-DGIT_SUBMODULE=OFF",
+        "-DUSE_CUDA=OFF",
+        "-DUSE_CUDA_MPI=OFF",
+        "-DENABLE_CUSOLVERMP=OFF",
+        "-DENABLE_CUBLASMP=OFF",
+        "-DLIBRI_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/libri",
+        "-DLIBCOMM_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+        "-Dcereal_DIR=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/lib/cmake/cereal"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "input-cpu/build",
+      "command": [
+        "cmake",
+        "--build",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input",
+        "--target",
+        "MODULE_IO_read_item_serial",
+        "--parallel",
+        "12"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "input-cpu/test",
+      "command": [
+        "ctest",
+        "--test-dir",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input",
+        "-V",
+        "-R",
+        "^MODULE_IO_read_item_serial$"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "abacus/version",
+      "command": [
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu/abacus_std_gpu",
+        "--version"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "abacus/cli",
+      "command": [
+        "python3",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/control/verify_cli.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "abacus/scf_hse_gamma",
+      "command": [
+        "python3",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/control/backend_regressions.py",
+        "--abacus",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu/abacus_std_gpu",
+        "--source",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source",
+        "--output",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/results/scf_hse_gamma",
+        "--case",
+        "scf_hse_gamma"
+      ],
+      "exit_code": 0
+    },
+    {
+      "step": "abacus/scf_hse_complex_multik_mpi2",
+      "command": [
+        "python3",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/control/backend_regressions.py",
+        "--abacus",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu/abacus_std_gpu",
+        "--source",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/source",
+        "--output",
+        "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/results/scf_hse_complex_multik_mpi2",
+        "--case",
+        "scf_hse_complex_multik_mpi2"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

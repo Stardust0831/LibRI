@@ -12,3 +12,7 @@ abacus-collapse-fixed/results/** -text -whitespace
 abacus-collapse-fixed/build-records/** -text -whitespace
 abacus-collapse-fixed/previous-results/** -text -whitespace
 abacus-collapse-fixed/move-declarations.patch -text -whitespace
+abacus-merged/results/** -text -whitespace
+abacus-merged/build-records/** -text -whitespace
+abacus-merged/previous-results/** -text -whitespace
+abacus-merged/move-declarations.patch -text -whitespace

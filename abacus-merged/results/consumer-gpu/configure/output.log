@@ -1,0 +1,87 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found MPI_CXX: /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib/libmpi.so (found version "3.1")
+-- Found MPI: TRUE (found version "3.1") found components: CXX
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5") found components: CXX
+-- Looking for sgemm_
+-- Looking for sgemm_ - not found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for sgemm_
+-- Looking for sgemm_ - found
+-- Found BLAS: /opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so
+-- Looking for cheev_
+-- Looking for cheev_ - found
+-- Found LAPACK: /opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so;-lm;-ldl
+-- Found CUDAToolkit: /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/include (found version "12.9.86")
+-- Found LibRI: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/libri
+-- Found LibComm: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm
+-- Found DDLA: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla/include
+-- Performing Test LIBRI_GPU_API_WORKS
+CMake Warning at /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-gpu/CMakeFiles/CMakeScratch/TryCompile-FZMmmA/CMakeLists.txt:25 (add_executable):
+  Cannot generate a safe runtime search path for target cmTC_eaab0 because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+
+
+-- Performing Test LIBRI_GPU_API_WORKS - Success
+-- Configuring done (11.4s)
+CMake Warning at CMakeLists.txt:26 (add_executable):
+  Cannot generate a safe runtime search path for target libri_consumer
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+
+
+CMake Warning at CMakeLists.txt:34 (add_executable):
+  Cannot generate a safe runtime search path for target
+  libri_gpu_accumulation because files in some directories may conflict with
+  libraries in implicit directories:
+
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+
+
+-- Generating done (0.3s)
+-- Build files have been written to: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/consumer-gpu

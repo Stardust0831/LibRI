@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "input_tests_per_configuration": 16,
+  "hse_cases": 8,
+  "component_comparisons": 16,
+  "previous_configuration_max_errors": {
+    "energy_ev": 1.2849454833485652e-10,
+    "forces_ev_angstrom": 3.000000248221113e-10,
+    "stress_kbar": 0.0
+  }
+}

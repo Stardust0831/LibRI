@@ -1,0 +1,63 @@
+--- a/include/RI/ri/LRI_k-cal_cvc_mo.hpp
++++ b/include/RI/ri/LRI_k-cal_cvc_mo.hpp
+@@ -133,9 +133,9 @@
+ #pragma omp parallel for schedule(static) collapse(2)
+     for (int ik_index=0; ik_index<k_indices.size(); ++ik_index)
+     {
+-		const int ik = k_indices[ik_index];
+         for (int iat1_index=0; iat1_index<list_IJ.size(); ++iat1_index)
+         {
++			const int ik = k_indices[ik_index];
+ 			const int iat1 = list_IJ[iat1_index];
+             Tk k = kindex_map.at(ik);
+             auto& tensor_ao_mo = Csk_ao_mo.at(ik).at(iat1); // C'^\mu (s,m)[k]
+@@ -307,12 +307,12 @@
+ #pragma omp for schedule(dynamic, 64) collapse(3)
+ 		for (int q_index=0; q_index<q_list.size(); ++q_index)
+ 		{
+-			const Tk q=q_list[q_index];
+ 			for (int mu_index=0; mu_index<list_I.size(); ++mu_index)
+ 			{
+-				const TA mu = list_I[mu_index];
+ 				for (int nu_index=0; nu_index<list_J.size(); ++nu_index)
+ 				{	// 2.1 calculate V(q)_{mu,nu} on-the-fly
++					const Tk q=q_list[q_index];
++					const TA mu = list_I[mu_index];
+ 					const TA nu = list_J[nu_index];
+ 					Tensor<Tdata> Vq_mu_nu;
+ 					const auto& V_mu = Vs.at(mu);
+@@ -465,9 +465,9 @@
+ #pragma omp for schedule(dynamic, 64) collapse(2)
+ 		for (int mu_index=0; mu_index < list_I.size(); ++mu_index)
+ 		{
+-			const TA& mu = list_J[mu_index];
+ 			for (int k1_index=0; k1_index<k1_indices.size(); ++k1_index)
+ 			{
++				const TA& mu = list_J[mu_index];
+ 				const int k1 = k1_indices[k1_index];
+ 				// 2.1 calculate C^mu (i,a^*)[k1,k1] on-the-fly
+ 				const Tensor<Tdata> C_mu_ia = Cs_ao_mo_to_Cs_mo(Cs_ao_mo, map_psi, k1, k1,
+--- a/include/RI/ri/LRI_k-cal_hartree.hpp
++++ b/include/RI/ri/LRI_k-cal_hartree.hpp
+@@ -121,9 +121,9 @@
+ #pragma omp for schedule(dynamic) collapse(2)
+ 		for (int v_index=0; v_index<list_I.size(); v_index++)
+ 		{
+-			const TA v = list_I[v_index];
+ 			for (int u_index=0; u_index<list_I.size(); u_index++)
+ 			{
++				const TA v = list_I[v_index];
+ 				const TA u = list_J[u_index];
+ 				const std::map<int, Tensor<Tdata>>& D_v_u = Global_Func::find(Ds, v, u);
+ 				if (D_v_u.empty()) continue;
+@@ -205,9 +205,9 @@
+ #pragma omp parallel for schedule(dynamic) collapse(2)
+ 	for (int s_index=0; s_index<list_I.size(); s_index++)
+ 	{
+-		const TA s = list_I[s_index];
+ 		for (int t_index=0; t_index<list_J.size(); t_index++)
+ 		{
++			const TA s = list_I[s_index];
+ 			const TA t = list_J[t_index];
+ 			auto& hartree_st = hartree_k.at(s).at(t);
+ 			const std::map<int, Tensor<Tdata>>& Csk_s_t = Global_Func::find(Csk, s, t);

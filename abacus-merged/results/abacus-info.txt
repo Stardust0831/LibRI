@@ -1,0 +1,68 @@
+
+----------------- ABACUS Core & Platform -----------------
+ABACUS Version:                v3.11.0-beta11
+Git Commit:                    N/A
+Target Platform:               CPU + NVIDIA CUDA
+Build Type:                    Release
+
+----------------- Build Environment -----------------
+Built By:                      abacususer01
+Built On:                      16v100n04.mr-sai.ai
+Built At:                      Oct 23 2026 22:03:51
+
+----------------- Compiler & Flags -----------------
+C++ Compiler:                  GNU (/usr/bin/c++)
+C++ Compiler Ver:              13.3.0
+C++ Flags:                     
+Linker Flags:                  
+CUDA Flags:                    
+
+----------------- Sanitizers & Debugging -----------------
+AddressSanitizer:              no
+Debug Symbols:                 no
+
+----------------- CMake Configuration Summary -----------------
+Build Options:  ENABLE_MPI=ON  ENABLE_OPENMP=ON  USE_CUDA=ON  USE_ROCM=OFF  ENABLE_LCAO=ON  ENABLE_ELPA=OFF  ENABLE_LIBXC=ON  ENABLE_LIBRI_GPU=ON  ENABLE_MLALGO=OFF  ENABLE_ASAN=OFF  BUILD_TESTING=ON
+
+FindPackage Results:  MPI Found=TRUE  OpenMP Found=TRUE  CUDA Found=  ROCm Found=  ELPA Found=  Libxc Found=1  PEXSI Found=  LibRI Found=TRUE
+
+----------------- Parallelism & Communication -----------------
+MPI Implementation:            OpenMPI
+MPI Version:                   (MPI standard: 3.1)
+CUDA-aware MPI:                yes
+OpenMP Support:                yes (v4.5)
+
+----------------- Core Math Libraries -----------------
+LCAO Algorithm:                yes
+ELPA Support:                  no
+MKL Support:                   no
+LibXC Support:                 yes (v7.0.0)
+FFTW Support:                  yes (v3.3.10)
+
+----------------- Accelerators & Hardware -----------------
+NVIDIA CUDA Support:           yes (v12.9.86)
+AMD ROCm Support:              no
+CUSOLVERMP Support:            yes (version unknown)
+
+----------------- Hybrid Functional Libraries -----------------
+Cereal Serialization:          yes (version unknown)
+LibRI Support:                 yes (v2.1.1)
+LibComm Support:               yes (path: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm)
+
+----------------- AI & Machine Learning -----------------
+LibTorch Support:              no
+Libnpy Support:                no
+DeePMD-kit Support:            no
+NEP Support:                   no
+TensorFlow Support:            no
+
+----------------- Other Libraries -----------------
+DFT-D4 Support:                no
+JSON Support:                  no
+PEXSI Support:                 no
+cnpy Support:                  no
+
+----------------- Testing -----------------
+GTest Support:                 yes (from git origin/main)
+Google Benchmark:              Disabled
+

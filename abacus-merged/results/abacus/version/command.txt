@@ -1,0 +1,1 @@
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-gpu/abacus_std_gpu --version

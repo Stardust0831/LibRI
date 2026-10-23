@@ -1,0 +1,1152 @@
+Internal ctest changing into directory: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input
+UpdateCTestConfiguration  from :/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input/DartConfiguration.tcl
+Parse Config file:/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input/DartConfiguration.tcl
+UpdateCTestConfiguration  from :/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input/DartConfiguration.tcl
+Parse Config file:/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input/DartConfiguration.tcl
+Test project /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 361
+    Start 361: MODULE_IO_read_item_serial
+
+361: Test command: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input/source/source_io/test_serial/MODULE_IO_read_item_serial
+361: Working Directory: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/pr8169-merged-validation-20261023/build-cpu-input/source/source_io/test_serial
+361: Test timeout computed to be: 1500
+361: Running main() from /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/googletest/googletest/src/gtest_main.cc
+361: [==========] Running 16 tests from 2 test suites.
+361: [----------] Global test environment set-up.
+361: [----------] 14 tests from InputTest
+361: [ RUN      ] InputTest.RelaxMethod
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  relax_method requires exactly one scalar option. The parameter relax_method must be 'cg', 'cg_trad', 'bfgs', 'bfgs_trad', 'sd', 'cg_bfgs' or 'lbfgs'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361: [       OK ] InputTest.RelaxMethod (10 ms)
+361: [ RUN      ] InputTest.PccSelectionAndUnsupportedCombinations
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  pcc_0d requires nspin 1 or 2
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  pcc_0d requires device cpu
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  pcc_0d does not support cal_stress
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  pcc_0d requires calculation scf or fixed-cell relax
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  pcc_2d_axis must be 0, 1 or 2
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  The parameter assume_isolated must be 'none', 'makov-payne', 'm-p', 'mp', 'pcc_0d' or 'pcc_2d'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361: [       OK ] InputTest.PccSelectionAndUnsupportedCombinations (7 ms)
+361: [ RUN      ] InputTest.DeviceExx
+361: [       OK ] InputTest.DeviceExx (5 ms)
+361: [ RUN      ] InputTest.RejectInvalidMemSaver
+361: [       OK ] InputTest.RejectInvalidMemSaver (25 ms)
+361: [ RUN      ] InputTest.AcceptSupportedMemSaverInputs
+361: [       OK ] InputTest.AcceptSupportedMemSaverInputs (10 ms)
+361: [ RUN      ] InputTest.Item_test
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  Invalid INPUT mem_saver=1 with calculation=scf. Use mem_saver=0 for this calculation; memory saving with mem_saver=1 is intended for nscf.
+361: See https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#mem-saver
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  Invalid INPUT mem_saver=1 with calculation=relax. Use mem_saver=0 for this calculation; memory saving with mem_saver=1 is intended for nscf.
+361: See https://abacus.deepmodeling.com/en/latest/advanced/input_files/input-main.html#mem-saver
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  init_wfc accepts one or two values
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  init_wfc accepts one or two values
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  the init_wfc file format must be txt or binary
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  only init_wfc file accepts a second value
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  The parameter init_wfc must be 'atomic', 'atomic+random', 'random', 'nao', 'nao+random' or 'file'!
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361: [       OK ] InputTest.Item_test (64 ms)
+361: [ RUN      ] InputTest.HsOutputAliases
+361: [       OK ] InputTest.HsOutputAliases (12 ms)
+361: [ RUN      ] InputTest.PreserveExplicitMagneticMixing
+361: [       OK ] InputTest.PreserveExplicitMagneticMixing (12 ms)
+361: [ RUN      ] InputTest.DefaultMagneticMixing
+361: [       OK ] InputTest.DefaultMagneticMixing (6 ms)
+361: [ RUN      ] InputTest.Item_test2
+361: [       OK ] InputTest.Item_test2 (50 ms)
+361: [ RUN      ] InputTest.Item_test_out_mat_vec
+361: [       OK ] InputTest.Item_test_out_mat_vec (2 ms)
+361: [ RUN      ] InputTest.OutStru
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted. Got: 'abc'.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted. Got: '2.5'.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted. Got: '2abc'.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted. Got: '-1abc'.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted. Got: 'xyz'.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  out_stru must be one of 0, 1, 2. For backward compatibility, true/false are also accepted. Got: ''.
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361: [       OK ] InputTest.OutStru (10 ms)
+361: [ RUN      ] InputTest.LRExternalKernelSupportsSpectraOnly
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  lr_init_xc_kernel=file supports spectra only; excited-state forces and relaxation are not supported
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  lr_init_xc_kernel=file supports spectra only; excited-state forces and relaxation are not supported
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  lr_init_xc_kernel=from_charge_file supports spectra only; excited-state forces and relaxation are not supported
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  lr_init_xc_kernel=from_charge_file supports spectra only; excited-state forces and relaxation are not supported
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  lr_init_xc_kernel=file supports spectra only; excited-state forces and relaxation are not supported
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  lr_init_xc_kernel=file supports spectra only; excited-state forces and relaxation are not supported
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  lr_init_xc_kernel=from_charge_file supports spectra only; excited-state forces and relaxation are not supported
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  lr_init_xc_kernel=from_charge_file supports spectra only; excited-state forces and relaxation are not supported
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361: [       OK ] InputTest.LRExternalKernelSupportsSpectraOnly (8 ms)
+361: [ RUN      ] InputTest.LRFixedFieldRejectsForcesAndRelaxation
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  LR-TDDFT forces and relaxation with efield_flag are not supported: moving-AO correction is missing
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  LR-TDDFT forces and relaxation with efield_flag are not supported: moving-AO correction is missing
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  LR-TDDFT forces and relaxation with efield_flag are not supported: moving-AO correction is missing
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361:  
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361:  
+361:  LR-TDDFT forces and relaxation with efield_flag are not supported: moving-AO correction is missing
+361:  CHECK IN FILE : warning.log
+361:  
+361:  For detailed manual of ABACUS, please see the website
+361:  https://abacus.deepmodeling.com
+361:  For any questions, propose issues on the website
+361:  https://github.com/deepmodeling/abacus-develop/issues
+361:  ---------------------------------------------------------
+361:                          !NOTICE!                         
+361:  ---------------------------------------------------------
+361: 
+361:  TIME STATISTICS
+361: -----------------------------------------------------
+361:  CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+361: -----------------------------------------------------
+361:             total      0.00   0        -nan   0.00   
+361: -----------------------------------------------------
+361: 
+361:  See output information in : 
+361: [       OK ] InputTest.LRFixedFieldRejectsForcesAndRelaxation (5 ms)
+361: [----------] 14 tests from InputTest (232 ms total)
+361: 
+361: [----------] 2 tests from ReadInpSccs
+361: [ RUN      ] ReadInpSccs.LegacyBooleansAndModelSelection
+361: [       OK ] ReadInpSccs.LegacyBooleansAndModelSelection (0 ms)
+361: [ RUN      ] ReadInpSccs.SupportedScopeAndNumericalValidation
+361: [       OK ] ReadInpSccs.SupportedScopeAndNumericalValidation (0 ms)
+361: [----------] 2 tests from ReadInpSccs (0 ms total)
+361: 
+361: [----------] Global test environment tear-down
+361: [==========] 16 tests from 2 test suites ran. (232 ms total)
+361: [  PASSED  ] 16 tests.
+1/1 Test #361: MODULE_IO_read_item_serial .......   Passed    0.30 sec
+
+The following tests passed:
+	MODULE_IO_read_item_serial
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.40 sec

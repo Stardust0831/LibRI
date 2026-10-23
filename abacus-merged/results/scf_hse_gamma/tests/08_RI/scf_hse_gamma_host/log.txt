@@ -1,0 +1,174 @@
+
+                     ▄████▄ █████▄ ▄████▄ ▄█████ ██  ██ ▄█████ 
+                     ██▄▄██ ██▄▄██ ██▄▄██ ██     ██  ██ ▀▀▀▄▄▄ 
+                     ██  ██ ██▄▄█▀ ██  ██ ▀█████ ▀████▀ █████▀ 
+
+                                                                                     
+                                v3.11.0-beta11
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: unknown
+
+ Fri Oct 23 22:07:09 2026
+ MAKE THE DIR         : OUT.autotest/
+ RUNNING WITH DEVICE  : CPU / AMD Ryzen Threadripper PRO 5995WX 64-Cores (x1)
+ WARNING: some of potential function is set to zero cause of less than 1e-30.
+ NAME OF ELEMENT      : H
+ DFT FUNC. (PSEUDO)   : PBE
+ DFT FUNC. (SET TO)   : HSE
+ MAKE SURE THIS DFT FUNCTIONAL IS WHAT YOU NEED
+ WARNING: some of potential function is set to zero cause of less than 1e-30.
+ NAME OF ELEMENT      : O
+ DFT FUNC. (PSEUDO)   : PBE
+ DFT FUNC. (SET TO)   : HSE
+ MAKE SURE THIS DFT FUNCTIONAL IS WHAT YOU NEED
+ UNIFORM GRID DIM          : 27 * 27 * 27
+ UNIFORM GRID DIM (BIG)    : 9 * 9 * 9
+ DONE(0.0625453  SEC) : SETUP UNITCELL
+ DONE(0.0641665  SEC) : INIT K-POINTS
+ ----------------------------------------------------------------
+ Self-consistent calculations for electrons
+ ----------------------------------------------------------------
+ SPIN    KPOINTS         PROCESSES   THREADS/PROC  THREADS/TOTAL 
+ 1       Gamma           1           1             1             
+ ----------------------------------------------------------------
+ Use Systematically Improvable Atomic bases
+ ----------------------------------------------------------------
+ TOTAL NBASE 6
+ ELEMENT ORBITALS        NBASE       NATOM       
+ H       1s0p-6au        1           2           
+ O       1s1p0d-6au      4           1           
+ ----------------------------------------------------------------
+ Initial plane wave basis and FFT box
+ ----------------------------------------------------------------
+ DONE(0.0699419  SEC) : INIT PLANEWAVE
+ START CHARGE         : ATOMIC
+ DONE(0.106002   SEC) : CHARGE
+ DONE(0.516676   SEC) : POTENTIALS
+
+ ================================================================
+ SELF-CONSISTENT: 
+ ================================================================
+ DONE(0.537528   SEC) : INIT SCF
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ GV1   -4.28327257e+02   0.00000000e+00   3.2616e-01   0.01
+ GV2   -4.28473351e+02  -1.46094267e-01   1.8594e-01   0.01
+ GV3   -4.28493959e+02  -2.06075210e-02   3.5153e-02   0.01
+ GV4   -4.28576298e+02  -8.23389591e-02   1.1112e-02   0.01
+ GV5   -4.28578035e+02  -1.73768160e-03   7.7898e-03   0.01
+ GV6   -4.28593661e+02  -1.56256318e-02   4.5041e-03   0.01
+ GV7   -4.28599573e+02  -5.91153186e-03   2.7121e-03   0.01
+ GV8   -4.28601355e+02  -1.78257968e-03   2.0491e-03   0.01
+ GV9   -4.28603290e+02  -1.93499983e-03   1.0730e-03   0.01
+ GV10  -4.28604105e+02  -8.14863116e-04   4.0668e-04   0.01
+ GV11  -4.28604332e+02  -2.27474381e-04   1.2805e-04   0.01
+ GV12  -4.28604391e+02  -5.88010110e-05   6.8402e-05   0.01
+ GV13  -4.28604427e+02  -3.59586803e-05   1.0646e-05   0.01
+ GV14  -4.28604429e+02  -2.03799969e-06   2.9268e-06   0.01
+ GV15  -4.28604429e+02  -1.40000626e-07   1.8757e-06   0.01
+ GV16  -4.28604429e+02   5.02061729e-07   7.4337e-07   0.01
+ GV17  -4.28604429e+02  -2.41583466e-07   5.2854e-07   0.01
+ GV18  -4.28604430e+02  -6.65723632e-07   2.4485e-07   0.01
+ GV19  -4.28604430e+02  -4.04349439e-08   1.5534e-07   0.01
+ GV20  -4.28604430e+02  -4.13185953e-09   1.2079e-07   0.00
+ GV21  -4.28604430e+02  -4.31607241e-09   3.2144e-08   0.01
+ Updating EXX and rerun SCF	5.600e-02 (s)
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ GV1   -4.28973127e+02   0.00000000e+00   9.5033e-03   0.02
+ GV2   -4.28982290e+02  -9.16256106e-03   4.7928e-03   0.02
+ GV3   -4.28989130e+02  -6.84005915e-03   1.9701e-03   0.02
+ GV4   -4.28989727e+02  -5.97412510e-04   1.0559e-03   0.02
+ GV5   -4.28990088e+02  -3.60885460e-04   6.2799e-04   0.02
+ GV6   -4.28990220e+02  -1.31888845e-04   4.6682e-04   0.02
+ GV7   -4.28990358e+02  -1.38168624e-04   2.5259e-04   0.02
+ GV8   -4.28990408e+02  -5.00925398e-05   9.8954e-05   0.01
+ GV9   -4.28990424e+02  -1.57021794e-05   3.4438e-05   0.01
+ GV10  -4.28990429e+02  -4.93390470e-06   9.3921e-06   0.01
+ GV11  -4.28990429e+02   1.90295623e-07   4.4608e-06   0.01
+ GV12  -4.28990429e+02  -1.00649739e-07   1.2801e-06   0.01
+ GV13  -4.28990429e+02  -2.62824936e-07   6.6314e-07   0.01
+ GV14  -4.28990429e+02  -2.53688828e-08   1.0339e-07   0.01
+ GV15  -4.28990429e+02   3.54050284e-09   6.8647e-08   0.01
+ deltaE (eV) from outer loop: 3.85999146e-01 
+ Updating EXX and rerun SCF	4.893e-02 (s)
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ GV1   -4.28991969e+02   0.00000000e+00   1.2283e-03   0.02
+ GV2   -4.28993273e+02  -1.30386258e-03   6.1563e-04   0.02
+ GV3   -4.28994158e+02  -8.84523240e-04   2.5283e-04   0.02
+ GV4   -4.28994235e+02  -7.74009054e-05   1.2953e-04   0.02
+ GV5   -4.28994276e+02  -4.13728175e-05   8.1460e-05   0.02
+ GV6   -4.28994296e+02  -1.94496420e-05   5.0264e-05   0.02
+ GV7   -4.28994308e+02  -1.20855345e-05   2.7267e-05   0.01
+ GV8   -4.28994311e+02  -3.42810288e-06   1.1850e-05   0.01
+ GV9   -4.28994313e+02  -2.06734977e-06   4.5416e-06   0.01
+ GV10  -4.28994314e+02  -5.03037850e-07   8.6720e-07   0.01
+ GV11  -4.28994314e+02  -3.46037919e-08   1.8422e-07   0.01
+ GV12  -4.28994314e+02   6.59512066e-10   1.1786e-07   0.01
+ GV13  -4.28994314e+02  -6.00980612e-09   1.9731e-08   0.01
+ deltaE (eV) from outer loop: 3.88497290e-03 
+ >> NOTICE: calculating EXX force/stress, which may be time-consuming
+ ----------------------------------------------------------------
+              Stress_x             Stress_y             Stress_z 
+ ----------------------------------------------------------------
+        -32.7888700507         6.9594240298        -0.0000000000 
+          6.8181549229       -42.8149639648         0.0000000000 
+         -0.0000000000         0.0000000000      -167.4031212394 
+ ----------------------------------------------------------------
+ TOTAL-PRESSURE (EXCLUDE KINETIC PART OF IONS): -81.002318 kbar
+
+ TIME STATISTICS
+----------------------------------------------------------------------
+     CLASS_NAME             NAME        TIME/s  CALLS   AVG/s  PER/%  
+----------------------------------------------------------------------
+                     total              1.51   13       0.12   100.00 
+ Driver              atomic_world       1.51   1        1.51   100.00 
+ Driver              reading            0.02   1        0.02   1.16   
+ ESolver_KS_LCAO     before_all_runners 0.47   1        0.47   31.07  
+ PW_Basis_Sup        recip2real         0.06   307      0.00   3.84   
+ NOrbital_Lm         extra_uniform      0.08   74       0.00   5.35   
+ Mathzone_Add1       Uni_Deriv_Phi      0.07   74       0.00   4.44   
+ Exx_LRI             init               0.41   1        0.41   26.96  
+ Matrix_Orbs21       init               0.07   2        0.03   4.59   
+ Matrix_Orbs21       init_radial_table  0.20   2        0.10   13.53  
+ Center2_Orb         cal_ST_Phi12_R     0.20   90       0.00   13.35  
+ Exx_LRI             refresh_coulomb    0.25   1        0.25   16.49  
+ LRI_CV              set_orbitals       0.24   1        0.24   16.07  
+ Matrix_Orbs11       init_radial_table  0.08   1        0.08   5.15   
+ Relax_Driver        relax_driver       0.99   1        0.99   65.70  
+ ESolver_KS          runner             0.68   1        0.68   45.11  
+ ESolver_KS_LCAO     before_scf         0.02   1        0.02   1.29   
+ Potential           cal_veff           0.45   51       0.01   29.66  
+ H_Hartree_pw        v_hartree          0.02   51       0.00   1.40   
+ PW_Basis_Sup        real2recip         0.06   332      0.00   3.89   
+ PotXC               cal_veff           0.43   51       0.01   28.22  
+ XC_Functional       v_xc               0.08   22       0.00   5.61   
+ HSolverLCAO         solve              0.06   49       0.00   3.98   
+ HamiltLCAO          updateHk           0.02   49       0.00   1.58   
+ OperatorLCAO        init               0.02   343      0.00   1.58   
+ Veff                contributeHR       0.02   49       0.00   1.47   
+ Gint                cal_gint_vl        0.02   49       0.00   1.46   
+ LCAO_domain         dm2rho             0.03   49       0.00   1.73   
+ Gint                cal_gint_rho       0.02   49       0.00   1.57   
+ Charge_Mixing       mix_rho            0.03   46       0.00   2.05   
+ Charge_Mixing       mix_rho_real       0.03   46       0.00   2.01   
+ module_charge       kerker_screen_real 0.02   46       0.00   1.21   
+ ModuleIO            ctrl_iter_lcao     0.11   49       0.00   7.37   
+ Exx_LRI             cal_exx_elec       0.10   2        0.05   6.89   
+ XC_Functional_Libxc v_xc_libxc         0.34   29       0.01   22.46  
+ Libxc               xc_lda/gga_exc_vxc 0.27   29       0.01   18.04  
+ ESolver_KS_LCAO     cal_force          0.31   1        0.31   20.57  
+ Force_Stress_LCAO   getForceStress     0.31   1        0.31   20.54  
+ Exx_LRI             cal_exx_force      0.15   1        0.15   9.68   
+ Exx_LRI             cal_exx_stress     0.15   1        0.15   9.66   
+----------------------------------------------------------------------
+
+
+ START  Time  : Fri Oct 23 22:07:09 2026
+ FINISH Time  : Fri Oct 23 22:07:10 2026
+ TOTAL  Time  : 1
+ SEE INFORMATION IN : OUT.autotest/
