@@ -6,3 +6,5 @@ openmp-collapse/01-original-libri/control/** -text -whitespace
 openmp-collapse/01-original-libri/cmake-targets/** -text -whitespace
 openmp-collapse/02-libri-comparison/snapshots/** -text -whitespace
 openmp-collapse/02-libri-comparison/move-declarations.patch -text -whitespace
+abacus-unpatched/results/** -text -whitespace
+abacus-unpatched/build-records/** -text -whitespace

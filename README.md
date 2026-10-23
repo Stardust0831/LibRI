@@ -11,3 +11,5 @@
 | `fe27bb1`，仅把声明移入最内层循环 | 编译、链接成功 | 编译、链接成功 |
 
 工具链为 GCC 13.3、OpenMP、OpenMPI 和 OpenBLAS。这是两个实际测试目标的编译验证；本次对修改后的版本没有执行物理数值测试。
+
+另有 **[ABACUS 接入未打补丁 LibRI 的实测记录](abacus-unpatched/README.md)**：最新 `fac_add_Ds` 的依赖测试通过，但实际 ABACUS BSE 目标被同一 OpenMP 编译问题阻塞，尚未运行 HSE 算例。

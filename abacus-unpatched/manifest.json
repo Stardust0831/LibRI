@@ -1,0 +1,14 @@
+{
+  "source_sha": "d098ea5ef77e3b48a775795c37955b3e2d26c04c",
+  "libri_sha": "f68342122e4d23007142028bf2d017ce026835eb",
+  "libri_repository": "https://gitee.com/linpeize/LibRI.git",
+  "libri_branch": "fac_add_Ds",
+  "ddla_version": "v0.0.4",
+  "ddla_sha": "9c404ac65148ec1b48977b846f38ba6ef9e134f7",
+  "patches_applied": [],
+  "remote_root": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-abacus-unpatched-20261023",
+  "archive_sha256": {
+    "abacus.tar.gz": "9fda334e836c3afecf82607ca9fbec5372140287ee24e487e6ec44b0f6fe2bf0",
+    "libri.tar.gz": "6ff809e755eb1229f188fc2cbc60b1a7e22473c510d4e4f1c04181d9c30a4870"
+  }
+}
