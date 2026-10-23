@@ -1,0 +1,30 @@
+[  7%] Building CXX object CMakeFiles/cpu_float.dir/driver.cpp.o
+[  7%] Building CXX object CMakeFiles/cpu_complex_float.dir/driver.cpp.o
+[ 10%] Linking CXX executable cpu_float
+[ 14%] Linking CXX executable cpu_complex_float
+[ 14%] Built target cpu_float
+[ 17%] Building CXX object CMakeFiles/gpu_float.dir/driver.cpp.o
+[ 17%] Built target cpu_complex_float
+[ 21%] Building CXX object CMakeFiles/gpu_complex_float.dir/driver.cpp.o
+[ 25%] Linking CXX executable gpu_float
+[ 28%] Linking CXX executable gpu_complex_float
+[ 28%] Built target gpu_float
+[ 32%] Building CXX object CMakeFiles/inrepo_float.dir/inrepo_driver.cpp.o
+[ 32%] Built target gpu_complex_float
+[ 35%] Building CXX object CMakeFiles/inrepo_complex_float.dir/inrepo_driver.cpp.o
+In file included from /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/control/inrepo_driver.cpp:1:
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/pr-tests/unittests/ri/LRI-loop3-test.hpp:13:9: fatal error: unittests/print_stl.h: No such file or directory
+   13 | #include"unittests/print_stl.h"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [CMakeFiles/inrepo_float.dir/build.make:79: CMakeFiles/inrepo_float.dir/inrepo_driver.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:258: CMakeFiles/inrepo_float.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+In file included from /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/control/inrepo_driver.cpp:1:
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/pr-tests/unittests/ri/LRI-loop3-test.hpp:13:9: fatal error: unittests/print_stl.h: No such file or directory
+   13 | #include"unittests/print_stl.h"
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [CMakeFiles/inrepo_complex_float.dir/build.make:79: CMakeFiles/inrepo_complex_float.dir/inrepo_driver.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:290: CMakeFiles/inrepo_complex_float.dir/all] Error 2
+gmake: *** [Makefile:91: all] Error 2

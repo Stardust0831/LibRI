@@ -1,0 +1,15 @@
+{
+  "repository": "https://gitee.com/linpeize/LibRI.git",
+  "branch": "fac_add_Ds",
+  "commit": "fe27bb14d9abbccd9d05296a0833278acc7f34f4",
+  "pr_test_commit": "bc79bb2ca52af2dbd9ab612c38e248f6c9dd96f1",
+  "baseline": "d891fd91f6211eb82e126716e2d01aabff3efa3c",
+  "latest_observed_commit": "f68342122e4d23007142028bf2d017ce026835eb",
+  "latest_observed_note": "The two LRI_k headers are unchanged from fe27bb1; this evidence remains pinned to fe27bb1.",
+  "after_change": "Move declarations inside the innermost collapsed loop; no expression or list-bound changes.",
+  "archive_sha256": {
+    "after.tar.gz": "1320aed7ed19d8c512a44a03070995f10345cea4f9319f73bbf58b684c530089",
+    "before.tar.gz": "54c8158fb16a5312e7b82992f665e74684b70bdb4fd767ae8d20bc8a6e0ce58c",
+    "parent.tar.gz": "663b656dd72a42abcd6455524256002e4bbdcc2dfa7aca3eec65a45c9e8bae92"
+  }
+}

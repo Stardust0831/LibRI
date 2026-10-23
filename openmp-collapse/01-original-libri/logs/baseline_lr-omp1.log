@@ -1,0 +1,23 @@
+baseline_lr: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/baseline/unittests/physics/Test_Helpers.hpp:106: void Test_Helpers::compare_map(const RI::Tensor<T>&, const RI::Tensor<T>&) [with T = std::complex<double>]: Assertion `std::abs(a.ptr()[i] - b.ptr()[i]) < REF_TOLERANCE' failed.
+[16v100n01:1196313] *** Process received signal ***
+[16v100n01:1196313] Signal: Aborted (6)
+[16v100n01:1196313] Signal code:  (-6)
+[16v100n01:1196313] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x154c76376330]
+[16v100n01:1196313] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x154c763cfb2c]
+[16v100n01:1196313] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x154c7637627e]
+[16v100n01:1196313] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x154c763598ff]
+[16v100n01:1196313] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x2881b)[0x154c7635981b]
+[16v100n01:1196313] [ 5] /lib/x86_64-linux-gnu/libc.so.6(+0x3b517)[0x154c7636c517]
+[16v100n01:1196313] [ 6] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/build/baseline_lr(+0x2d0b4)[0x55567d9b40b4]
+[16v100n01:1196313] [ 7] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/build/baseline_lr(+0x22394)[0x55567d9a9394]
+[16v100n01:1196313] [ 8] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/build/baseline_lr(+0x1a05b)[0x55567d9a105b]
+[16v100n01:1196313] [ 9] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/build/baseline_lr(+0xc6fb)[0x55567d9936fb]
+[16v100n01:1196313] [10] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/build/baseline_lr(+0xd02f)[0x55567d99402f]
+[16v100n01:1196313] [11] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x154c7635b1ca]
+[16v100n01:1196313] [12] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x154c7635b28b]
+[16v100n01:1196313] [13] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-fac-add-ds-20261023/build/baseline_lr(+0x97e5)[0x55567d9907e5]
+[16v100n01:1196313] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 1196313 on node 16v100n01 exited on
+signal 6 (Aborted).
+--------------------------------------------------------------------------

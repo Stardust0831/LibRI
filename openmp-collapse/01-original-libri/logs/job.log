@@ -1,0 +1,37 @@
+PASS cpu_float OMP=1
+PASS cpu_double OMP=1
+PASS cpu_complex_float OMP=1
+PASS cpu_complex_double OMP=1
+PASS gpu_float OMP=1
+PASS gpu_double OMP=1
+PASS gpu_complex_float OMP=1
+PASS gpu_complex_double OMP=1
+PASS inrepo_float OMP=1
+PASS inrepo_double OMP=1
+PASS inrepo_complex_float OMP=1
+PASS inrepo_complex_double OMP=1
+PASS cpu_float OMP=4
+PASS cpu_double OMP=4
+PASS cpu_complex_float OMP=4
+PASS cpu_complex_double OMP=4
+PASS gpu_float OMP=4
+PASS gpu_double OMP=4
+PASS gpu_complex_float OMP=4
+PASS gpu_complex_double OMP=4
+PASS inrepo_float OMP=4
+PASS inrepo_double OMP=4
+PASS inrepo_complex_float OMP=4
+PASS inrepo_complex_double OMP=4
+PASS negative control: contractions
+PASS negative control: physics
+PASS negative control: inrepo
+GPU_VALIDATION_FAILURES=0
+BUILD_FAIL source_hartree
+BUILD_FAIL source_lr
+BUILD_PASS baseline_hartree
+PASS baseline_hartree OMP=1
+PASS baseline_hartree OMP=4
+BUILD_PASS baseline_lr
+FAIL baseline_lr OMP=1
+FAIL baseline_lr OMP=4
+VALIDATION_COMPLETE

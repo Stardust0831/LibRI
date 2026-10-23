@@ -1,0 +1,70 @@
+Change Dir: '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+
+Run Build Command(s): /opt/devtools/cmake/3.31.6/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j2 before_hartree
+/opt/devtools/cmake/3.31.6/bin/cmake -S/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control -B/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/gmake  -f CMakeFiles/Makefile2 before_hartree
+gmake[1]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+/opt/devtools/cmake/3.31.6/bin/cmake -S/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control -B/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build --check-build-system CMakeFiles/Makefile.cmake 0
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_progress_start /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build/CMakeFiles 2
+/usr/bin/gmake  -f CMakeFiles/Makefile2 CMakeFiles/before_hartree.dir/all
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+/usr/bin/gmake  -f CMakeFiles/before_hartree.dir/build.make CMakeFiles/before_hartree.dir/depend
+gmake[3]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build/CMakeFiles/before_hartree.dir/DependInfo.cmake "--color="
+gmake[3]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+/usr/bin/gmake  -f CMakeFiles/before_hartree.dir/build.make CMakeFiles/before_hartree.dir/build
+gmake[3]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+[ 50%] Building CXX object CMakeFiles/before_hartree.dir/hartree_driver.cpp.o
+/usr/bin/c++  -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/include -isystem /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/include -O0 -fopenmp -MD -MT CMakeFiles/before_hartree.dir/hartree_driver.cpp.o -MF CMakeFiles/before_hartree.dir/hartree_driver.cpp.o.d -o CMakeFiles/before_hartree.dir/hartree_driver.cpp.o -c /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control/hartree_driver.cpp
+In file included from /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k.h:71,
+                 from /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/Hartree.h:10,
+                 from /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/unittests/physics/Hartree-test.hpp:8,
+                 from /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control/hartree_driver.cpp:1:
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp: In member function ‘std::map<int, std::map<TA, RI::Tensor<Tdata> > > RI::LRI_k<TA, Tcell, Ndim, Tdata>::cal_Csk_ao_mo(const std::map<TA, std::map<std::pair<TA, std::array<_Tp, _Nm> >, RI::Tensor<Tdata> > >&, const std::map<int, std::map<TA, RI::Tensor<Tdata> > >&, const std::vector<std::array<double, Ndim> >&, const std::vector<int>&, const std::vector<Tkey>&, std::ofstream&)’:
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp:136:17: error: not enough for loops to collapse
+  136 |                 const int ik = k_indices[ik_index];
+      |                 ^~~~~
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp:136:42: error: ‘ik_index’ was not declared in this scope; did you mean ‘rindex’?
+  136 |                 const int ik = k_indices[ik_index];
+      |                                          ^~~~~~~~
+      |                                          rindex
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp: In member function ‘std::map<int, std::map<int, RI::Tensor<Tdata> > > RI::LRI_k<TA, Tcell, Ndim, Tdata>::cal_cvc_mo_k_onthefly(const std::map<int, std::map<TA, RI::Tensor<Tdata> > >&, const std::map<int, std::map<TA, RI::Tensor<Tdata> > >&, const std::vector<int>&, const std::vector<int>&, const std::vector<Tkey>&, const std::vector<Tkey>&, const std::vector<std::__cxx11::basic_string<char> >&, std::size_t, std::size_t, const std::string&, bool, const std::vector<std::array<double, Ndim> >&, const std::map<std::array<double, Ndim>, std::vector<std::pair<int, int> > >&)’:
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp:310:25: error: not enough for loops to collapse
+  310 |                         const Tk q=q_list[q_index];
+      |                         ^~~~~
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp:310:43: error: ‘q_index’ was not declared in this scope; did you mean ‘rindex’?
+  310 |                         const Tk q=q_list[q_index];
+      |                                           ^~~~~~~
+      |                                           rindex
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp: In member function ‘std::map<int, std::map<int, RI::Tensor<Tdata> > > RI::LRI_k<TA, Tcell, Ndim, Tdata>::cal_cvc_mo_k_hartree_onthefly(const std::map<int, std::map<TA, RI::Tensor<Tdata> > >&, const std::map<int, std::map<TA, RI::Tensor<Tdata> > >&, const std::vector<int>&, const std::vector<int>&, const std::vector<Tkey>&, const std::vector<Tkey>&, const std::vector<std::__cxx11::basic_string<char> >&, std::size_t, std::size_t, const std::string&, bool)’:
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp:468:25: error: not enough for loops to collapse
+  468 |                         const TA& mu = list_J[mu_index];
+      |                         ^~~~~
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_cvc_mo.hpp:468:47: error: ‘mu_index’ was not declared in this scope; did you mean ‘rindex’?
+  468 |                         const TA& mu = list_J[mu_index];
+      |                                               ^~~~~~~~
+      |                                               rindex
+In file included from /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k.h:72:
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_hartree.hpp: In member function ‘std::map<TA, std::map<TA, std::map<int, RI::Tensor<Tdata> > > > RI::LRI_k<TA, Tcell, Ndim, Tdata>::cal_cvcd_k_hartree(const std::map<TA, std::map<TA, std::map<int, RI::Tensor<Tdata> > > >&, const std::vector<std::array<double, Ndim> >&, const std::vector<int>&, const std::vector<Tkey>&, const std::vector<Tkey>&, const std::vector<Tkey>&, const std::string&, const std::string&)’:
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_hartree.hpp:124:25: error: not enough for loops to collapse
+  124 |                         const TA v = list_I[v_index];
+      |                         ^~~~~
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_hartree.hpp:124:45: error: ‘v_index’ was not declared in this scope; did you mean ‘rindex’?
+  124 |                         const TA v = list_I[v_index];
+      |                                             ^~~~~~~
+      |                                             rindex
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_hartree.hpp:208:17: error: not enough for loops to collapse
+  208 |                 const TA s = list_I[s_index];
+      |                 ^~~~~
+/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/before/include/RI/physics/../ri/LRI_k-cal_hartree.hpp:208:37: error: ‘s_index’ was not declared in this scope; did you mean ‘rindex’?
+  208 |                 const TA s = list_I[s_index];
+      |                                     ^~~~~~~
+      |                                     rindex
+gmake[3]: *** [CMakeFiles/before_hartree.dir/build.make:79: CMakeFiles/before_hartree.dir/hartree_driver.cpp.o] Error 1
+gmake[3]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+gmake[2]: *** [CMakeFiles/Makefile2:156: CMakeFiles/before_hartree.dir/all] Error 2
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+gmake[1]: *** [CMakeFiles/Makefile2:163: CMakeFiles/before_hartree.dir/rule] Error 2
+gmake[1]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+gmake: *** [Makefile:150: before_hartree] Error 2
+

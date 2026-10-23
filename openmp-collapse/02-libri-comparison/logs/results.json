@@ -1,0 +1,46 @@
+[
+  {
+    "variant": "parent",
+    "suite": "hartree",
+    "status": "BUILT",
+    "exit_code": 0,
+    "executable_size_bytes": 2619104,
+    "executable_sha256": "b3756ce231723ce96d602664ac9089a6145b0a319aa96e27b8b7305b1f0069db"
+  },
+  {
+    "variant": "parent",
+    "suite": "lr",
+    "status": "BUILT",
+    "exit_code": 0,
+    "executable_size_bytes": 2063592,
+    "executable_sha256": "4997dbd1bfee8ecf97bdf9a12fbcd6a9c84a94e54fb4aa72dcd0767366057143"
+  },
+  {
+    "variant": "before",
+    "suite": "hartree",
+    "status": "BUILD FAILED",
+    "exit_code": 2
+  },
+  {
+    "variant": "before",
+    "suite": "lr",
+    "status": "BUILD FAILED",
+    "exit_code": 2
+  },
+  {
+    "variant": "after",
+    "suite": "hartree",
+    "status": "BUILT",
+    "exit_code": 0,
+    "executable_size_bytes": 2618840,
+    "executable_sha256": "15857b7a4b10333217d1ea314e3e347f273172544aee2b8841d73a33f113387a"
+  },
+  {
+    "variant": "after",
+    "suite": "lr",
+    "status": "BUILT",
+    "exit_code": 0,
+    "executable_size_bytes": 2062984,
+    "executable_sha256": "fe9e040a3bc10d9abe23f37cddfc79deba4265ce8d0f10a3515f22634f73288b"
+  }
+]

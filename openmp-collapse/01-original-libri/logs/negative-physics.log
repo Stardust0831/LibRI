@@ -1,0 +1,16 @@
+PASS Exx-Hs mode=0 elements=25 max_abs=0 max_scaled=0
+PASS Exx-energy mode=0 elements=1 max_abs=0 max_scaled=0
+PASS Exx-dHs mode=0 elements=150 max_abs=0 max_scaled=0
+PASS Exx-force mode=0 elements=6 max_abs=0 max_scaled=0
+PASS Exx-dHRs mode=0 elements=225 max_abs=0 max_scaled=0
+PASS Exx-stress mode=0 elements=9 max_abs=0 max_scaled=0
+PASS Exx-density-update mode=0 elements=26 max_abs=1.4210854715202004e-14 max_scaled=2.9165057765193408e-16
+PASS Exx-Hs mode=1 elements=25 max_abs=1.7763568394002505e-15 max_scaled=1.5738455650960374e-16
+PASS Exx-energy mode=1 elements=1 max_abs=0 max_scaled=0
+PASS Exx-dHs mode=1 elements=150 max_abs=4.4408920985006262e-16 max_scaled=2.2305197800147344e-16
+PASS Exx-force mode=1 elements=6 max_abs=1.7763568394002505e-15 max_scaled=9.8352513273977399e-16
+PASS Exx-dHRs mode=1 elements=225 max_abs=8.8817841970012523e-16 max_scaled=3.0547647111560002e-16
+PASS Exx-stress mode=1 elements=9 max_abs=2.2204460492503131e-16 max_scaled=1.6658785170200862e-16
+PASS Exx-density-update mode=1 elements=26 max_abs=3.5527136788005009e-15 max_scaled=3.2694255719798335e-16
+Exx dHs actual=1.58326 expected=-1.48549 error=3.06875 scale=2.48549
+Numerical comparison failed

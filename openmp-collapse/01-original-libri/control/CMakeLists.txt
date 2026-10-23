@@ -1,0 +1,51 @@
+cmake_minimum_required(VERSION 3.18)
+project(libri_fac_add_ds_validation LANGUAGES CXX)
+find_package(MPI REQUIRED COMPONENTS CXX)
+find_package(OpenMP REQUIRED COMPONENTS CXX)
+find_package(CUDAToolkit REQUIRED)
+find_library(TEST_BLAS NAMES openblas REQUIRED)
+find_library(TEST_DDLA NAMES ddla PATHS "${DDLA_ROOT}/lib" NO_DEFAULT_PATH REQUIRED)
+
+function(add_case name variant backend precision complex driver)
+  add_executable(${name} ${driver})
+  target_compile_features(${name} PRIVATE cxx_std_17)
+  target_compile_options(${name} PRIVATE -O0)
+  target_include_directories(${name} PRIVATE
+    "${RUN_ROOT}/${variant}/include" "${RUN_ROOT}/pr-tests" "${RUN_ROOT}/source"
+    "${LIBCOMM_ROOT}/include" "${CEREAL_ROOT}/include")
+  target_compile_definitions(${name} PRIVATE TEST_REAL=${precision})
+  if(complex)
+    target_compile_definitions(${name} PRIVATE TEST_COMPLEX)
+  endif()
+  target_link_libraries(${name} PRIVATE MPI::MPI_CXX OpenMP::OpenMP_CXX ${TEST_BLAS})
+  if(backend STREQUAL "gpu")
+    target_include_directories(${name} PRIVATE "${DDLA_ROOT}/include")
+    target_compile_definitions(${name} PRIVATE __GPU_RI __DDLA_RI DDLA_USE_CUDA)
+    target_link_libraries(${name} PRIVATE ${TEST_DDLA}
+      CUDA::cudart CUDA::cublas CUDA::curand CUDA::cusolver)
+  endif()
+endfunction()
+
+foreach(precision float double)
+  foreach(backend cpu gpu)
+    add_case(${backend}_${precision} source ${backend} ${precision} FALSE driver.cpp)
+    add_case(${backend}_complex_${precision} source ${backend} ${precision} TRUE driver.cpp)
+  endforeach()
+  add_case(inrepo_${precision} source gpu ${precision} FALSE inrepo_driver.cpp)
+  add_case(inrepo_complex_${precision} source gpu ${precision} TRUE inrepo_driver.cpp)
+endforeach()
+add_case(negative_double negative gpu double FALSE driver.cpp)
+add_case(negative_inrepo negative gpu double FALSE inrepo_driver.cpp)
+
+foreach(variant source baseline)
+  foreach(suite hartree lr)
+    add_executable(${variant}_${suite} EXCLUDE_FROM_ALL ${suite}_driver.cpp)
+    target_compile_features(${variant}_${suite} PRIVATE cxx_std_17)
+    target_compile_options(${variant}_${suite} PRIVATE -O0)
+    target_include_directories(${variant}_${suite} PRIVATE
+      "${RUN_ROOT}/${variant}/include" "${RUN_ROOT}/${variant}"
+      "${LIBCOMM_ROOT}/include" "${CEREAL_ROOT}/include")
+    target_link_libraries(${variant}_${suite} PRIVATE
+      MPI::MPI_CXX OpenMP::OpenMP_CXX ${TEST_BLAS})
+  endforeach()
+endforeach()

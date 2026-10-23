@@ -1,0 +1,22 @@
+[
+  {
+    "example": "failure",
+    "compilation": "FAILED",
+    "compile_exit_code": 1,
+    "execution": "NOT RUN"
+  },
+  {
+    "example": "success",
+    "compilation": "SUCCEEDED",
+    "compile_exit_code": 0,
+    "execution": "SUCCEEDED",
+    "run_exit_code": 0
+  },
+  {
+    "example": "range-for-reference",
+    "compilation": "SUCCEEDED",
+    "compile_exit_code": 0,
+    "execution": "SUCCEEDED",
+    "run_exit_code": 0
+  }
+]

@@ -1,0 +1,27 @@
+Change Dir: '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+
+Run Build Command(s): /opt/devtools/cmake/3.31.6/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j2 parent_hartree
+/opt/devtools/cmake/3.31.6/bin/cmake -S/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control -B/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/gmake  -f CMakeFiles/Makefile2 parent_hartree
+gmake[1]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+/opt/devtools/cmake/3.31.6/bin/cmake -S/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control -B/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build --check-build-system CMakeFiles/Makefile.cmake 0
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_progress_start /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build/CMakeFiles 2
+/usr/bin/gmake  -f CMakeFiles/Makefile2 CMakeFiles/parent_hartree.dir/all
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+/usr/bin/gmake  -f CMakeFiles/parent_hartree.dir/build.make CMakeFiles/parent_hartree.dir/depend
+gmake[3]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build/CMakeFiles/parent_hartree.dir/DependInfo.cmake "--color="
+gmake[3]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+/usr/bin/gmake  -f CMakeFiles/parent_hartree.dir/build.make CMakeFiles/parent_hartree.dir/build
+gmake[3]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+[ 50%] Building CXX object CMakeFiles/parent_hartree.dir/hartree_driver.cpp.o
+/usr/bin/c++  -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/parent/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources/parent -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/include -isystem /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/include -O0 -fopenmp -MD -MT CMakeFiles/parent_hartree.dir/hartree_driver.cpp.o -MF CMakeFiles/parent_hartree.dir/hartree_driver.cpp.o.d -o CMakeFiles/parent_hartree.dir/hartree_driver.cpp.o -c /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control/hartree_driver.cpp
+[100%] Linking CXX executable parent_hartree
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_link_script CMakeFiles/parent_hartree.dir/link.txt --verbose=1
+/usr/bin/c++ -Wl,-rpath -Wl,/opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib -Wl,--enable-new-dtags -Wl,--dependency-file=CMakeFiles/parent_hartree.dir/link.d CMakeFiles/parent_hartree.dir/hartree_driver.cpp.o -o parent_hartree  /opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas_zenp-r0.3.32.so /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib/libmpi.so /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a
+gmake[3]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+[100%] Built target parent_hartree
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_progress_start /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build/CMakeFiles 0
+gmake[1]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build'
+

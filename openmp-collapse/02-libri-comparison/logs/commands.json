@@ -1,0 +1,135 @@
+[
+  {
+    "step": "environment/compiler",
+    "command": [
+      "g++",
+      "--version"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-23T12:41:20+00:00"
+  },
+  {
+    "step": "environment/mpi",
+    "command": [
+      "mpicxx",
+      "--showme:version"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-23T12:41:20+00:00"
+  },
+  {
+    "step": "environment/cmake",
+    "command": [
+      "cmake",
+      "--version"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-23T12:41:20+00:00"
+  },
+  {
+    "step": "configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/control",
+      "-B",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build",
+      "-DSOURCES_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/sources",
+      "-DLIBCOMM_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+      "-DCEREAL_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install",
+      "-DTEST_BLAS=/opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas_zenp-r0.3.32.so"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-23T12:41:20+00:00"
+  },
+  {
+    "step": "parent/hartree",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build",
+      "--target",
+      "parent_hartree",
+      "--parallel",
+      "2",
+      "--verbose"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-23T12:41:21+00:00"
+  },
+  {
+    "step": "parent/lr",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build",
+      "--target",
+      "parent_lr",
+      "--parallel",
+      "2",
+      "--verbose"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-23T12:41:28+00:00"
+  },
+  {
+    "step": "before/hartree",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build",
+      "--target",
+      "before_hartree",
+      "--parallel",
+      "2",
+      "--verbose"
+    ],
+    "exit_code": 2,
+    "started_utc": "2026-10-23T12:41:34+00:00"
+  },
+  {
+    "step": "before/lr",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build",
+      "--target",
+      "before_lr",
+      "--parallel",
+      "2",
+      "--verbose"
+    ],
+    "exit_code": 2,
+    "started_utc": "2026-10-23T12:41:37+00:00"
+  },
+  {
+    "step": "after/hartree",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build",
+      "--target",
+      "after_hartree",
+      "--parallel",
+      "2",
+      "--verbose"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-23T12:41:39+00:00"
+  },
+  {
+    "step": "after/lr",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build",
+      "--target",
+      "after_lr",
+      "--parallel",
+      "2",
+      "--verbose"
+    ],
+    "exit_code": 0,
+    "started_utc": "2026-10-23T12:41:46+00:00"
+  }
+]

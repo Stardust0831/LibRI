@@ -1,0 +1,1 @@
+cmake --build /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-collapse-full-build-20261023/work/build --target after_lr --parallel 2 --verbose

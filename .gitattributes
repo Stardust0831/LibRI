@@ -1,0 +1,8 @@
+# Preserve captured compiler output and source snapshots byte for byte.
+*.log -text -whitespace
+*.tar.gz binary
+openmp-collapse/01-original-libri/logs/** -text -whitespace
+openmp-collapse/01-original-libri/control/** -text -whitespace
+openmp-collapse/01-original-libri/cmake-targets/** -text -whitespace
+openmp-collapse/02-libri-comparison/snapshots/** -text -whitespace
+openmp-collapse/02-libri-comparison/move-declarations.patch -text -whitespace
