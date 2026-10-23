@@ -1,0 +1,94 @@
+ In SCAN_LINE_BEGIN, can't find: ABFS_ORBITAL block.
+ In SCAN_LINE_BEGIN, can't find: ABFS_JLES_ORBITAL block.
+ NAME OF ELEMENT      : Si
+ DFT FUNC. (PSEUDO)   : PBE
+ DFT FUNC. (SET TO)   : HSE
+ MAKE SURE THIS DFT FUNCTIONAL IS WHAT YOU NEED
+ AUTO_SET NBANDS to 8
+ AUTO_SET NBANDS to 0
+                            startmag_type = 2
+                       charge from rho_at = 4
+                         charge should be = 4
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 8
+           total electron number from rho = 8
+                                should be = 8
+                 charge before normalized = 8.00000000000002
+                  charge after normalized = 8
+                 charge before normalized = 8.00054838471126
+                  charge after normalized = 7.99999999999998
+                 charge before normalized = 7.99999999999993
+                  charge after normalized = 8.00000000000001
+                 charge before normalized = 8.00054979972825
+                  charge after normalized = 8
+                 charge before normalized = 8.00000000000002
+                  charge after normalized = 8
+                 charge before normalized = 8.00055077861896
+                  charge after normalized = 7.99999999999995
+                 charge before normalized = 7.99999999999999
+                  charge after normalized = 8
+                 charge before normalized = 8.0005504976492
+                  charge after normalized = 8.00000000000001
+                 charge before normalized = 8.00000000000007
+                  charge after normalized = 7.99999999999999
+                 charge before normalized = 8.00055049557509
+                  charge after normalized = 8
+                 charge before normalized = 7.99999999999994
+                  charge after normalized = 7.99999999999998
+                 charge before normalized = 8.00055049566586
+                  charge after normalized = 7.99999999999998
+                 charge before normalized = 8.00000000000005
+                  charge after normalized = 8.00000000000002
+                 charge before normalized = 8.00055049568482
+                  charge after normalized = 8.00000000000002
+                 charge before normalized = 8.00054803929052
+                  charge after normalized = 8
+                 charge before normalized = 8.00000000000005
+                  charge after normalized = 8
+                 charge before normalized = 8.0005480490781
+                  charge after normalized = 7.99999999999998
+                 charge before normalized = 7.99999999999991
+                  charge after normalized = 8
+                 charge before normalized = 8.00054805118748
+                  charge after normalized = 8
+                 charge before normalized = 8.00000000000012
+                  charge after normalized = 7.99999999999999
+                 charge before normalized = 8.00054805063627
+                  charge after normalized = 8
+                 charge before normalized = 7.99999999999996
+                  charge after normalized = 8.00000000000001
+                 charge before normalized = 8.00054805063386
+                  charge after normalized = 8.00000000000002
+                 charge before normalized = 8.00054793644599
+                  charge after normalized = 8.00000000000001
+                 charge before normalized = 8.00000000000003
+                  charge after normalized = 7.99999999999999
+                 charge before normalized = 8.0005479368972
+                  charge after normalized = 8.00000000000001
+                 charge before normalized = 7.99999999999995
+                  charge after normalized = 8.00000000000001
+                 charge before normalized = 8.00054793699587
+                  charge after normalized = 7.99999999999995
+                 charge before normalized = 8.00000000000002
+                  charge after normalized = 8
+                 charge before normalized = 8.00054793697138
+                  charge after normalized = 8.00000000000004
+                 charge before normalized = 8.00054793169451
+                  charge after normalized = 7.99999999999997
+                 charge before normalized = 8.00000000000005
+                  charge after normalized = 7.99999999999998
+                 charge before normalized = 8.00054793171472
+                  charge after normalized = 8.00000000000001
+                 charge before normalized = 7.99999999999996
+                  charge after normalized = 8
+                 charge before normalized = 8.00054793171921
+                  charge after normalized = 8.00000000000001
+                            startmag_type = 2
+                       charge from rho_at = 3.99999754034073
+                         charge should be = 4
+
+ SETUP ATOMIC RHO FOR SPIN 1
+                 Electron number from rho = 8.00000000000005
+           total electron number from rho = 8.00000000000005
+                                should be = 8

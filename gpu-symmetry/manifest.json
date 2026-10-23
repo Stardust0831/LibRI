@@ -1,0 +1,20 @@
+{
+  "libri_base": "f68342122e4d23007142028bf2d017ce026835eb",
+  "backported_commits": [
+    "2f77684417313e78e2da67aeee2ebf9b44f1e9fe",
+    "a0db48f56ffadf448c8057788df57562b42cd3c8"
+  ],
+  "local_backport_head": "dc1084707f51615ca34e479bb15299e4b1da4540",
+  "ddla": "v0.0.4",
+  "comment": "https://github.com/deepmodeling/abacus-develop/pull/8169#issuecomment-6244851698",
+  "fixed_tree": "909df4a1215b0cfd857c00821ad7ee8995f93b9f",
+  "archives_sha256": {
+    "abacus-validation.tar.gz": "f6c891d3a7f702096fc1ffaefc49e5191c74a679f68875b87cbd92c5452cf108",
+    "backport.tar.gz": "f7ce39bbc5f69b64e227deb33f1f087b829ed7c2047d47422a5391b6712ec9ca",
+    "baseline.tar.gz": "6ff809e755eb1229f188fc2cbc60b1a7e22473c510d4e4f1c04181d9c30a4870",
+    "fixed.tar.gz": "5d7c689b06756627447178eb51bf6190563dc832a0dc39654195afd29a779cfe"
+  },
+  "abacus_validation_base": "b30b66a5a333a2667d618932f8430a80dd92146a",
+  "abacus_patch": "abacus-validation-only.patch",
+  "additional_libri_compile_patch": "move-declarations.patch"
+}

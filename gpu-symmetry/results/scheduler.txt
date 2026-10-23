@@ -1,0 +1,6 @@
+1913058|libri-symmetry-fix|FAILED|1:0|00:06:35|billing=300,cpu=16,gres/gpu=2,mem=30G,node=1
+1913058.batch|batch|FAILED|1:0|00:06:35|cpu=16,gres/gpu=2,mem=30G,node=1
+1913058.extern|extern|COMPLETED|0:0|00:06:35|billing=300,cpu=16,gres/gpu=2,mem=30G,node=1
+1913206|libri-symmetry-cases|COMPLETED|0:0|00:02:19|billing=300,cpu=16,gres/gpu=2,mem=30G,node=1
+1913206.batch|batch|COMPLETED|0:0|00:02:19|cpu=16,gres/gpu=2,mem=30G,node=1
+1913206.extern|extern|COMPLETED|0:0|00:02:19|billing=300,cpu=16,gres/gpu=2,mem=30G,node=1

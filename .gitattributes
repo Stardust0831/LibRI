@@ -16,3 +16,6 @@ abacus-merged/results/** -text -whitespace
 abacus-merged/build-records/** -text -whitespace
 abacus-merged/previous-results/** -text -whitespace
 abacus-merged/move-declarations.patch -text -whitespace
+gpu-symmetry/results/** -text -whitespace
+gpu-symmetry/build-records/** -text -whitespace
+gpu-symmetry/*.patch -text -whitespace

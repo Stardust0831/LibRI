@@ -1,0 +1,5 @@
+{
+  "commit": "2781215e73813de9d58fc45a6087b7b857659f45",
+  "tree": "909df4a1215b0cfd857c00821ad7ee8995f93b9f",
+  "note": "The committed tree is identical to fixed.tar.gz; the separate OpenMP declaration patch is applied only to the ABACUS validation copy."
+}

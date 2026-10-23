@@ -1,0 +1,6 @@
+PASS repository references: real-mpi1
+PASS repository references: complex-mpi1
+PASS repository references: real-mpi2
+PASS repository references: complex-mpi2
+PASS all 20 HSE symmetry runs and 16 component comparisons
+ALL VALIDATION PASSED

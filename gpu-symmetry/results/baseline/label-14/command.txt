@@ -1,0 +1,1 @@
+mpirun -np 1 --map-by ppr:2:node:pe=4 /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/final-build-baseline/test_lri_gpu_symmetry 14 gpu real

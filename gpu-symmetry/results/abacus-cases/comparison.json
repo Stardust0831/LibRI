@@ -1,0 +1,671 @@
+{
+  "cases": {
+    "real-mpi1": {
+      "host": {
+        "energy_ev": [
+          -189.44067551708753
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "cpu_sym": {
+        "energy_ev": [
+          -189.44067551708767
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          -0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "gpu_sym": {
+        "energy_ev": [
+          -189.44067551708724
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "cpu_full": {
+        "energy_ev": [
+          -189.44067551708767
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "gpu_full": {
+        "energy_ev": [
+          -189.44067551708775
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126
+        ]
+      }
+    },
+    "complex-mpi1": {
+      "host": {
+        "energy_ev": [
+          -189.44067551708764
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "cpu_sym": {
+        "energy_ev": [
+          -189.44067551708753
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "gpu_sym": {
+        "energy_ev": [
+          -189.44067551708716
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "cpu_full": {
+        "energy_ev": [
+          -189.44067551708707
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "gpu_full": {
+        "energy_ev": [
+          -189.44067551708707
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      }
+    },
+    "real-mpi2": {
+      "host": {
+        "energy_ev": [
+          -189.44067551708804
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "cpu_sym": {
+        "energy_ev": [
+          -189.4406755170877
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "gpu_sym": {
+        "energy_ev": [
+          -189.44067551708784
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "cpu_full": {
+        "energy_ev": [
+          -189.44067551708787
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "gpu_full": {
+        "energy_ev": [
+          -189.44067551708795
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126
+        ]
+      }
+    },
+    "complex-mpi2": {
+      "host": {
+        "energy_ev": [
+          -189.4406755170876
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "cpu_sym": {
+        "energy_ev": [
+          -189.44067551708784
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "gpu_sym": {
+        "energy_ev": [
+          -189.44067551708827
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          -0.0,
+          0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          -0.0,
+          -714.5981063126
+        ]
+      },
+      "cpu_full": {
+        "energy_ev": [
+          -189.44067551708818
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          0.0,
+          0.0,
+          0.0,
+          -714.5981063126
+        ]
+      },
+      "gpu_full": {
+        "energy_ev": [
+          -189.44067551708767
+        ],
+        "force_ev_angstrom": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "stress_kbar": [
+          -714.5981063126,
+          -0.0,
+          0.0,
+          -0.0,
+          -714.5981063126,
+          -0.0,
+          -0.0,
+          0.0,
+          -714.5981063126
+        ]
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "group": "real-mpi1",
+      "reference": "cpu_sym",
+      "variant": "host",
+      "max_errors": {
+        "energy_ev": 1.4210854715202004e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi1",
+      "reference": "cpu_sym",
+      "variant": "gpu_sym",
+      "max_errors": {
+        "energy_ev": 4.263256414560601e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi1",
+      "reference": "cpu_sym",
+      "variant": "cpu_full",
+      "max_errors": {
+        "energy_ev": 0.0,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi1",
+      "reference": "cpu_sym",
+      "variant": "gpu_full",
+      "max_errors": {
+        "energy_ev": 8.526512829121202e-14,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi1",
+      "reference": "cpu_sym",
+      "variant": "host",
+      "max_errors": {
+        "energy_ev": 1.1368683772161603e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi1",
+      "reference": "cpu_sym",
+      "variant": "gpu_sym",
+      "max_errors": {
+        "energy_ev": 3.694822225952521e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi1",
+      "reference": "cpu_sym",
+      "variant": "cpu_full",
+      "max_errors": {
+        "energy_ev": 4.547473508864641e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi1",
+      "reference": "cpu_sym",
+      "variant": "gpu_full",
+      "max_errors": {
+        "energy_ev": 4.547473508864641e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi2",
+      "reference": "cpu_sym",
+      "variant": "host",
+      "max_errors": {
+        "energy_ev": 3.410605131648481e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi2",
+      "reference": "cpu_sym",
+      "variant": "gpu_sym",
+      "max_errors": {
+        "energy_ev": 1.4210854715202004e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi2",
+      "reference": "cpu_sym",
+      "variant": "cpu_full",
+      "max_errors": {
+        "energy_ev": 1.7053025658242404e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "real-mpi2",
+      "reference": "cpu_sym",
+      "variant": "gpu_full",
+      "max_errors": {
+        "energy_ev": 2.5579538487363607e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi2",
+      "reference": "cpu_sym",
+      "variant": "host",
+      "max_errors": {
+        "energy_ev": 2.2737367544323206e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi2",
+      "reference": "cpu_sym",
+      "variant": "gpu_sym",
+      "max_errors": {
+        "energy_ev": 4.263256414560601e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi2",
+      "reference": "cpu_sym",
+      "variant": "cpu_full",
+      "max_errors": {
+        "energy_ev": 3.410605131648481e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    },
+    {
+      "group": "complex-mpi2",
+      "reference": "cpu_sym",
+      "variant": "gpu_full",
+      "max_errors": {
+        "energy_ev": 1.7053025658242404e-13,
+        "force_ev_angstrom": 0.0,
+        "stress_kbar": 0.0
+      },
+      "passed": true
+    }
+  ],
+  "passed": true
+}

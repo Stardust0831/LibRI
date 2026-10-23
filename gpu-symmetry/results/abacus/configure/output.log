@@ -1,0 +1,142 @@
+CMake Warning at CMakeLists.txt:15 (message):
+  The build system now uses cmake_dependent_option extensively.
+
+  Many advanced options are now conditionally enabled based on their
+  dependencies; when dependency conditions are not met, the corresponding
+  options will beautomatically turned OFF and hidden in cmake-gui/ccmake.
+
+  Please review your configuration if you previously set these options
+  manually.
+
+
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Git: /usr/bin/git (found version "2.43.0")
+-- Found git: attempting to get commit info...
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+fatal: not a git repository (or any parent up to mount point /)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+CMake Warning at CMakeLists.txt:205 (message):
+  Failed to get git commit info
+
+
+-- Found MPI_CXX: /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib/libmpi.so (found version "3.1")
+-- Found MPI: TRUE (found version "3.1") found components: CXX
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found OpenMP_CXX: -fopenmp (found version "4.5")
+-- Found OpenMP: TRUE (found version "4.5")
+-- Looking for sgemm_
+-- Looking for sgemm_ - not found
+-- Looking for sgemm_
+-- Looking for sgemm_ - found
+-- Found BLAS: /opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so
+-- Looking for cheev_
+-- Looking for cheev_ - found
+-- Found LAPACK: /opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so;-lm;-ldl
+-- Found ScaLAPACK: /opt/devtools/saiblas/2603-gnu-avx2/lib/libscalapack.so
+-- Found FFTW3: /opt/devtools/fftw/fftw-3.3.10/lib/libfftw3.so
+-- Looking for a CUDA compiler
+-- Looking for a CUDA compiler - /opt/devtools/nvidia/cuda-12.9.1/bin/nvcc
+-- Found CUDAToolkit: /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/include (found version "12.9.86")
+-- The CUDA compiler identification is NVIDIA 12.9.86 with host compiler GNU 13.3.0
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /opt/devtools/nvidia/cuda-12.9.1/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Found cuSOLVERMp: /opt/devtools/nvidia/mp_libs/lib/libcusolverMp.so
+-- Detected cuSOLVERMp 0.9.0 (>= 0.7.0). Using NCCL backend.
+-- Found NCCL: /opt/devtools/nvidia/nccl_2.29.3_cuda12.9_sai_v2.29.3-1-sai.2/lib/libnccl.so
+-- Found cuBLASMp: /opt/devtools/nvidia/mp_libs/lib/libcublasmp.so
+-- Detected cuBLASMp version: 0.9.1
+-- Found LibRI: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/fixed
+-- Found LibComm: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm
+-- Found DDLA: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla/include
+-- Performing Test LIBRI_GPU_API_WORKS
+CMake Warning at /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/abacus-build/CMakeFiles/CMakeScratch/TryCompile-CjVeYL/CMakeLists.txt:25 (add_executable):
+  Cannot generate a safe runtime search path for target cmTC_d743a because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+
+
+-- Performing Test LIBRI_GPU_API_WORKS - Success
+-- Setting up build information...
+ ===================================================================
+                       ABACUS Build Summary                         
+ ===================================================================
+ Build Type        : Release
+ Platform          : CPU + NVIDIA CUDA
+ Compiler          : GNU 13.3.0
+ -------------------------------------------------------------------
+ MPI Support       : OpenMPI (MPI standard: 3.1)
+ CUDA-Aware MPI    : yes
+ OpenMP Support    : yes (v4.5)
+ -------------------------------------------------------------------
+ LCAO Enabled      : True
+ Two-center FFT    : Enabled
+ -------------------------------------------------------------------
+ Math Libraries    : BLAS           = Generic BLAS
+                     FFTW           = yes (v3.3.10)
+                     ELPA           = no
+ Accelerators      : CUDA           = yes (v12.9.86)
+                     cuSOLVERMp     = yes (version unknown)
+                     cuBLASMp       = yes
+                     NCCL parallel  = Disabled
+                     HIP/ROCm       = no
+ Machine Learning  : MLALGO         = Disabled
+                     Torch          = no
+                     DeePMD         = no
+                     NEP            = no
+ Features          : Libxc          = yes (v7.0.0)
+                     LibRI          = yes (v2.1.1)
+                     LibRI GPU      = ON
+                     DFT-D4         = no
+                     JSON           = no
+                     PEXSI          = no
+                     CNPY           = no
+ -------------------------------------------------------------------
+ Build Testing     : OFF
+ ===================================================================
+-- Build info header configured: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/abacus-build/source/source_io/build_info.h
+-- Configuring done (14.0s)
+CMake Warning at source/CMakeLists.txt:568 (add_executable):
+  Cannot generate a safe runtime search path for target abacus_std_gpu
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+
+
+-- Generating done (4.1s)
+-- Build files have been written to: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-gpu-symmetry-20261023/abacus-build
