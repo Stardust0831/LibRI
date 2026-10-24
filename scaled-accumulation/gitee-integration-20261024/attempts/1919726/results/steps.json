@@ -1,0 +1,156 @@
+[
+  {
+    "name": "environment/compiler",
+    "command": [
+      "mpicxx",
+      "--version"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "environment/gpu",
+    "command": [
+      "nvidia-smi",
+      "-q"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/configure",
+    "command": [
+      "cmake",
+      "-S",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control",
+      "-B",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests",
+      "-DCMAKE_BUILD_TYPE=Debug",
+      "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+      "-DRUN_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024",
+      "-DLIBCOMM_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm",
+      "-DCEREAL_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install",
+      "-DDDLA_ROOT=/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla",
+      "-DTEST_BLAS=/opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/build",
+    "command": [
+      "cmake",
+      "--build",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests",
+      "--verbose",
+      "--parallel",
+      "2"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/cpu_float/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/cpu_float"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/cpu_double/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/cpu_double"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/cpu_complex_float/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/cpu_complex_float"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/cpu_complex_double/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/cpu_complex_double"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/gpu_float/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gpu_float"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/gpu_double/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gpu_double"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/gpu_complex_float/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gpu_complex_float"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/gpu_complex_double/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gpu_complex_double"
+    ],
+    "exit_code": 0
+  },
+  {
+    "name": "tests/hartree/omp1",
+    "command": [
+      "mpirun",
+      "-np",
+      "1",
+      "--map-by",
+      "ppr:2:node:pe=4",
+      "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/hartree"
+    ],
+    "exit_code": 134
+  }
+]

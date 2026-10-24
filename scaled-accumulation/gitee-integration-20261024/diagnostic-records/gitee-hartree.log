@@ -1,0 +1,23 @@
+/usr/include/c++/13/bits/stl_vector.h:1147: std::vector<_Tp, _Alloc>::const_reference std::vector<_Tp, _Alloc>::operator[](size_type) const [with _Tp = int; _Alloc = std::allocator<int>; const_reference = const int&; size_type = long unsigned int]: Assertion '__n < this->size()' failed.
+[16v100n01:3546785] *** Process received signal ***
+[16v100n01:3546785] Signal: Aborted (6)
+[16v100n01:3546785] Signal code:  (-6)
+[16v100n01:3546785] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x1524a073e330]
+[16v100n01:3546785] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x1524a0797b2c]
+[16v100n01:3546785] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x1524a073e27e]
+[16v100n01:3546785] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x1524a07218ff]
+[16v100n01:3546785] [ 4] /lib/x86_64-linux-gnu/libstdc++.so.6(+0xdf90d)[0x1524a0b0190d]
+[16v100n01:3546785] [ 5] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gitee_atom_lists(+0x23a75)[0x55699a45da75]
+[16v100n01:3546785] [ 6] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gitee_atom_lists(+0x9d1b0)[0x55699a4d71b0]
+[16v100n01:3546785] [ 7] /lib/x86_64-linux-gnu/libgomp.so.1(GOMP_parallel+0x47)[0x1524a0cba977]
+[16v100n01:3546785] [ 8] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gitee_atom_lists(+0x1a953)[0x55699a454953]
+[16v100n01:3546785] [ 9] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gitee_atom_lists(+0x12ba0)[0x55699a44cba0]
+[16v100n01:3546785] [10] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gitee_atom_lists(+0xb125)[0x55699a445125]
+[16v100n01:3546785] [11] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x1524a07231ca]
+[16v100n01:3546785] [12] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x1524a072328b]
+[16v100n01:3546785] [13] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/gitee_atom_lists(+0xa0d5)[0x55699a4440d5]
+[16v100n01:3546785] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 3546785 on node 16v100n01 exited on
+signal 6 (Aborted).
+--------------------------------------------------------------------------

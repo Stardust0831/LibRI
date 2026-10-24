@@ -1,0 +1,20 @@
+START environment/compiler
+END environment/compiler 0
+START environment/gpu
+END environment/gpu 0
+START tests/configure
+END tests/configure 0
+START tests/build
+END tests/build 0
+START tests/cpu_float/omp1
+END tests/cpu_float/omp1 0
+START tests/cpu_double/omp1
+END tests/cpu_double/omp1 0
+START tests/cpu_complex_float/omp1
+END tests/cpu_complex_float/omp1 0
+START tests/cpu_complex_double/omp1
+END tests/cpu_complex_double/omp1 0
+START tests/gpu_float/omp1
+END tests/gpu_float/omp1 0
+START tests/gpu_double/omp1
+[2026-10-24T14:32:49.412] error: *** JOB 1919732 ON 16v100n01 CANCELLED AT 2026-10-24T14:32:49 DUE to SIGNAL Terminated ***

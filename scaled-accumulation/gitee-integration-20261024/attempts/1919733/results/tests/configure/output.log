@@ -1,0 +1,129 @@
+-- Configuring done (0.7s)
+CMake Warning at CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target gpu_float because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  CMakeLists.txt:28 (add_case)
+
+
+CMake Warning at CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target gpu_complex_float
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  CMakeLists.txt:29 (add_case)
+
+
+CMake Warning at CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target gpu_double because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  CMakeLists.txt:28 (add_case)
+
+
+CMake Warning at CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target gpu_complex_double
+  because files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  CMakeLists.txt:29 (add_case)
+
+
+CMake Warning at CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target gpu_physics because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  CMakeLists.txt:32 (add_case)
+
+
+CMake Warning at CMakeLists.txt:9 (add_executable):
+  Cannot generate a safe runtime search path for target unscaled because
+  files in some directories may conflict with libraries in implicit
+  directories:
+
+    runtime library [libcublas.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcurand.so.10] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusolver.so.11] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcublasLt.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+    runtime library [libcusparse.so.12] in /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64 may be hidden by files in:
+      /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib
+
+  Some of these libraries may not be found correctly.
+Call Stack (most recent call first):
+  CMakeLists.txt:38 (add_case)
+
+
+-- Generating done (0.6s)
+-- Build files have been written to: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests

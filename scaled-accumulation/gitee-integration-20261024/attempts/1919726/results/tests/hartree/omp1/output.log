@@ -1,0 +1,24 @@
+hartree: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/source/unittests/physics/Test_Helpers.hpp:106: void Test_Helpers::compare_map(const RI::Tensor<T>&, const RI::Tensor<T>&) [with T = std::complex<double>]: Assertion `std::abs(a.ptr()[i] - b.ptr()[i]) < REF_TOLERANCE' failed.
+[16v100n06:414498] *** Process received signal ***
+[16v100n06:414498] Signal: Aborted (6)
+[16v100n06:414498] Signal code:  (-6)
+[16v100n06:414498] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x1459e3e07330]
+[16v100n06:414498] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x1459e3e60b2c]
+[16v100n06:414498] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x1459e3e0727e]
+[16v100n06:414498] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x1459e3dea8ff]
+[16v100n06:414498] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x2881b)[0x1459e3dea81b]
+[16v100n06:414498] [ 5] /lib/x86_64-linux-gnu/libc.so.6(+0x3b517)[0x1459e3dfd517]
+[16v100n06:414498] [ 6] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/hartree(+0x380c5)[0x55728c0e60c5]
+[16v100n06:414498] [ 7] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/hartree(+0x2c88a)[0x55728c0da88a]
+[16v100n06:414498] [ 8] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/hartree(+0x21da0)[0x55728c0cfda0]
+[16v100n06:414498] [ 9] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/hartree(+0x1a66b)[0x55728c0c866b]
+[16v100n06:414498] [10] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/hartree(+0xd623)[0x55728c0bb623]
+[16v100n06:414498] [11] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/hartree(+0xdb60)[0x55728c0bbb60]
+[16v100n06:414498] [12] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x1459e3dec1ca]
+[16v100n06:414498] [13] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x1459e3dec28b]
+[16v100n06:414498] [14] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/hartree(+0xb315)[0x55728c0b9315]
+[16v100n06:414498] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 414498 on node 16v100n06 exited on
+signal 6 (Aborted).
+--------------------------------------------------------------------------

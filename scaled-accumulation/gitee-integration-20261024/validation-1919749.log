@@ -1,0 +1,93 @@
+START environment/compiler
+END environment/compiler 0
+START environment/gpu
+END environment/gpu 0
+START tests/configure
+END tests/configure 0
+START tests/build
+END tests/build 0
+START tests/cpu_float/omp1
+END tests/cpu_float/omp1 0
+START tests/cpu_double/omp1
+END tests/cpu_double/omp1 0
+START tests/cpu_complex_float/omp1
+END tests/cpu_complex_float/omp1 0
+START tests/cpu_complex_double/omp1
+END tests/cpu_complex_double/omp1 0
+START tests/gpu_float/omp1
+END tests/gpu_float/omp1 0
+START tests/gpu_double/omp1
+END tests/gpu_double/omp1 0
+START tests/gpu_complex_float/omp1
+END tests/gpu_complex_float/omp1 0
+START tests/gpu_complex_double/omp1
+END tests/gpu_complex_double/omp1 0
+START tests/hartree/omp1
+END tests/hartree/omp1 0
+START tests/atom_lists/omp1
+END tests/atom_lists/omp1 0
+START tests/gpu_physics/omp1
+END tests/gpu_physics/omp1 0
+START tests/lr/reference/candidate/omp1
+END tests/lr/reference/candidate/omp1 134
+START tests/lr/precise/candidate/omp1
+END tests/lr/precise/candidate/omp1 0
+START tests/lr/reference/parent/omp1
+END tests/lr/reference/parent/omp1 134
+START tests/lr/precise/parent/omp1
+END tests/lr/precise/parent/omp1 0
+START tests/lr/comparison/omp1
+END tests/lr/comparison/omp1 0
+START tests/cpu_float/omp4
+END tests/cpu_float/omp4 0
+START tests/cpu_double/omp4
+END tests/cpu_double/omp4 0
+START tests/cpu_complex_float/omp4
+END tests/cpu_complex_float/omp4 0
+START tests/cpu_complex_double/omp4
+END tests/cpu_complex_double/omp4 0
+START tests/gpu_float/omp4
+END tests/gpu_float/omp4 0
+START tests/gpu_double/omp4
+END tests/gpu_double/omp4 0
+START tests/gpu_complex_float/omp4
+END tests/gpu_complex_float/omp4 0
+START tests/gpu_complex_double/omp4
+END tests/gpu_complex_double/omp4 0
+START tests/hartree/omp4
+END tests/hartree/omp4 0
+START tests/atom_lists/omp4
+END tests/atom_lists/omp4 0
+START tests/gpu_physics/omp4
+END tests/gpu_physics/omp4 0
+START tests/lr/reference/candidate/omp4
+END tests/lr/reference/candidate/omp4 134
+START tests/lr/precise/candidate/omp4
+END tests/lr/precise/candidate/omp4 0
+START tests/lr/reference/parent/omp4
+END tests/lr/reference/parent/omp4 134
+START tests/lr/precise/parent/omp4
+END tests/lr/precise/parent/omp4 0
+START tests/lr/comparison/omp4
+END tests/lr/comparison/omp4 0
+START negative/hartree
+END negative/hartree 134
+START negative/cvc
+END negative/cvc 1
+START negative/const-input
+END negative/const-input 1
+START negative/unscaled
+END negative/unscaled 1
+START abacus/configure
+END abacus/configure 0
+START abacus/build
+END abacus/build 0
+START abacus/version
+END abacus/version 0
+START abacus/help
+END abacus/help 0
+START abacus/scf_hse_gamma
+END abacus/scf_hse_gamma 0
+START abacus/scf_hse_complex_multik_mpi2
+END abacus/scf_hse_complex_multik_mpi2 0
+ALL PR15 VALIDATION PASSED

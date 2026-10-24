@@ -1,0 +1,35 @@
+START environment/compiler
+END environment/compiler 0
+START environment/gpu
+END environment/gpu 0
+START tests/configure
+END tests/configure 0
+START tests/build
+END tests/build 0
+START tests/cpu_float/omp1
+END tests/cpu_float/omp1 0
+START tests/cpu_double/omp1
+END tests/cpu_double/omp1 0
+START tests/cpu_complex_float/omp1
+END tests/cpu_complex_float/omp1 0
+START tests/cpu_complex_double/omp1
+END tests/cpu_complex_double/omp1 0
+START tests/gpu_float/omp1
+END tests/gpu_float/omp1 0
+START tests/gpu_double/omp1
+END tests/gpu_double/omp1 0
+START tests/gpu_complex_float/omp1
+END tests/gpu_complex_float/omp1 0
+START tests/gpu_complex_double/omp1
+END tests/gpu_complex_double/omp1 0
+START tests/hartree/omp1
+END tests/hartree/omp1 0
+START tests/lr/omp1
+END tests/lr/omp1 134
+Traceback (most recent call last):
+  File "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control/run.py", line 50, in <module>
+    run(f'tests/{name}/omp{threads}', [*launch, build / name], env, cwd=root / 'source')
+  File "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control/run.py", line 29, in run
+    assert result.returncode == 0, name
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: tests/lr/omp1

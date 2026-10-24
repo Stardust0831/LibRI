@@ -1,0 +1,39 @@
+commit 1c2a8905a95a34dc80556e1b82965a50a773f186
+Author:     linpz <linpz@mail.ustc.edu.cn>
+AuthorDate: Fri Oct 23 00:57:44 2026 +0800
+Commit:     Jiacheng Xu <13862180016@163.com>
+CommitDate: Sat Oct 24 14:21:14 2026 +0800
+
+    1. fix fac_add_Ds bug in LRI-cal_loop3_GPU
+    
+    (cherry picked from commit fe27bb14d9abbccd9d05296a0833278acc7f34f4)
+
+commit c39328132b9b2579ecf665c2ce914ce9ce92b622
+Author:     linpz <linpz@mail.ustc.edu.cn>
+AuthorDate: Fri Oct 23 19:28:00 2026 +0800
+Commit:     Jiacheng Xu <13862180016@163.com>
+CommitDate: Sat Oct 24 14:21:15 2026 +0800
+
+    1. change fac_add_Ds to Tdata
+    
+    (cherry picked from commit 6534722c2c4925d521793b3d279052ef3c7be886)
+
+commit a02f626d7955d3e636fba814401b51e34c21c38b
+Author:     Jiacheng Xu <13862180016@163.com>
+AuthorDate: Sat Oct 24 14:44:37 2026 +0800
+Commit:     Jiacheng Xu <13862180016@163.com>
+CommitDate: Sat Oct 24 14:44:37 2026 +0800
+
+    Fix atom-list indexing in indexed Hartree loops
+    
+    Use the right atom list to bound the density loop and the left atom list to select mu in the CVC loop. Add scalar-reference regressions for distinct and unequal atom partitions.
+
+commit 2cf829054e2bbbc3a5ebd2bb9e2bb6d38e6060fa
+Author:     Jiacheng Xu <13862180016@163.com>
+AuthorDate: Sat Oct 24 14:44:43 2026 +0800
+Commit:     Jiacheng Xu <13862180016@163.com>
+CommitDate: Sat Oct 24 14:44:43 2026 +0800
+
+    Keep const tensor inputs independent of accumulators
+    
+    Copy the input when initializing an empty result with unit coefficient. Tensor assignment shares storage, so subsequent in-place additions otherwise change the input and other accumulators. Cover independent outputs and complex accumulation coefficients.

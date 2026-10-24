@@ -1,0 +1,195 @@
+Change Dir: '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+
+Run Build Command(s): /opt/devtools/cmake/3.31.6/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile -j2
+/opt/devtools/cmake/3.31.6/bin/cmake -S/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control -B/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests --check-build-system CMakeFiles/Makefile.cmake 0
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_progress_start /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests//CMakeFiles/progress.marks
+/usr/bin/gmake  -f CMakeFiles/Makefile2 all
+gmake[1]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/cpu_float.dir/build.make CMakeFiles/cpu_float.dir/depend
+/usr/bin/gmake  -f CMakeFiles/cpu_complex_float.dir/build.make CMakeFiles/cpu_complex_float.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_complex_float.dir/DependInfo.cmake "--color="
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_float.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/cpu_complex_float.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_complex_float.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/cpu_float.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_float.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/cpu_complex_float.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_complex_float.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/cpu_float.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_float.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target cpu_float
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/cpu_float.dir/build.make CMakeFiles/cpu_float.dir/build
+Consolidate compiler generated dependencies of target cpu_complex_float
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/cpu_complex_float.dir/build.make CMakeFiles/cpu_complex_float.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/cpu_complex_float.dir/build'.
+gmake[2]: Nothing to be done for 'CMakeFiles/cpu_float.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 13%] Built target cpu_complex_float
+/usr/bin/gmake  -f CMakeFiles/cpu_double.dir/build.make CMakeFiles/cpu_double.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_double.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/cpu_double.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_double.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/cpu_double.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_double.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target cpu_double
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/cpu_double.dir/build.make CMakeFiles/cpu_double.dir/build
+[ 13%] Built target cpu_float
+/usr/bin/gmake  -f CMakeFiles/cpu_complex_double.dir/build.make CMakeFiles/cpu_complex_double.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_complex_double.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/cpu_complex_double.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_complex_double.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/cpu_complex_double.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/cpu_complex_double.dir/compiler_depend.internal".
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/cpu_double.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+Consolidate compiler generated dependencies of target cpu_complex_double
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/cpu_complex_double.dir/build.make CMakeFiles/cpu_complex_double.dir/build
+[ 20%] Built target cpu_double
+/usr/bin/gmake  -f CMakeFiles/gpu_float.dir/build.make CMakeFiles/gpu_float.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_float.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/gpu_float.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_float.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/gpu_float.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_float.dir/compiler_depend.internal".
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/cpu_complex_double.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 26%] Built target cpu_complex_double
+/usr/bin/gmake  -f CMakeFiles/gpu_complex_float.dir/build.make CMakeFiles/gpu_complex_float.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_complex_float.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/gpu_complex_float.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_complex_float.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/gpu_complex_float.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_complex_float.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target gpu_float
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/gpu_float.dir/build.make CMakeFiles/gpu_float.dir/build
+Consolidate compiler generated dependencies of target gpu_complex_float
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/gpu_complex_float.dir/build.make CMakeFiles/gpu_complex_float.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/gpu_complex_float.dir/build'.
+gmake[2]: Nothing to be done for 'CMakeFiles/gpu_float.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 36%] Built target gpu_float
+/usr/bin/gmake  -f CMakeFiles/gpu_double.dir/build.make CMakeFiles/gpu_double.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_double.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/gpu_double.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_double.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/gpu_double.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_double.dir/compiler_depend.internal".
+[ 40%] Built target gpu_complex_float
+/usr/bin/gmake  -f CMakeFiles/gpu_complex_double.dir/build.make CMakeFiles/gpu_complex_double.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_complex_double.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/gpu_complex_double.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_complex_double.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/gpu_complex_double.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_complex_double.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target gpu_double
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/gpu_double.dir/build.make CMakeFiles/gpu_double.dir/build
+Consolidate compiler generated dependencies of target gpu_complex_double
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/gpu_complex_double.dir/build.make CMakeFiles/gpu_complex_double.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/gpu_double.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 46%] Built target gpu_double
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/gpu_complex_double.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/gpu_physics.dir/build.make CMakeFiles/gpu_physics.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_physics.dir/DependInfo.cmake "--color="
+[ 53%] Built target gpu_complex_double
+/usr/bin/gmake  -f CMakeFiles/hartree.dir/build.make CMakeFiles/hartree.dir/depend
+Dependencies file "CMakeFiles/gpu_physics.dir/physics_driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_physics.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/gpu_physics.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gpu_physics.dir/compiler_depend.internal".
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/hartree.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/hartree.dir/hartree_driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/hartree.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/hartree.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/hartree.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target gpu_physics
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/gpu_physics.dir/build.make CMakeFiles/gpu_physics.dir/build
+Consolidate compiler generated dependencies of target hartree
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/hartree.dir/build.make CMakeFiles/hartree.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/hartree.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/gpu_physics.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 60%] Built target hartree
+/usr/bin/gmake  -f CMakeFiles/lr.dir/build.make CMakeFiles/lr.dir/depend
+[ 66%] Built target gpu_physics
+/usr/bin/gmake  -f CMakeFiles/atom_lists.dir/build.make CMakeFiles/atom_lists.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/lr.dir/DependInfo.cmake "--color="
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/atom_lists.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/lr.dir/lr_driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/lr.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/lr.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/lr.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/atom_lists.dir/atom_lists_driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/atom_lists.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/atom_lists.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/atom_lists.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target atom_lists
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/atom_lists.dir/build.make CMakeFiles/atom_lists.dir/build
+Consolidate compiler generated dependencies of target lr
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/lr.dir/build.make CMakeFiles/lr.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/atom_lists.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/lr.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 80%] Built target lr
+/usr/bin/gmake  -f CMakeFiles/gitee_atom_lists.dir/build.make CMakeFiles/gitee_atom_lists.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gitee_atom_lists.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/gitee_atom_lists.dir/atom_lists_driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gitee_atom_lists.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/gitee_atom_lists.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gitee_atom_lists.dir/compiler_depend.internal".
+[ 80%] Built target atom_lists
+/usr/bin/gmake  -f CMakeFiles/gitee_const_input.dir/build.make CMakeFiles/gitee_const_input.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/gitee_const_input.dir/DependInfo.cmake "--color="
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/gitee_const_input.dir/build.make CMakeFiles/gitee_const_input.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+Consolidate compiler generated dependencies of target gitee_atom_lists
+[ 83%] Building CXX object CMakeFiles/gitee_const_input.dir/driver.cpp.o
+/usr/bin/c++ -DTEST_COMPLEX -DTEST_REAL=double -D_GLIBCXX_ASSERTIONS -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/gitee/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/source -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/include -isystem /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/include -g -O0 -UNDEBUG -fopenmp -MD -MT CMakeFiles/gitee_const_input.dir/driver.cpp.o -MF CMakeFiles/gitee_const_input.dir/driver.cpp.o.d -o CMakeFiles/gitee_const_input.dir/driver.cpp.o -c /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control/driver.cpp
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/gitee_atom_lists.dir/build.make CMakeFiles/gitee_atom_lists.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+gmake[2]: Nothing to be done for 'CMakeFiles/gitee_atom_lists.dir/build'.
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 90%] Built target gitee_atom_lists
+/usr/bin/gmake  -f CMakeFiles/unscaled.dir/build.make CMakeFiles/unscaled.dir/depend
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+cd /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests && /opt/devtools/cmake/3.31.6/bin/cmake -E cmake_depends "Unix Makefiles" /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/unscaled.dir/DependInfo.cmake "--color="
+Dependencies file "CMakeFiles/unscaled.dir/driver.cpp.o.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/unscaled.dir/compiler_depend.internal".
+Dependencies file "CMakeFiles/unscaled.dir/link.d" is newer than depends file "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles/unscaled.dir/compiler_depend.internal".
+Consolidate compiler generated dependencies of target unscaled
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/usr/bin/gmake  -f CMakeFiles/unscaled.dir/build.make CMakeFiles/unscaled.dir/build
+gmake[2]: Entering directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 93%] Building CXX object CMakeFiles/unscaled.dir/driver.cpp.o
+/usr/bin/c++ -DDDLA_USE_CUDA -DTEST_REAL=double -D_GLIBCXX_ASSERTIONS -D__DDLA_RI -D__GPU_RI -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/bad/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/source -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla/include -isystem /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/include -isystem /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/include -g -O0 -UNDEBUG -fopenmp -MD -MT CMakeFiles/unscaled.dir/driver.cpp.o -MF CMakeFiles/unscaled.dir/driver.cpp.o.d -o CMakeFiles/unscaled.dir/driver.cpp.o -c /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control/driver.cpp
+[ 96%] Linking CXX executable gitee_const_input
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_link_script CMakeFiles/gitee_const_input.dir/link.txt --verbose=1
+/usr/bin/c++ -g -Wl,-rpath -Wl,/opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib -Wl,--enable-new-dtags -Wl,--dependency-file=CMakeFiles/gitee_const_input.dir/link.d CMakeFiles/gitee_const_input.dir/driver.cpp.o -o gitee_const_input  /opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib/libmpi.so /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[ 96%] Built target gitee_const_input
+[100%] Linking CXX executable unscaled
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_link_script CMakeFiles/unscaled.dir/link.txt --verbose=1
+/usr/bin/c++ -g -Wl,-rpath -Wl,/opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib -Wl,--enable-new-dtags -Wl,--dependency-file=CMakeFiles/unscaled.dir/link.d CMakeFiles/unscaled.dir/driver.cpp.o -o unscaled  -Wl,-rpath,/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla/lib:/opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib /opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/install/ddla/lib/libddla.so /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib/libcudart.so /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64/libcublas.so /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64/libcurand.so /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64/libcusolver.so /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib/libmpi.so /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.a -ldl /usr/lib/x86_64-linux-gnu/librt.a /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64/libcublas.so /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib/libculibos.a /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64/libcublasLt.so /opt/devtools/nvidia/hpc_sdk/Linux_x86_64/26.3/math_libs/12.9/lib64/libcusparse.so /opt/devtools/nvidia/cuda-12.9.1/targets/x86_64-linux/lib/libnvJitLink.so
+gmake[2]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+[100%] Built target unscaled
+gmake[1]: Leaving directory '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests'
+/opt/devtools/cmake/3.31.6/bin/cmake -E cmake_progress_start /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/CMakeFiles 0
+

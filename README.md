@@ -19,3 +19,5 @@
 最新 **[PR #8169 最终提交的完整验证](abacus-merged/README.md)** 对应 `b30b66a5a`：已移除三个旧兼容补丁并合入 `develop`，完整 GPU 构建、CPU/GPU 各 16 项输入测试和八组 HSE 计算均通过。该目录保留最终版本的完整原始日志及数值对照。
 
 另见 **[GPU 实空间对称性缺陷与修复验证](gpu-symmetry/README.md)**：包含原始版本、维护者修复及补充修复的逐项数值对照，完整原始编译日志，以及 ABACUS 对称性计算结果。
+
+另有 **[PR #15 整合 Gitee 实现后的验证](scaled-accumulation/gitee-integration-20261024/README.md)**：保留 PeizeLin 的原始署名，记录三个补充修正、16 组 CPU/GPU 测试和八组 ABACUS HSE 计算结果，并说明原有 LR 参考测试的精度问题及前后数值对照。

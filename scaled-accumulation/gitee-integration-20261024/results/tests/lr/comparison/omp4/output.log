@@ -1,0 +1,7 @@
+{
+  "numeric_tokens": 662,
+  "maximum_candidate_parent_difference": 0.0,
+  "maximum_candidate_reference_difference": 1.2500368029577658e-07,
+  "maximum_parent_reference_difference": 1.2500368029577658e-07,
+  "candidate_parent_tolerance": 1e-07
+}

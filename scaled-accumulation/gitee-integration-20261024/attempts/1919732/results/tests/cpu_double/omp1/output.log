@@ -1,0 +1,40 @@
+a0b0_a1b1	0
+a0b1_a1b0	0
+a0b0_a2b1	0
+a0b1_a2b0	0
+a1b0_a2b1	0
+a1b1_a2b0	0
+a0b0_a1b2	0
+a0b1_a1b2	0
+a0b2_a1b0	0
+a0b2_a1b1	0
+a0b0_a2b2	0
+a0b1_a2b2	0
+a0b2_a2b0	0
+a0b2_a2b1	0
+a1b0_a2b2	0
+a1b1_a2b2	0
+a1b2_a2b0	0
+a1b2_a2b1	0
+Accumulation: all 18 contractions and their sum passed, mode=0
+Accumulation: all 18 contractions and their sum passed, mode=0
+a0b0_a1b1	0
+a0b1_a1b0	0
+a0b0_a2b1	0
+a0b1_a2b0	0
+a1b0_a2b1	0
+a1b1_a2b0	0
+a0b0_a1b2	0
+a0b1_a1b2	0
+a0b2_a1b0	0
+a0b2_a1b1	0
+a0b0_a2b2	0
+a0b1_a2b2	0
+a0b2_a2b0	0
+a0b2_a2b1	0
+a1b0_a2b2	0
+a1b1_a2b2	0
+a1b2_a2b0	0
+a1b2_a2b1	0
+Accumulation: all 18 contractions and their sum passed, mode=1
+Accumulation: all 18 contractions and their sum passed, mode=1

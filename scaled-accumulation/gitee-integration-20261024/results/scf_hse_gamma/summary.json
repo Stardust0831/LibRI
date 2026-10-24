@@ -1,0 +1,51 @@
+[
+  {
+    "case": "scf_hse_gamma_host",
+    "ranks": 1,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_gamma_default",
+    "ranks": 1,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_gamma_cpu",
+    "ranks": 1,
+    "device_exx": "cpu",
+    "result": "PASS"
+  },
+  {
+    "case": "scf_hse_gamma_gpu",
+    "ranks": 1,
+    "device_exx": "gpu",
+    "result": "PASS"
+  },
+  {
+    "check": "valid_cpu",
+    "result": "PASS",
+    "expected_error": null
+  },
+  {
+    "check": "valid_gpu",
+    "result": "PASS",
+    "expected_error": null
+  },
+  {
+    "check": "bad_value",
+    "result": "PASS",
+    "expected_error": "device_exx must be cpu or gpu"
+  },
+  {
+    "check": "bad_device",
+    "result": "PASS",
+    "expected_error": "device_exx=gpu requires basis_type=lcao and device=gpu"
+  },
+  {
+    "check": "bad_symmetry",
+    "result": "PASS",
+    "expected_error": "LibRI GPU contractions do not support real-space EXX symmetry"
+  }
+]

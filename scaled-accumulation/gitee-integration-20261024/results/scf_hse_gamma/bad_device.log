@@ -1,0 +1,42 @@
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+
+                     ▄████▄ █████▄ ▄████▄ ▄█████ ██  ██ ▄█████ 
+                     ██▄▄██ ██▄▄██ ██▄▄██ ██     ██  ██ ▀▀▀▄▄▄ 
+                     ██  ██ ██▄▄█▀ ██  ██ ▀█████ ▀████▀ █████▀ 
+
+                                                                                     
+                                v3.11.0-beta11
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: unknown
+
+ Sat Oct 24 14:49:48 2026
+ 
+ ---------------------------------------------------------
+                         !NOTICE!                         
+ ---------------------------------------------------------
+ 
+ device_exx=gpu requires basis_type=lcao and device=gpu
+ CHECK IN FILE : warning.log
+ 
+ For detailed manual of ABACUS, please see the website
+ https://abacus.deepmodeling.com
+ For any questions, propose issues on the website
+ https://github.com/deepmodeling/abacus-develop/issues
+ ---------------------------------------------------------
+                         !NOTICE!                         
+ ---------------------------------------------------------
+
+ TIME STATISTICS
+-----------------------------------------------------
+ CLASS_NAME    NAME    TIME/s  CALLS   AVG/s  PER/%  
+-----------------------------------------------------
+            total      0.00   1        0.00   100.00 
+-----------------------------------------------------
+
+ See output information in : 

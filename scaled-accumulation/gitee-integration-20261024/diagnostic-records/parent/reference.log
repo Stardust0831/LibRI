@@ -1,0 +1,23 @@
+parent-lr: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/source/unittests/physics/Test_Helpers.hpp:106: void Test_Helpers::compare_map(const RI::Tensor<T>&, const RI::Tensor<T>&) [with T = std::complex<double>]: Assertion `std::abs(a.ptr()[i] - b.ptr()[i]) < REF_TOLERANCE' failed.
+[16v100n01:3546499] *** Process received signal ***
+[16v100n01:3546499] Signal: Aborted (6)
+[16v100n01:3546499] Signal code:  (-6)
+[16v100n01:3546499] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x154406304330]
+[16v100n01:3546499] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x15440635db2c]
+[16v100n01:3546499] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x15440630427e]
+[16v100n01:3546499] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x1544062e78ff]
+[16v100n01:3546499] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x2881b)[0x1544062e781b]
+[16v100n01:3546499] [ 5] /lib/x86_64-linux-gnu/libc.so.6(+0x3b517)[0x1544062fa517]
+[16v100n01:3546499] [ 6] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/diagnostic/parent-lr(+0x2f72a)[0x556a0c12e72a]
+[16v100n01:3546499] [ 7] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/diagnostic/parent-lr(+0x23e0a)[0x556a0c122e0a]
+[16v100n01:3546499] [ 8] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/diagnostic/parent-lr(+0x1b3db)[0x556a0c11a3db]
+[16v100n01:3546499] [ 9] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/diagnostic/parent-lr(+0xd2eb)[0x556a0c10c2eb]
+[16v100n01:3546499] [10] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/diagnostic/parent-lr(+0xdc1f)[0x556a0c10cc1f]
+[16v100n01:3546499] [11] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x1544062e91ca]
+[16v100n01:3546499] [12] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x1544062e928b]
+[16v100n01:3546499] [13] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/diagnostic/parent-lr(+0xa3d5)[0x556a0c1093d5]
+[16v100n01:3546499] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 3546499 on node 16v100n01 exited on
+signal 6 (Aborted).
+--------------------------------------------------------------------------

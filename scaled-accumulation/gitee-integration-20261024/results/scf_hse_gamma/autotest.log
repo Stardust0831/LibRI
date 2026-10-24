@@ -1,0 +1,53 @@
+-----AUTO TESTS OF ABACUS ------
+ABACUS path: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/abacus-build/abacus_std_gpu
+Number of processes: 1
+Number of threads: 1
+Concurrent test cases: 1
+Test accuracy totenergy: 0.0000001 eV
+Test accuracy force: 0.0001
+Test accuracy stress: 0.001
+Test accuracy descriptor mean: 0.00001
+Check accuaracy: 8
+Test cases file: CASES.task.txt
+Test cases regex: ^[^#].*_.*$
+Generate reference: 
+Property collectors: true
+--------------------------------
+
+[0;32m[ RUN      ][0m scf_hse_gamma_host
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+[----------] scf HSE on H2O, gamma_only, nspin=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[----------] Time elapsed: 3.822 seconds
+
+[0;32m[ RUN      ][0m scf_hse_gamma_default
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+[----------] scf HSE on H2O, gamma_only, nspin=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[----------] Time elapsed: 5.243 seconds
+
+[0;32m[ RUN      ][0m scf_hse_gamma_cpu
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+[----------] scf HSE on H2O, gamma_only, nspin=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[----------] Time elapsed: 5.538 seconds
+
+[0;32m[ RUN      ][0m scf_hse_gamma_gpu
+Info: Local MPI proc number: 1,OpenMP thread number: 1,Total thread number: 1,Local thread limit: 128
+[----------] scf HSE on H2O, gamma_only, nspin=1, exx_separate_loop=1.
+[0;32m[      OK  ] [0m etotref
+[0;32m[      OK  ] [0m etotperatomref
+[0;32m[      OK  ] [0m totalforceref
+[0;32m[      OK  ] [0m totalstressref
+[----------] Time elapsed: 6.306 seconds
+
+[0;32m[ PASSED   ] [0m 16 test cases passed.

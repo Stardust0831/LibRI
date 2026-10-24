@@ -1,0 +1,41 @@
+PASS const tensor accumulation preserves input and independent results
+a0b0_a1b1	0
+a0b1_a1b0	0
+a0b0_a2b1	0
+a0b1_a2b0	0
+a1b0_a2b1	66.6933
+a1b1_a2b0	33.2265
+a0b0_a1b2	0
+a0b1_a1b2	28.5657
+a0b2_a1b0	0
+a0b2_a1b1	21.9089
+a0b0_a2b2	13.8564
+a0b1_a2b2	44.7214
+a0b2_a2b0	15.8745
+a0b2_a2b1	51.4587
+a1b0_a2b2	98.8737
+a1b1_a2b2	98.6306
+a1b2_a2b0	62.2254
+a1b2_a2b1	137.463
+Accumulation: all 18 contractions and their sum passed, mode=0
+Accumulation: all 18 contractions and their sum passed, mode=0
+a0b0_a1b1	0
+a0b1_a1b0	0
+a0b0_a2b1	0
+a0b1_a2b0	0
+a1b0_a2b1	66.6933
+a1b1_a2b0	33.2265
+a0b0_a1b2	0
+a0b1_a1b2	28.5657
+a0b2_a1b0	0
+a0b2_a1b1	21.9089
+a0b0_a2b2	13.8564
+a0b1_a2b2	44.7214
+a0b2_a2b0	15.8745
+a0b2_a2b1	51.4587
+a1b0_a2b2	98.8737
+a1b1_a2b2	98.6306
+a1b2_a2b0	62.2254
+a1b2_a2b1	137.463
+Accumulation: all 18 contractions and their sum passed, mode=1
+Accumulation: all 18 contractions and their sum passed, mode=1

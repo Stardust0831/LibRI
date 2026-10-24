@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/control/diagnose.py", line 22, in <module>
+    subprocess.run(link, cwd=root, stdout=log, stderr=subprocess.STDOUT, check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/usr/bin/c++', '-g', '-Wl,-rpath', '-Wl,/opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib', '-Wl,--enable-new-dtags', '-Wl,--dependency-file=CMakeFiles/lr.dir/link.d', '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/diagnostic/parent-lr.o', '-o', '/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/diagnostic/parent-lr', '/opt/devtools/saiblas/2603-gnu-avx2/lib/libopenblas.so', '/opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/lib/libmpi.so', '/usr/lib/gcc/x86_64-linux-gnu/13/libgomp.so', '/usr/lib/x86_64-linux-gnu/libpthread.a']' returned non-zero exit status 1.

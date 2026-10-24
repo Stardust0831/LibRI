@@ -1,0 +1,61 @@
+PASS const tensor accumulation preserves input and independent results
+a0b0_a1b1	0
+a0b1_a1b0	0
+a0b0_a2b1	0
+a0b1_a2b0	0
+a1b0_a2b1	0
+a1b1_a2b0	0
+a0b0_a1b2	0
+a0b1_a1b2	0
+a0b2_a1b0	0
+a0b2_a1b1	0
+a0b0_a2b2	0
+a0b1_a2b2	0
+a0b2_a2b0	0
+a0b2_a2b1	0
+a1b0_a2b2	0
+a1b1_a2b2	0
+a1b2_a2b0	0
+a1b2_a2b1	0
+Accumulation: all 18 contractions and their sum passed, mode=0
+Accumulation: all 18 contractions and their sum passed, mode=0
+a0b0_a1b1	0
+a0b1_a1b0	0
+a0b0_a2b1	0
+a0b1_a2b0	0
+a1b0_a2b1	0
+a1b1_a2b0	0
+a0b0_a1b2	0
+a0b1_a1b2	0
+a0b2_a1b0	0
+a0b2_a1b1	0
+a0b0_a2b2	0
+a0b1_a2b2	0
+a0b2_a2b0	0
+a0b2_a2b1	0
+a1b0_a2b2	0
+a1b1_a2b2	0
+a1b2_a2b0	0
+a1b2_a2b1	0
+Accumulation: all 18 contractions and their sum passed, mode=1
+Accumulation: all 18 contractions and their sum passed, mode=1
+a0b0_a1b1	0
+a0b1_a1b0	0
+a0b0_a2b1	0
+a0b1_a2b0	0
+a1b0_a2b1	0
+a1b1_a2b0	0
+a0b0_a1b2	0
+a0b1_a1b2	0
+a0b2_a1b0	0
+a0b2_a1b1	0
+a0b0_a2b2	0
+a0b1_a2b2	0
+a0b2_a2b0	0
+a0b2_a2b1	0
+a1b0_a2b2	0
+a1b1_a2b2	0
+a1b2_a2b0	0
+a1b2_a2b1	0
+a1b1_a2b2 mode=2 seeded=0 factor=0 element=0 error=2.20835
+Accumulation differs from the CPU reference

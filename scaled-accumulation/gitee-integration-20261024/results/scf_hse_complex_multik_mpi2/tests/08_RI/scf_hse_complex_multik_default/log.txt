@@ -1,0 +1,116 @@
+
+                     ▄████▄ █████▄ ▄████▄ ▄█████ ██  ██ ▄█████ 
+                     ██▄▄██ ██▄▄██ ██▄▄██ ██     ██  ██ ▀▀▀▄▄▄ 
+                     ██  ██ ██▄▄█▀ ██  ██ ▀█████ ▀████▀ █████▀ 
+
+                                                                                     
+                                v3.11.0-beta11
+
+               Atomic-orbital Based Ab-initio Computation at UStc                    
+
+                     Website: http://abacus.ustc.edu.cn/                             
+               Documentation: https://abacus.deepmodeling.com/                       
+                  Repository: https://github.com/abacusmodeling/abacus-develop       
+                              https://github.com/deepmodeling/abacus-develop         
+                      Commit: unknown
+
+ Sat Oct 24 14:49:55 2026
+ MAKE THE DIR         : OUT.autotest/
+ RUNNING WITH DEVICE  : CPU / AMD Ryzen Threadripper PRO 5995WX 64-Cores (x1)
+                        GPU / Tesla V100-SXM2-16GB (x2)
+ WARNING: some of potential function is set to zero cause of less than 1e-30.
+ NAME OF ELEMENT      : Si
+ DFT FUNC. (PSEUDO)   : PBE
+ DFT FUNC. (SET TO)   : HSE
+ MAKE SURE THIS DFT FUNCTIONAL IS WHAT YOU NEED
+ UNIFORM GRID DIM          : 15 * 15 * 15
+ UNIFORM GRID DIM (BIG)    : 5 * 5 * 5
+ DONE(0.357215   SEC) : SETUP UNITCELL
+ DONE(0.358155   SEC) : INIT K-POINTS
+ ----------------------------------------------------------------
+ Self-consistent calculations for electrons
+ ----------------------------------------------------------------
+ SPIN    KPOINTS         PROCESSES   THREADS/PROC  THREADS/TOTAL 
+ 1       3               2           1             2             
+ ----------------------------------------------------------------
+ Use Systematically Improvable Atomic bases
+ ----------------------------------------------------------------
+ TOTAL NBASE 8
+ ELEMENT ORBITALS        NBASE       NATOM       
+ Si      1s1p-6au        4           2           
+ ----------------------------------------------------------------
+ Initial plane wave basis and FFT box
+ ----------------------------------------------------------------
+ DONE(0.358467   SEC) : INIT PLANEWAVE
+ START CHARGE         : ATOMIC
+ DONE(0.391326   SEC) : CHARGE
+ DONE(1.08813    SEC) : POTENTIALS
+
+ ================================================================
+ SELF-CONSISTENT: 
+ ================================================================
+ DONE(1.19496    SEC) : INIT SCF
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ CU1   -1.91744877e+02   0.00000000e+00   3.5160e-01   0.08
+ CU2   -1.91604433e+02   1.40443659e-01   1.1313e-01   0.04
+ CU3   -1.91603105e+02   1.32800694e-03   1.5536e-02   0.02
+ CU4   -1.91602574e+02   5.30468561e-04   1.9371e-02   0.03
+ CU5   -1.91603946e+02  -1.37119665e-03   3.7536e-03   0.03
+ CU6   -1.91603940e+02   5.32821012e-06   1.8163e-03   0.05
+ CU7   -1.91603954e+02  -1.40909352e-05   5.9793e-04   0.06
+ CU8   -1.91603956e+02  -1.12177318e-06   3.8214e-05   0.04
+ CU9   -1.91603956e+02  -9.58888201e-10   3.1529e-06   0.09
+ Updating EXX and rerun SCF	4.225e-01 (s)
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ CU1   -1.93345096e+02   0.00000000e+00   1.2513e-02   0.03
+ CU2   -1.93344998e+02   9.88542225e-05   3.2194e-03   0.03
+ CU3   -1.93345000e+02  -2.77135342e-06   1.4750e-04   0.02
+ CU4   -1.93345000e+02  -5.68317992e-08   1.1558e-05   0.02
+ CU5   -1.93345000e+02  -8.99675193e-09   3.8046e-07   0.03
+ deltaE (eV) from outer loop: 1.74104492e+00 
+ Updating EXX and rerun SCF	3.938e-01 (s)
+ ITER     ETOT/eV          EDIFF/eV         DRHO     TIME/s
+ CU1   -1.93395453e+02   0.00000000e+00   9.6485e-04   0.03
+ CU2   -1.93395452e+02   1.51476059e-07   2.3425e-04   0.03
+ CU3   -1.93395453e+02  -2.13007945e-07   2.7206e-05   0.03
+ CU4   -1.93395453e+02   4.55524462e-09   1.8527e-06   0.06
+ deltaE (eV) from outer loop: 5.04521636e-02 
+
+ TIME STATISTICS
+------------------------------------------------------------------
+   CLASS_NAME           NAME        TIME/s  CALLS   AVG/s  PER/%  
+------------------------------------------------------------------
+                 total              2.76   13       0.21   100.00 
+ Driver          atomic_world       2.76   1        2.76   100.00 
+ Driver          reading            0.29   1        0.29   10.50  
+ ESolver_KS_LCAO before_all_runners 0.74   1        0.74   26.78  
+ Exx_LRI         init               0.70   1        0.70   25.18  
+ Matrix_Orbs21   init               0.12   2        0.06   4.44   
+ Matrix_Orbs21   init_radial_table  0.32   2        0.16   11.60  
+ Center2_Orb     cal_ST_Phi12_R     0.43   83       0.01   15.56  
+ Exx_LRI         refresh_coulomb    0.47   1        0.47   16.88  
+ LRI_CV          set_orbitals       0.46   1        0.46   16.68  
+ Matrix_Orbs11   init_radial_table  0.19   1        0.19   6.71   
+ Relax_Driver    relax_driver       1.65   1        1.65   59.80  
+ ESolver_KS      runner             1.65   1        1.65   59.80  
+ ESolver_KS_LCAO before_scf         0.11   1        0.11   3.86   
+ Exx_LRI         cal_exx_ions       0.10   1        0.10   3.69   
+ HSolverLCAO     solve              0.69   18       0.04   24.88  
+ HSolverLCAO     parakSolve         0.50   18       0.03   18.19  
+ HamiltLCAO      updateHk           0.17   54       0.00   6.10   
+ OperatorLCAO    init               0.17   378      0.00   6.10   
+ Veff            contributeHR       0.17   18       0.01   6.01   
+ Gint            cal_gint_vl        0.17   18       0.01   6.01   
+ Gint            hr_gint_to_hR      0.03   18       0.00   1.11   
+ DiagoCusolver   cusolver           0.06   36       0.00   2.32   
+ LCAO_domain     dm2rho             0.18   18       0.01   6.61   
+ Gint            cal_gint_rho       0.11   18       0.01   4.15   
+ ModuleIO        ctrl_iter_lcao     0.82   18       0.05   29.61  
+ Exx_LRI         cal_exx_elec       0.82   2        0.41   29.53  
+------------------------------------------------------------------
+
+
+ START  Time  : Sat Oct 24 14:49:55 2026
+ FINISH Time  : Sat Oct 24 14:49:58 2026
+ TOTAL  Time  : 3
+ SEE INFORMATION IN : OUT.autotest/

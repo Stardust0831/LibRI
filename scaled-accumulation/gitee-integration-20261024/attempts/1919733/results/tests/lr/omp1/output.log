@@ -1,0 +1,23 @@
+lr: /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/source/unittests/physics/Test_Helpers.hpp:106: void Test_Helpers::compare_map(const RI::Tensor<T>&, const RI::Tensor<T>&) [with T = std::complex<double>]: Assertion `std::abs(a.ptr()[i] - b.ptr()[i]) < REF_TOLERANCE' failed.
+[16v100n01:3539494] *** Process received signal ***
+[16v100n01:3539494] Signal: Aborted (6)
+[16v100n01:3539494] Signal code:  (-6)
+[16v100n01:3539494] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x45330)[0x1539b7610330]
+[16v100n01:3539494] [ 1] /lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x11c)[0x1539b7669b2c]
+[16v100n01:3539494] [ 2] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x1e)[0x1539b761027e]
+[16v100n01:3539494] [ 3] /lib/x86_64-linux-gnu/libc.so.6(abort+0xdf)[0x1539b75f38ff]
+[16v100n01:3539494] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x2881b)[0x1539b75f381b]
+[16v100n01:3539494] [ 5] /lib/x86_64-linux-gnu/libc.so.6(+0x3b517)[0x1539b7606517]
+[16v100n01:3539494] [ 6] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/lr(+0x2f98e)[0x56331142998e]
+[16v100n01:3539494] [ 7] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/lr(+0x23e0a)[0x56331141de0a]
+[16v100n01:3539494] [ 8] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/lr(+0x1b3db)[0x5633114153db]
+[16v100n01:3539494] [ 9] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/lr(+0xd2eb)[0x5633114072eb]
+[16v100n01:3539494] [10] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/lr(+0xdc1f)[0x563311407c1f]
+[16v100n01:3539494] [11] /lib/x86_64-linux-gnu/libc.so.6(+0x2a1ca)[0x1539b75f51ca]
+[16v100n01:3539494] [12] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x8b)[0x1539b75f528b]
+[16v100n01:3539494] [13] /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-gitee-20261024/build-tests/lr(+0xa3d5)[0x5633114043d5]
+[16v100n01:3539494] *** End of error message ***
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 3539494 on node 16v100n01 exited on
+signal 6 (Aborted).
+--------------------------------------------------------------------------
