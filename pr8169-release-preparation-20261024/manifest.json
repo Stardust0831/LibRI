@@ -1,0 +1,10 @@
+{
+  "abacus": "1bd79c473134b366fa45f422e0efd0c54491c43c",
+  "libri": "a0661cbb4b4f89ceeb23e040d49accb00943093f",
+  "ddla": "9c404ac65148ec1b48977b846f38ba6ef9e134f7",
+  "ddla_release": "v0.0.4",
+  "libri_release": null,
+  "additional_patches": [],
+  "abacus_sha256": "6736b3ec6bbe1ca054f2ce329f2af1e06844644d61f32ef0ee9142d358b57092",
+  "source_sha256": "91c65d943e0410a7f4723b8540123edb82e12e42c7e98d8b9891dc71c604871a"
+}

@@ -1,0 +1,59 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "cpu_default",
+      "expected": "accepted",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "gpu_default_cpu_ri",
+      "expected": "accepted",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "gpu_explicit_cpu_ri",
+      "expected": "accepted",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "gpu_symmetry",
+      "expected": "accepted",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "gpu_full",
+      "expected": "accepted",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "gpu_no_symmetry",
+      "expected": "accepted",
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "case": "unknown_device_exx",
+      "expected": "device_exx must be cpu or gpu",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "case": "gpu_ri_cpu_device",
+      "expected": "device_exx=gpu requires basis_type=lcao and device=gpu",
+      "exit_code": 1,
+      "passed": true
+    },
+    {
+      "case": "gpu_ri_pw",
+      "expected": "device_exx=gpu requires basis_type=lcao and device=gpu",
+      "exit_code": 1,
+      "passed": true
+    }
+  ]
+}

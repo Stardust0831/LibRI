@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -euo pipefail
+exec "${RI_SYSTEM_MPIRUN:?}" --map-by ppr:${RI_TEST_RANKS:-1}:node:pe=1 --bind-to core "$@"
