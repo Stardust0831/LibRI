@@ -21,3 +21,5 @@
 另见 **[GPU 实空间对称性缺陷与修复验证](gpu-symmetry/README.md)**：包含原始版本、维护者修复及补充修复的逐项数值对照，完整原始编译日志，以及 ABACUS 对称性计算结果。
 
 另有 **[PR #15 整合 Gitee 实现后的验证](scaled-accumulation/gitee-integration-20261024/README.md)**：保留 PeizeLin 的原始署名，记录三个补充修正、16 组 CPU/GPU 测试和八组 ABACUS HSE 计算结果，并说明原有 LR 参考测试的精度问题及前后数值对照。
+
+**[#15/#16 解决冲突后的联合验证](merged-pr15-pr16-20261024/README.md)**：两个普通 merge commit 接入最新上游；#15 的文件树保持不变，合并后的 #16 通过 CPU/GPU 对称性与累加回归、完整 ABACUS GPU 构建和 20 组对称性计算。

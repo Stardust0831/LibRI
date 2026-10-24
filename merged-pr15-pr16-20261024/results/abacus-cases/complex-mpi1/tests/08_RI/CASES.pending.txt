@@ -1,0 +1,5 @@
+host
+cpu_sym
+gpu_sym
+cpu_full
+gpu_full

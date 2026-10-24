@@ -1,0 +1,8 @@
+{
+  "pr15_merge_preserves_tree": true,
+  "upstream_is_ancestor_of_both_heads": true,
+  "pr15_is_ancestor_of_pr16": true,
+  "cpu_contraction_files_identical_between_pr15_and_pr16": true,
+  "all_tested_source_files_match_pr16_commit": true,
+  "runtime_header_hashes_match_archive": true
+}

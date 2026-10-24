@@ -1,0 +1,83 @@
+START environment/compiler
+END environment/compiler 0
+START environment/gpu
+END environment/gpu 0
+START symmetry/cpu/configure
+END symmetry/cpu/configure 0
+START symmetry/cpu/build
+END symmetry/cpu/build 0
+START symmetry/cpu/omp1
+END symmetry/cpu/omp1 0
+START symmetry/cpu/omp4
+END symmetry/cpu/omp4 0
+START symmetry/gpu/configure
+END symmetry/gpu/configure 0
+START symmetry/gpu/build
+END symmetry/gpu/build 0
+START symmetry/gpu/omp1
+END symmetry/gpu/omp1 0
+START symmetry/gpu/omp4
+END symmetry/gpu/omp4 0
+START callbacks/build
+END callbacks/build 0
+START callbacks/test
+END callbacks/test 0
+START accumulation/configure
+END accumulation/configure 0
+START accumulation/build
+END accumulation/build 0
+START accumulation/cpu_float/omp1
+END accumulation/cpu_float/omp1 0
+START accumulation/cpu_double/omp1
+END accumulation/cpu_double/omp1 0
+START accumulation/cpu_complex_float/omp1
+END accumulation/cpu_complex_float/omp1 0
+START accumulation/cpu_complex_double/omp1
+END accumulation/cpu_complex_double/omp1 0
+START accumulation/gpu_float/omp1
+END accumulation/gpu_float/omp1 0
+START accumulation/gpu_double/omp1
+END accumulation/gpu_double/omp1 0
+START accumulation/gpu_complex_float/omp1
+END accumulation/gpu_complex_float/omp1 0
+START accumulation/gpu_complex_double/omp1
+END accumulation/gpu_complex_double/omp1 0
+START physics/hartree/omp1
+END physics/hartree/omp1 0
+START physics/atom_lists/omp1
+END physics/atom_lists/omp1 0
+START physics/gpu_physics/omp1
+END physics/gpu_physics/omp1 0
+START accumulation/cpu_float/omp4
+END accumulation/cpu_float/omp4 0
+START accumulation/cpu_double/omp4
+END accumulation/cpu_double/omp4 0
+START accumulation/cpu_complex_float/omp4
+END accumulation/cpu_complex_float/omp4 0
+START accumulation/cpu_complex_double/omp4
+END accumulation/cpu_complex_double/omp4 0
+START accumulation/gpu_float/omp4
+END accumulation/gpu_float/omp4 0
+START accumulation/gpu_double/omp4
+END accumulation/gpu_double/omp4 0
+START accumulation/gpu_complex_float/omp4
+END accumulation/gpu_complex_float/omp4 0
+START accumulation/gpu_complex_double/omp4
+END accumulation/gpu_complex_double/omp4 0
+START physics/hartree/omp4
+END physics/hartree/omp4 0
+START physics/atom_lists/omp4
+END physics/atom_lists/omp4 0
+START physics/gpu_physics/omp4
+END physics/gpu_physics/omp4 0
+START abacus/configure
+END abacus/configure 0
+START abacus/build
+END abacus/build 0
+START abacus/version
+END abacus/version 0
+START abacus/help
+END abacus/help 0
+START abacus/cases
+END abacus/cases 0
+ALL MERGED PR15/PR16 VALIDATION PASSED

@@ -1,0 +1,1 @@
+python3 /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-pr16-merge-20261024/control/abacus_cases.py

@@ -1,0 +1,14 @@
+{
+  "upstream_master": "6534722c2c4925d521793b3d279052ef3c7be886",
+  "pr15": "e72194dc104f47294c733ef314255ccec4995c11",
+  "pr15_before": "2cf829054e2bbbc3a5ebd2bb9e2bb6d38e6060fa",
+  "pr15_tree": "c123f2fe72aa163b94c46b8fd03fcd178923cc03",
+  "pr15_before_tree": "c123f2fe72aa163b94c46b8fd03fcd178923cc03",
+  "pr16": "7025df62cc4d3c7a609d1acec1733ab4a95dc7fb",
+  "pr16_before": "27951e74f428decceca7805297838db6130cf8da",
+  "abacus_base": "b30b66a5a333a2667d618932f8430a80dd92146a",
+  "abacus_test_patch": "abacus-validation-only.patch",
+  "source_sha256": "1a8790fbb19181e31201d85c7b890f279b6932fad3291716669b444486bfc8d5",
+  "pr15_sha256": "1ef98ff8b59768f47b9305556df68744e599a322eb324e5cb00f452e7db43de6",
+  "abacus_sha256": "9b3470efb9f83de123e4f6e0184fed74dc19457a448a08efd5d670252fefc178"
+}

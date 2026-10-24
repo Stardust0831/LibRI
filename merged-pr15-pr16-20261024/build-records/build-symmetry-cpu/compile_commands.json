@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-pr16-merge-20261024/build-symmetry-cpu",
+  "command": "/usr/bin/c++  -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-pr16-merge-20261024/source/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/libcomm/include -I/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/exx-device-20261018-3/build/hse-deps/cereal-install/include -isystem /opt/devtools/openmpi/openmpi-5.0.10-nvhpc263-gnu-cuda12-avx2/include -g -fopenmp -o CMakeFiles/test_lri_gpu_symmetry.dir/test_lri_gpu_symmetry.cpp.o -c /org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-pr16-merge-20261024/source/unittests/gpu_symmetry/test_lri_gpu_symmetry.cpp",
+  "file": "/org/abacus-group/abacususer01/abacus_hse_gpu_experiment/runs/lcao-hse/libri-pr15-pr16-merge-20261024/source/unittests/gpu_symmetry/test_lri_gpu_symmetry.cpp",
+  "output": "CMakeFiles/test_lri_gpu_symmetry.dir/test_lri_gpu_symmetry.cpp.o"
+}
+]
