@@ -2,6 +2,8 @@
 
 PR #17 improves repeated GPU contractions in the two synthetic workloads measured here. On the larger 24-atom workload with four physical CPU cores, the original PR improves default timings by 1.16–1.18× relative to its merge base; explicitly keeping C/V on the GPU improves them by 2.61–3.32×. The proposed correctness fixes retain the improvement. These are contraction timings, not whole ABACUS calculations.
 
+The separate [ABACUS HSE measurements](abacus/README.md) cover complete 8- and 64-atom SCF/force calculations. The 64-atom EXX stages improve, while whole-calculation timings overlap across versions. ABACUS does not enable the optional C/V residency API in those runs.
+
 All figures compare these exact source versions:
 
 - Baseline: `a0661cbb4b4f89ceeb23e040d49accb00943093f`.
