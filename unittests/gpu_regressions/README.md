@@ -61,3 +61,6 @@ ctest --test-dir build-before --verbose --output-on-failure
 Use a separate `build-after` directory and point `LIBRI_ROOT` at the fixed tree.
 Keep both build and CTest logs. The baseline must report real failures, while
 the fixed version must satisfy the same assertions and tolerance.
+
+[Recorded before/after results and full logs](evidence/2026-11-03/README.md)
+are available for the committed fixture.
