@@ -73,7 +73,15 @@ void LRI<TA,Tcell,Ndim,Tdata>::set_tensors_map2(
 		? save_name_in
 		: Label_Tools::get_name(label_list);
 	#ifdef __GPU_RI
-	if(this->gpu_resident_blocks) this->gpu_resident_blocks->invalidate(save_name);
+	if(this->gpu_resident_blocks)
+	{
+		if(this->gpu_resident_blocks.use_count() > 1
+		   && this->gpu_resident_names.count(save_name))
+			this->gpu_resident_blocks.reset(
+				new GPU_Data::Resident_Blocks<TA, TAC, Tdata>(*this->gpu_resident_blocks));
+		else
+			this->gpu_resident_blocks->invalidate(save_name);
+	}
 	#endif
 	for(const Label::ab &label : label_list)
 		this->data_ab_name[label] = save_name;
@@ -88,7 +96,15 @@ void LRI<TA,Tcell,Ndim,Tdata>::free_tensors_map2(
 	const std::string &save_name)
 {
 	#ifdef __GPU_RI
-	if(this->gpu_resident_blocks) this->gpu_resident_blocks->invalidate(save_name);
+	if(this->gpu_resident_blocks)
+	{
+		if(this->gpu_resident_blocks.use_count() > 1
+		   && this->gpu_resident_names.count(save_name))
+			this->gpu_resident_blocks.reset(
+				new GPU_Data::Resident_Blocks<TA, TAC, Tdata>(*this->gpu_resident_blocks));
+		else
+			this->gpu_resident_blocks->invalidate(save_name);
+	}
 	#endif
 	this->data_pool.erase(save_name);
 }
