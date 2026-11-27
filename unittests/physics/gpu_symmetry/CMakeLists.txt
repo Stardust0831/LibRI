@@ -40,3 +40,19 @@ target_compile_features(test_gpu_symmetry_filters PRIVATE cxx_std_14)
 target_compile_definitions(test_gpu_symmetry_filters PRIVATE __GPU_RI)
 target_include_directories(test_gpu_symmetry_filters PRIVATE "${LIBRI_ROOT}/include")
 add_test(NAME gpu_symmetry_filters COMMAND test_gpu_symmetry_filters)
+
+if(ENABLE_GPU)
+  add_executable(test_gpu_data_input test_gpu_data_input.cpp)
+  target_compile_features(test_gpu_data_input PRIVATE cxx_std_17)
+  target_compile_definitions(test_gpu_data_input PRIVATE __GPU_RI __DDLA_RI)
+  target_include_directories(test_gpu_data_input PRIVATE
+    "${LIBRI_ROOT}/include" "${LIBCOMM_ROOT}/include" "${CEREAL_ROOT}/include")
+  target_link_libraries(test_gpu_data_input PRIVATE
+    MPI::MPI_CXX OpenMP::OpenMP_CXX ${LAPACK_LIBRARIES} ${BLAS_LIBRARIES} ddla::ddla)
+  foreach(threads 1 4)
+    add_test(NAME gpu_data_input_omp${threads} COMMAND ${MPIEXEC_EXECUTABLE} ${MPIEXEC_NUMPROC_FLAG} 1
+      ${MPIEXEC_PREFLAGS} $<TARGET_FILE:test_gpu_data_input> ${MPIEXEC_POSTFLAGS})
+    set_tests_properties(gpu_data_input_omp${threads} PROPERTIES ENVIRONMENT
+      "OMP_NUM_THREADS=${threads};OPENBLAS_NUM_THREADS=1;MKL_NUM_THREADS=1")
+  endforeach()
+endif()

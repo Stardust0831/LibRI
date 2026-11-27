@@ -44,9 +44,6 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 	const Data_Pack_Wrapper<TA,TC,Tdata> data_wrapper(this->data_pool, this->data_ab_name);
 	const LRI_Cal_Tools<TA,TC,Tdata> tools(this->period, this->data_pool, this->data_ab_name);
 
-	std::map<TA, std::map<TAC, Tensor<Tdata>>> Ds_a_transpose, Ds_b_transpose;
-	std::tie(Ds_a_transpose, Ds_b_transpose) = tools.cal_Ds_transpose(labels);
-
 	#ifdef __MKL_RI
 	const std::size_t mkl_threads = mkl_get_max_threads();
 	mkl_set_num_threads(1);
@@ -300,7 +297,7 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 							{
 								const TAC &Aa2 = list_Aa2[ia2];
 								if (this->filter_atom->filter_GPU_for22(label, Aa01, Aa2))	continue;
-								const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+								const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 								if (D_a.empty())	continue;
 								for (std::size_t ib2 = 0; ib2 < list_Ab2.size(); ++ib2) // G
 								{
@@ -312,11 +309,11 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 									#pragma omp critical(rDs_output)
 									{
 										rDs_mul.insert_2nd(D_mul);
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_output.insert( Aa2.first, {Ab2.first, (Ab2.second - Aa2.second) % period}, {D_a.shape[2], D_mul.shape[0]});
-										dim_2.input(D_a.shape[2], D_mul.shape[0], {D_a.shape[0], D_a.shape[1]});
+										dim_2.input(D_a.shape[2], D_mul.shape[0], {D_a.shape[1], D_a.shape[0]});
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 								} // end for Ab2
 							} // end for Aa2
 						} // end for Aa01
@@ -434,20 +431,20 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 								{
 									const TAC &Aa2 = list_Aa2[ia2];
 									if (this->filter_atom->filter_GPU_for32(label, Aa01, Ab01, Aa2))	continue;
-									const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+									const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 									if (D_a.empty())	continue;
 
 									#pragma omp critical(rDs_output)
 									{
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_a0b0.insert(Aa01, Ab01, D_a0b0);
 										rDs_mul.insert_2nd(D_mul);
 										const GPU_Data::Pack &D_tmp = rDs_tmp.insert({D_mul.shape[1], D_mul.shape[2], D_a0b0.shape[0]});
 										rDs_output.insert(Aa2.first, {Ab01.first, (Ab01.second - Aa2.second) % period}, {D_a.shape[2], D_tmp.shape[0]});
 										dim_1.input({D_mul.shape[1], D_mul.shape[2]}, D_a0b0.shape[0], D_a0b0.shape[1]);
-										dim_2.input(D_a.shape[2], D_tmp.shape[0], {D_a.shape[0], D_a.shape[1]});
+										dim_2.input(D_a.shape[2], D_tmp.shape[0], {D_a.shape[1], D_a.shape[0]});
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 									rDs_a0b0.insert_data(D_a0b0);
 								} // end for Ab01
 							}  // end for Aa2
@@ -854,20 +851,20 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 								{
 									const TAC &Aa2 = list_Aa2[ia2];
 									if (this->filter_atom->filter_GPU_for32(label, Aa01, Ab01, Aa2))	continue;
-									const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+									const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 									if (D_a.empty())	continue;
 
 									#pragma omp critical(rDs_output)
 									{
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_a1b1.insert(Aa01, Ab01, D_a1b1);
 										rDs_mul.insert_2nd(D_mul);
 										const GPU_Data::Pack &D_tmp = rDs_tmp.insert({D_a1b1.shape[0], D_mul.shape[0], D_mul.shape[1]});
 										rDs_output.insert(Aa2.first, {Ab01.first, (Ab01.second - Aa2.second) % period}, {D_a.shape[2], D_tmp.shape[2]});
 										dim_1.input(D_a1b1.shape[0], {D_mul.shape[0], D_mul.shape[1]}, D_a1b1.shape[1]);
-										dim_2.input(D_a.shape[2], D_tmp.shape[2], {D_a.shape[0], D_a.shape[1]});
+										dim_2.input(D_a.shape[2], D_tmp.shape[2], {D_a.shape[1], D_a.shape[0]});
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 									rDs_a1b1.insert_data(D_a1b1);
 								} // end for Ab01
 							}  // end for Aa2
@@ -937,7 +934,7 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 							{
 								const TAC &Aa2 = list_Aa2[ia2];
 								if(this->filter_atom->filter_GPU_for21(label,Aa01,Aa2))	continue;
-								const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+								const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 								if(D_a.empty())	continue;
 								for (std::size_t ib01=0; ib01<list_Ab01.size(); ++ib01)
 								{
@@ -948,12 +945,12 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 
 									#pragma omp critical(rDs_mul)
 									{
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_a2b1.insert(Aa2.first, {Ab01.first, (Ab01.second - Aa2.second) % this->period}, D_a2b1);
-										const GPU_Data::Pack &D_mul = rDs_mul.insert_1st(Aa01, Ab01, {D_a2b1.shape[1], D_a.shape[0], D_a.shape[1]});
-										dim_0.input(D_a2b1.shape[1], {D_a.shape[0], D_a.shape[1]}, D_a2b1.shape[0]);
+										const GPU_Data::Pack &D_mul = rDs_mul.insert_1st(Aa01, Ab01, {D_a2b1.shape[1], D_a.shape[1], D_a.shape[0]});
+										dim_0.input(D_a2b1.shape[1], {D_a.shape[1], D_a.shape[0]}, D_a2b1.shape[0]);
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 									rDs_a2b1.insert_data(D_a2b1);
 
 								} // end for Aa2
@@ -1357,7 +1354,7 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 							{
 								const TAC &Aa2 = list_Aa2[ia2];
 								if(this->filter_atom->filter_GPU_for21(label,Aa01,Aa2))	continue;
-								const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+								const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 								if(D_a.empty())	continue;
 								for (std::size_t ib01=0; ib01<list_Ab01.size(); ++ib01)
 								{
@@ -1368,12 +1365,12 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 
 									#pragma omp critical(rDs_mul)
 									{
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_a2b0.insert(Aa2.first, {Ab01.first, (Ab01.second - Aa2.second) % this->period}, D_a2b0);
-										const GPU_Data::Pack &D_mul = rDs_mul.insert_1st(Aa01, Ab01, {D_a.shape[0], D_a.shape[1], D_a2b0.shape[1]});
-										dim_0.input({D_a.shape[0], D_a.shape[1]}, D_a2b0.shape[1], D_a.shape[2]);
+										const GPU_Data::Pack &D_mul = rDs_mul.insert_1st(Aa01, Ab01, {D_a.shape[1], D_a.shape[0], D_a2b0.shape[1]});
+										dim_0.input({D_a.shape[1], D_a.shape[0]}, D_a2b0.shape[1], D_a.shape[2]);
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 									rDs_a2b0.insert_data(D_a2b0);
 
 								} // end for Aa2
@@ -1499,7 +1496,7 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 							{
 								const TAC &Aa2 = list_Aa2[ia2];
 								if(this->filter_atom->filter_GPU_for21(label,Aa01,Aa2))	continue;
-								const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+								const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 								if(D_a.empty())	continue;
 								for(std::size_t ib2=0; ib2<list_Ab2.size(); ++ib2)
 								{
@@ -1510,12 +1507,12 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 
 									#pragma omp critical(rDs_mul)
 									{
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_a2b2.insert(Aa2.first, {Ab2.first, (Ab2.second - Aa2.second) % period}, D_a2b2);
-										rDs_mul.insert_1st(Aa01, Ab2, {D_a2b2.shape[1], D_a.shape[0], D_a.shape[1]});
-										dim_0.input(D_a2b2.shape[1], {D_a.shape[0], D_a.shape[1]}, D_a2b2.shape[0]);
+										rDs_mul.insert_1st(Aa01, Ab2, {D_a2b2.shape[1], D_a.shape[1], D_a.shape[0]});
+										dim_0.input(D_a2b2.shape[1], {D_a.shape[1], D_a.shape[0]}, D_a2b2.shape[0]);
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 									rDs_a2b2.insert_data(D_a2b2);
 								} // end for Ab2
 							} // end for Aa2
@@ -1555,22 +1552,22 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 								{
 									const TAC &Ab2 = list_Ab2[ib2];
 									if (this->filter_atom->filter_GPU_for32(label, Aa01, Ab01, Ab2))	continue;
-									const Tensor<Tdata> &D_b = Global_Func::find(Ds_b_transpose, Ab01.first, TAC{Ab2.first, (Ab2.second-Ab01.second)%this->period});
+									const Tensor<Tdata> &D_b = tools.get_Ds_ab(Label::ab::b, Ab01, Ab2);
 									if(D_b.empty())	continue;
 									const GPU_Data::Pack &D_mul = rDs_mul.find_2nd(Aa01, Ab2);
 									if (!D_mul.exist)	continue;
 
 									#pragma omp critical(rDs_output)
 									{
-										rDs_b.insert(Ab01.first, {Ab2.first, (Ab2.second - Ab01.second) % period}, D_b);
+										rDs_b.insert_transpose(Ab01.first, {Ab2.first, (Ab2.second - Ab01.second) % period}, D_b);
 										rDs_a0b0.insert(Aa01, Ab01, D_a0b0);
 										rDs_mul.insert_2nd(D_mul);
 										const GPU_Data::Pack &D_tmp = rDs_tmp.insert({D_a0b0.shape[1], D_mul.shape[0], D_mul.shape[1]});
-										rDs_output.insert(Aa01, Ab01, {D_tmp.shape[2], D_b.shape[0]});
+										rDs_output.insert(Aa01, Ab01, {D_tmp.shape[2], D_b.shape[1]});
 										dim_1.input(D_a0b0.shape[1], {D_mul.shape[0], D_mul.shape[1]}, D_a0b0.shape[0]);
-										dim_2.input(D_tmp.shape[2], D_b.shape[0], {D_b.shape[1], D_b.shape[2]});
+										dim_2.input(D_tmp.shape[2], D_b.shape[1], {D_b.shape[0], D_b.shape[2]});
 									}
-									rDs_b.insert_data(D_b);
+									rDs_b.insert_data_transpose(D_b);
 									rDs_a0b0.insert_data(D_a0b0);
 								} // end for Aa01
 							} // end for Ab2
@@ -1638,7 +1635,7 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 							{
 								const TAC &Aa2 = list_Aa2[ia2];
 								if(this->filter_atom->filter_GPU_for21(label,Aa01,Aa2))	continue;
-								const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+								const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 								if(D_a.empty())	continue;
 								for(std::size_t ib2=0; ib2<list_Ab2.size(); ++ib2)
 								{
@@ -1649,12 +1646,12 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 
 									#pragma omp critical(rDs_mul)
 									{
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_a2b2.insert(Aa2.first, {Ab2.first, (Ab2.second - Aa2.second) % period}, D_a2b2);
-										rDs_mul.insert_1st(Aa01, Ab2, {D_a2b2.shape[1], D_a.shape[0], D_a.shape[1]});
-										dim_0.input(D_a2b2.shape[1], {D_a.shape[0], D_a.shape[1]}, D_a2b2.shape[0]);
+										rDs_mul.insert_1st(Aa01, Ab2, {D_a2b2.shape[1], D_a.shape[1], D_a.shape[0]});
+										dim_0.input(D_a2b2.shape[1], {D_a.shape[1], D_a.shape[0]}, D_a2b2.shape[0]);
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 									rDs_a2b2.insert_data(D_a2b2);
 								} // end for Ab2
 							} // end for Aa2
@@ -1833,22 +1830,22 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 								{
 									const TAC &Ab2 = list_Ab2[ib2];
 									if (this->filter_atom->filter_GPU_for32(label, Aa01, Ab01, Ab2))	continue;
-									const Tensor<Tdata> &D_b = Global_Func::find(Ds_b_transpose, Ab01.first, TAC{Ab2.first, (Ab2.second-Ab01.second)%this->period});
+									const Tensor<Tdata> &D_b = tools.get_Ds_ab(Label::ab::b, Ab01, Ab2);
 									if(D_b.empty())	continue;
 									const GPU_Data::Pack &D_mul = rDs_mul.find_2nd(Aa01, Ab2);
 									if (!D_mul.exist)	continue;
 
 									#pragma omp critical(rDs_output)
 									{
-										rDs_b.insert(Ab01.first, {Ab2.first, (Ab2.second - Ab01.second) % period}, D_b);
+										rDs_b.insert_transpose(Ab01.first, {Ab2.first, (Ab2.second - Ab01.second) % period}, D_b);
 										rDs_a1b0.insert(Aa01, Ab01, D_a1b0);
 										rDs_mul.insert_2nd(D_mul);
 										const GPU_Data::Pack &D_tmp = rDs_tmp.insert({D_a1b0.shape[1], D_mul.shape[0], D_mul.shape[1]});
-										rDs_output.insert(Aa01, Ab01, {D_tmp.shape[2], D_b.shape[0]});
+										rDs_output.insert(Aa01, Ab01, {D_tmp.shape[2], D_b.shape[1]});
 										dim_1.input(D_a1b0.shape[1], {D_mul.shape[0], D_mul.shape[1]}, D_a1b0.shape[0]);
-										dim_2.input(D_tmp.shape[2], D_b.shape[0], {D_b.shape[1], D_b.shape[2]});
+										dim_2.input(D_tmp.shape[2], D_b.shape[1], {D_b.shape[0], D_b.shape[2]});
 									}
-									rDs_b.insert_data(D_b);
+									rDs_b.insert_data_transpose(D_b);
 									rDs_a1b0.insert_data(D_a1b0);
 								} // end for Aa01
 							} // end for Ab2
@@ -2104,7 +2101,7 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 							for(std::size_t ia2=0; ia2<list_Aa2.size(); ++ia2)
 							{
 								const TAC &Aa2 = list_Aa2[ia2];
-								const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+								const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 								if(D_a.empty())	continue;
 								if(this->filter_atom->filter_GPU_for22(label,Aa01,Aa2))	continue;
 								for(std::size_t ib01=0; ib01<list_Ab01.size(); ++ib01)
@@ -2116,12 +2113,12 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 
 									#pragma omp critical(rDs_mul_2)
 									{
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_a2b1.insert(Aa2.first, {Ab01.first, (Ab01.second - Aa2.second) % period}, D_a2b1);
-										rDs_mul_2.insert_1st(Aa01, Ab01, {D_a2b1.shape[1], D_a.shape[0], D_a.shape[1]});
-										dim_1.input(D_a2b1.shape[1], {D_a.shape[0], D_a.shape[1]}, D_a2b1.shape[0]);
+										rDs_mul_2.insert_1st(Aa01, Ab01, {D_a2b1.shape[1], D_a.shape[1], D_a.shape[0]});
+										dim_1.input(D_a2b1.shape[1], {D_a.shape[1], D_a.shape[0]}, D_a2b1.shape[0]);
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 									rDs_a2b1.insert_data(D_a2b1);
 								} // end for Aa2
 							} // end for Aa01
@@ -2268,7 +2265,7 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 							for(std::size_t ia2=0; ia2<list_Aa2.size(); ++ia2)
 							{
 								const TAC &Aa2 = list_Aa2[ia2];
-								const Tensor<Tdata> &D_a = Global_Func::find(Ds_a_transpose, Aa01, Aa2);
+								const Tensor<Tdata> &D_a = tools.get_Ds_ab(Label::ab::a, Aa01, Aa2);
 								if(D_a.empty())	continue;
 								if(this->filter_atom->filter_GPU_for22(label,Aa01,Aa2))	continue;
 								for(std::size_t ib01=0; ib01<list_Ab01.size(); ++ib01)
@@ -2280,12 +2277,12 @@ void LRI<TA,Tcell,Ndim,Tdata>::cal_loop3_GPU(
 
 									#pragma omp critical(rDs_mul_2)
 									{
-										rDs_a.insert(Aa01, Aa2, D_a);
+										rDs_a.insert_transpose(Aa01, Aa2, D_a);
 										rDs_a2b0.insert(Aa2.first, {Ab01.first, (Ab01.second - Aa2.second) % period}, D_a2b0);
-										rDs_mul_2.insert_1st(Aa01, Ab01, {D_a.shape[0], D_a.shape[1], D_a2b0.shape[1]});
-										dim_1.input({D_a.shape[0], D_a.shape[1]}, D_a2b0.shape[1], D_a.shape[2]);
+										rDs_mul_2.insert_1st(Aa01, Ab01, {D_a.shape[1], D_a.shape[0], D_a2b0.shape[1]});
+										dim_1.input({D_a.shape[1], D_a.shape[0]}, D_a2b0.shape[1], D_a.shape[2]);
 									}
-									rDs_a.insert_data(D_a);
+									rDs_a.insert_data_transpose(D_a);
 									rDs_a2b0.insert_data(D_a2b0);
 								} // end for Aa2
 							} // end for Aa01

@@ -7,10 +7,12 @@
 import textwrap
 import itertools
 
-get_D_a = lambda a : "tools.get_Ds_ab(Label::ab::a, Aa01, Aa2)" \
-					if a=="a0a1a2" else "Global_Func::find(Ds_a_transpose, Aa01, Aa2)"
-get_D_b = lambda b : "tools.get_Ds_ab(Label::ab::b, Ab01, Ab2)" \
-					if b=="b0b1b2" else "Global_Func::find(Ds_b_transpose, Ab01.first, TAC{Ab2.first, (Ab2.second-Ab01.second)%this->period})"
+get_D_a = lambda a : "tools.get_Ds_ab(Label::ab::a, Aa01, Aa2)"
+get_D_b = lambda b : "tools.get_Ds_ab(Label::ab::b, Ab01, Ab2)"
+
+def transpose_suffix(order):
+	return "_transpose" if order in ("a1a0a2", "b1b0b2") else ""
+
 
 ab_list = ["a0a1a2", "a1a0a2", "b0b1b2", "b1b0b2"] + \
 	[a+b for a,b in itertools.product(["a0","a1","a2"], ["b0","b1","b2"])]
@@ -63,6 +65,8 @@ def get_gemm_param(formula, *, other=""):
 			else:
 				return other
 		D = f"D_{get_D()}"
+		if transpose_suffix(ab):
+			index = [1-i if i < 2 else i for i in index]
 		return ", ".join([f"{D}.shape[{i}]" for i in index])
 
 	def add_brace(dim):
@@ -178,7 +182,7 @@ def content_a01b01_a01b01(ab_ab, formulas):
 
 							#pragma omp critical(rDs_mul)
 							{{
-								rDs_b.insert(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
+								rDs_b.insert{transpose_suffix(b)}(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
 								rDs_{a01b01[0]}.insert(Aa01, Ab01, D_{a01b01[0]});
 								rDs_{a01b01[1]}.insert(Aa01, Ab01, D_{a01b01[1]});
 								const GPU_Data::Pack &D_tmp = rDs_tmp.insert({{{dim_m_0_raw}, {dim_n_0_raw}}});
@@ -186,7 +190,7 @@ def content_a01b01_a01b01(ab_ab, formulas):
 								dim_0.input({dim_m_0_brace}, {dim_n_0_brace}, {dim_k_0_brace});
 								dim_1.input({dim_m_1_brace}, {dim_n_1_brace}, {dim_k_1_brace});
 							}}
-							rDs_b.insert_data(D_b);
+							rDs_b.insert_data{transpose_suffix(b)}(D_b);
 							rDs_{a01b01[0]}.insert_data(D_{a01b01[0]});
 							rDs_{a01b01[1]}.insert_data(D_{a01b01[1]});
 						}} // end for Aa01
@@ -241,11 +245,11 @@ def content_a01b01_a01b01(ab_ab, formulas):
 							#pragma omp critical(rDs_output)
 							{{
 								rDs_mul.insert_2nd(D_mul);
-								rDs_a.insert(Aa01, Aa2, D_a);
+								rDs_a.insert{transpose_suffix(a)}(Aa01, Aa2, D_a);
 								rDs_output.insert( Aa2.first, {{Ab2.first, (Ab2.second - Aa2.second) % period}}, {{{dim_m_2_raw}, {dim_n_2_raw}}});
 								dim_2.input({dim_m_2_brace}, {dim_n_2_brace}, {dim_k_2_brace});
 							}}
-							rDs_a.insert_data(D_a);
+							rDs_a.insert_data{transpose_suffix(a)}(D_a);
 						}} // end for Ab2
 					}} // end for Aa2
 				}} // end for Aa01
@@ -331,12 +335,12 @@ def content_a01b01_a01b2(ab_ab, formulas):
 
 							#pragma omp critical(rDs_mul)
 							{{
-								rDs_b.insert(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
+								rDs_b.insert{transpose_suffix(b)}(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
 								rDs_{a01b2}.insert(Aa01, Ab2, D_{a01b2});
 								const GPU_Data::Pack &D_mul = rDs_mul.insert_1st(Aa01, Ab01, {{{dim_m_0_raw}, {dim_n_0_raw}}});
 								dim_0.input({dim_m_0_brace}, {dim_n_0_brace}, {dim_k_0_brace});
 							}}
-							rDs_b.insert_data(D_b);
+							rDs_b.insert_data{transpose_suffix(b)}(D_b);
 							rDs_{a01b2}.insert_data(D_{a01b2});
 						}} // end for Ab2
 					}} // end for Aa01
@@ -384,7 +388,7 @@ def content_a01b01_a01b2(ab_ab, formulas):
 
 							#pragma omp critical(rDs_output)
 							{{
-								rDs_a.insert(Aa01, Aa2, D_a);
+								rDs_a.insert{transpose_suffix(a)}(Aa01, Aa2, D_a);
 								rDs_{a01b01}.insert(Aa01, Ab01, D_{a01b01});
 								rDs_mul.insert_2nd(D_mul);
 								const GPU_Data::Pack &D_tmp = rDs_tmp.insert({{{dim_m_1_raw}, {dim_n_1_raw}}});
@@ -392,7 +396,7 @@ def content_a01b01_a01b2(ab_ab, formulas):
 								dim_1.input({dim_m_1_brace}, {dim_n_1_brace}, {dim_k_1_brace});
 								dim_2.input({dim_m_2_brace}, {dim_n_2_brace}, {dim_k_2_brace});
 							}}
-							rDs_a.insert_data(D_a);
+							rDs_a.insert_data{transpose_suffix(a)}(D_a);
 							rDs_{a01b01}.insert_data(D_{a01b01});
 						}} // end for Ab01
 					}}  // end for Aa2
@@ -489,12 +493,12 @@ def content_a01b01_a2b01(ab_ab, formulas):
 
 							#pragma omp critical(rDs_mul)
 							{{
-								rDs_a.insert(Aa01, Aa2, D_a);
+								rDs_a.insert{transpose_suffix(a)}(Aa01, Aa2, D_a);
 								rDs_{a2b01}.insert(Aa2.first, {{Ab01.first, (Ab01.second - Aa2.second) % this->period}}, D_{a2b01});
 								const GPU_Data::Pack &D_mul = rDs_mul.insert_1st(Aa01, Ab01, {{{dim_m_0_raw}, {dim_n_0_raw}}});
 								dim_0.input({dim_m_0_brace}, {dim_n_0_brace}, {dim_k_0_brace});
 							}}
-							rDs_a.insert_data(D_a);
+							rDs_a.insert_data{transpose_suffix(a)}(D_a);
 							rDs_{a2b01}.insert_data(D_{a2b01});
 
 						}} // end for Aa2
@@ -542,7 +546,7 @@ def content_a01b01_a2b01(ab_ab, formulas):
 
 							#pragma omp critical(rDs_output)
 							{{
-								rDs_b.insert(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
+								rDs_b.insert{transpose_suffix(b)}(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
 								rDs_{a01b01}.insert(Aa01, Ab01, D_{a01b01});
 								rDs_mul.insert_2nd(D_mul);
 								const GPU_Data::Pack &D_tmp = rDs_tmp.insert({{{dim_m_1_raw}, {dim_n_1_raw}}});
@@ -550,7 +554,7 @@ def content_a01b01_a2b01(ab_ab, formulas):
 								dim_1.input({dim_m_1_brace}, {dim_n_1_brace}, {dim_k_1_brace});
 								dim_2.input({dim_m_2_brace}, {dim_n_2_brace}, {dim_k_2_brace});
 							}}
-							rDs_b.insert_data(D_b);
+							rDs_b.insert_data{transpose_suffix(b)}(D_b);
 							rDs_{a01b01}.insert_data(D_{a01b01});
 						}} // end for Aa01
 					}} // end for Ab2
@@ -644,12 +648,12 @@ def content_a01b01_a2b2(ab_ab, formulas):
 
 							#pragma omp critical(rDs_mul)
 							{{
-								rDs_a.insert(Aa01, Aa2, D_a);
+								rDs_a.insert{transpose_suffix(a)}(Aa01, Aa2, D_a);
 								rDs_a2b2.insert(Aa2.first, {{Ab2.first, (Ab2.second - Aa2.second) % period}}, D_a2b2);
 								rDs_mul.insert_1st(Aa01, Ab2, {{{dim_m_0_raw}, {dim_n_0_raw}}});
 								dim_0.input({dim_m_0_brace}, {dim_n_0_brace}, {dim_k_0_brace});
 							}}
-							rDs_a.insert_data(D_a);
+							rDs_a.insert_data{transpose_suffix(a)}(D_a);
 							rDs_a2b2.insert_data(D_a2b2);
 						}} // end for Ab2
 					}} // end for Aa2
@@ -696,7 +700,7 @@ def content_a01b01_a2b2(ab_ab, formulas):
 
 							#pragma omp critical(rDs_output)
 							{{
-								rDs_b.insert(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
+								rDs_b.insert{transpose_suffix(b)}(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
 								rDs_{a01b01}.insert(Aa01, Ab01, D_{a01b01});
 								rDs_mul.insert_2nd(D_mul);
 								const GPU_Data::Pack &D_tmp = rDs_tmp.insert({{{dim_m_1_raw}, {dim_n_1_raw}}});
@@ -704,7 +708,7 @@ def content_a01b01_a2b2(ab_ab, formulas):
 								dim_1.input({dim_m_1_brace}, {dim_n_1_brace}, {dim_k_1_brace});
 								dim_2.input({dim_m_2_brace}, {dim_n_2_brace}, {dim_k_2_brace});
 							}}
-							rDs_b.insert_data(D_b);
+							rDs_b.insert_data{transpose_suffix(b)}(D_b);
 							rDs_{a01b01}.insert_data(D_{a01b01});
 						}} // end for Aa01
 					}} // end for Ab2
@@ -796,12 +800,12 @@ def content_a01b2_a2b01(ab_ab, formulas):
 
 							#pragma omp critical(rDs_mul_1)
 							{{
-								rDs_b.insert(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
+								rDs_b.insert{transpose_suffix(b)}(Ab01.first, {{Ab2.first, (Ab2.second - Ab01.second) % period}}, D_b);
 								rDs_{a01b2}.insert(Aa01, Ab2, D_{a01b2});
 								rDs_mul_1.insert_1st(Aa01, Ab01, {{{dim_m_0_raw}, {dim_n_0_raw}}});
 								dim_0.input({dim_m_0_brace}, {dim_n_0_brace}, {dim_k_0_brace});
 							}}
-							rDs_b.insert_data(D_b);
+							rDs_b.insert_data{transpose_suffix(b)}(D_b);
 							rDs_{a01b2}.insert_data(D_{a01b2});
 						}} // end for Ab2
 					}} // end for Ab01
@@ -845,12 +849,12 @@ def content_a01b2_a2b01(ab_ab, formulas):
 
 							#pragma omp critical(rDs_mul_2)
 							{{
-								rDs_a.insert(Aa01, Aa2, D_a);
+								rDs_a.insert{transpose_suffix(a)}(Aa01, Aa2, D_a);
 								rDs_{a2b01}.insert(Aa2.first, {{Ab01.first, (Ab01.second - Aa2.second) % period}}, D_{a2b01});
 								rDs_mul_2.insert_1st(Aa01, Ab01, {{{dim_m_1_raw}, {dim_n_1_raw}}});
 								dim_1.input({dim_m_1_brace}, {dim_n_1_brace}, {dim_k_1_brace});
 							}}
-							rDs_a.insert_data(D_a);
+							rDs_a.insert_data{transpose_suffix(a)}(D_a);
 							rDs_{a2b01}.insert_data(D_{a2b01});
 						}} // end for Aa2
 					}} // end for Aa01
@@ -969,9 +973,6 @@ def content_prefix():
 
 			const Data_Pack_Wrapper<TA,TC,Tdata> data_wrapper(this->data_pool, this->data_ab_name);
 			const LRI_Cal_Tools<TA,TC,Tdata> tools(this->period, this->data_pool, this->data_ab_name);
-
-			std::map<TA, std::map<TAC, Tensor<Tdata>>> Ds_a_transpose, Ds_b_transpose;
-			std::tie(Ds_a_transpose, Ds_b_transpose) = tools.cal_Ds_transpose(labels);
 
 			#ifdef __MKL_RI
 			const std::size_t mkl_threads = mkl_get_max_threads();
