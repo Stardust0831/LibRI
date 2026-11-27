@@ -10,8 +10,11 @@
 #include "../../global/gpu/GPU_Backend.h"
 #include "GPU_Data_Pack.h"
 
+#include <cassert>
+#include <cstring>
 #include <omp.h>
 #include <type_traits>
+#include <utility>
 
 namespace RI
 {
@@ -37,13 +40,28 @@ class Input
 
 	const Pack & insert(const TA &Aa, const TAC &Ab, const Tensor<Tdata_CPU> &tensor)
 	{
+		return this->insert_shape(Aa, Ab, tensor.shape);
+	}
+
+	// Pack the first two axes in reverse order without an intermediate Tensor.
+	const Pack & insert_transpose(const TA &Aa, const TAC &Ab, const Tensor<Tdata_CPU> &tensor)
+	{
+		assert(tensor.shape.size() == 3);
+		Shape_Vector shape = tensor.shape;
+		std::swap(shape[0], shape[1]);
+		return this->insert_shape(Aa, Ab, shape);
+	}
+
+  private:
+	const Pack & insert_shape(const TA &Aa, const TAC &Ab, const Shape_Vector &shape)
+	{
 		Pack &pack = this->ptrList[Aa][Ab];
 		if(!pack.exist)
 		{
 			pack.exist = true;
 			pack.pos = this->h_data[omp_get_thread_num()].size();
 			this->tensor_insert[omp_get_thread_num()] = true;
-			pack.shape = tensor.shape;
+			pack.shape = shape;
 			pack.thread_num = omp_get_thread_num();
 		}
 		else
@@ -54,11 +72,36 @@ class Input
 		return pack;
 	}
 
+  public:
 	void insert_data(const Tensor<Tdata_CPU> &tensor)
 	{
 		const int thread_num = omp_get_thread_num();
 		if(this->tensor_insert[thread_num])
 			insert_data_impl(this->h_data[thread_num], tensor, Same_data_layout());
+	}
+
+	void insert_data_transpose(const Tensor<Tdata_CPU> &tensor)
+	{
+		const int thread_num = omp_get_thread_num();
+		if (!this->tensor_insert[thread_num])
+			return;
+		assert(tensor.shape.size() == 3);
+		std::vector<Tdata_GPU> &buffer = this->h_data[thread_num];
+		const std::size_t begin = buffer.size();
+		const std::size_t size = tensor.shape.get_shape_all();
+		buffer.resize(begin + size);
+		const std::size_t row_size = tensor.shape[2];
+		if (size == 0)
+			return;
+		for (std::size_t i1 = 0; i1 < tensor.shape[1]; ++i1)
+			for (std::size_t i0 = 0; i0 < tensor.shape[0]; ++i0)
+			{
+				const std::size_t source_offset = (i0 * tensor.shape[1] + i1) * row_size;
+				const std::size_t target_offset = begin + (i1 * tensor.shape[0] + i0) * row_size;
+				const Tdata_CPU *source = tensor.ptr() + source_offset;
+				Tdata_GPU *target = buffer.data() + target_offset;
+				copy_row(target, source, row_size, Same_data_layout());
+			}
 	}
 
 	// 将对应的 C, V, D 放在 d_Cs, d_Vs, d_Ds 上
@@ -90,6 +133,19 @@ class Input
 	}
 
   private:
+	static void copy_row(Tdata_GPU *target, const Tdata_CPU *source,
+	                     const std::size_t size, std::true_type)
+	{
+		std::memcpy(target, source, size * sizeof(Tdata_CPU));
+	}
+
+	static void copy_row(Tdata_GPU *target, const Tdata_CPU *source,
+	                     const std::size_t size, std::false_type)
+	{
+		for (std::size_t i = 0; i < size; ++i)
+			target[i] = GPU_Backend::data_to_GPU(source[i]);
+	}
+
 	static void insert_data_impl(
 		std::vector<Tdata_GPU> &h_data,
 		const Tensor<Tdata_CPU> &tensor,
